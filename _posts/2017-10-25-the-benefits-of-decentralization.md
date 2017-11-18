@@ -1,8 +1,8 @@
 ---
-layout:     single
-title:      "The Benefits of Decentralization"
-excerpt:    "An analysis of peer-to-peer technologies and how they can cut
-             costs and scale Internet services at the same time."
+layout:   single
+banner:   "The Benefits of Decentralization"
+excerpt:  "An analysis of peer-to-peer technologies and how they can cut costs
+           and scale Internet services at the same time."
 
 categories: networking
 header:

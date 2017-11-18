@@ -1,6 +1,6 @@
 ---
-layout: single
-title:  "How Joe Shmoe and I Can Track Your Every Move Through Your Devices"
+layout:  single
+banner:  "How Joe Shmoe and I Can Track Your Every Move Through Your Devices"
 excerpt: "Or, abusing MAC addresses for fun and profit (well, no profit unless
     you're a massive corporation or the government...)."
 categories: privacy

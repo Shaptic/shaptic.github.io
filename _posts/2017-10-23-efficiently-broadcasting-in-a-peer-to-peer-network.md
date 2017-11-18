@@ -1,6 +1,6 @@
 ---
 layout:  single
-title:   "Efficiently Broadcasting in a Peer to Peer Network"
+banner:  "Efficiently Broadcasting in a Peer to Peer Network"
 excerpt: "A memory-less solution that minimizes extra message duplication."
 categories: networking
 header:
@@ -72,7 +72,7 @@ Here's the sample network again. Let's analyze the number of duplicates this gen
 Thus, we only got 2 duplicates in the network at absolutely _no memory cost_ to each node. Furthermore, in a more intelligent network nodes might be more aware of their direct neighbors and have even less duplication! For example, if $$ B $$ sees a stack of $$ \{ A, B \} $$ and knows that there's an edge between $$ A \longleftrightarrow D $$, it could preemptively set the stack to be $$ \{ A, D, E \} $$, eliminating _**all**_ possible duplicates!
 
 # Conclusion #
-Even for the small sample network, we cut the amount of duplicates in half; furthermore, none of the nodes need to store anything in memory. It's the double whammy we were looking for in the beginning! I use this [technique](https://github.com/Shaptic/Cicada/blob/461e62c0ddfec31c932386fcbb43b977790186e9/cicada/swarmlib/swarmnode.py#L133-L137) in _Cicada_ for [broadcast packets](https://github.com/Shaptic/Cicada/blob/461e62c0ddfec31c932386fcbb43b977790186e9/cicada/packetlib/cicada.py#L50-L134).<sup><a href="#footnote-1">[1]</a></sup> It can actually be further optimized since each node in a _Cicada_ swarm knows a few details (like immediate neighbors) about a handful of other nodes in the network.
+Even for the small sample network, we cut the amount of duplicates in half; furthermore, none of the nodes need to store anything in memory. We've achieved the two goals we were looking for in the beginning! I use this [technique](https://github.com/Shaptic/Cicada/blob/461e62c0ddfec31c932386fcbb43b977790186e9/cicada/swarmlib/swarmnode.py#L133-L137) in _Cicada_ for [broadcast packets](https://github.com/Shaptic/Cicada/blob/461e62c0ddfec31c932386fcbb43b977790186e9/cicada/packetlib/cicada.py#L50-L134).<sup><a href="#footnote-1">[1]</a></sup> It can actually be further optimized since each node in a _Cicada_ swarm knows a few details (like immediate neighbors) about a handful of other nodes in the network.
 {: #footnote-1-root}
 
 This kind of optimal broadcasting can be extremely important in a P2P content distribution platform. For example, in a live-streaming network in which a single user broadcasts their data to the rest of the swarm, this minimizes the strain on the content broadcaster as well as on the viewers.

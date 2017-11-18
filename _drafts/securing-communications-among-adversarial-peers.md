@@ -1,7 +1,8 @@
 ---
-layout:  single
-title:   "Securing Communications Among Adversarial Peers"
-excerpt: "A technical musing on the inherent privacy limitations of a peer-to-peer architecture."
+layout:   single
+banner:   "Securing Communications Among Adversarial Peers"
+excerpt : "A technical musing on the inherent privacy limitations of a 
+           peer-to-peer architecture."
 categories: networking
 header:
   overlay_image: /assets/img/keys-full.jpg

@@ -1,6 +1,6 @@
 ---
 layout:     single
-title:      "A Fresh Perspective on the Architecture of the Internet"
+banner:     "A Fresh Perspective on the Architecture of the Internet"
 excerpt:    "Almost 30 years after the invention of the Internet, we are
             plagued with censorship, security problems, and privacy invasion.
             What can we do?"
