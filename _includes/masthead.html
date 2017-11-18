@@ -2,7 +2,16 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
+        <div>
+          <a class="site-title" href="{{ '/' | absolute_url }}">
+            {% if page.author_profile %}
+            {% else %}
+              <img src="{{ "assets/icons/favicon-32x32.png" | absolute_url }}"
+                   style="display: inline; border-radius: 50%;" alt="logo">
+            {% endif %}
+            {{ site.title }}
+          </a>
+        </div>
         <ul class="visible-links">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
