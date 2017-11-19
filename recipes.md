@@ -1,6 +1,7 @@
 ---
-layout: single
-title:  "My Pescetarian Recipe Collection"
+layout:  single
+title:   "Recipes"
+banner:  "My Pescetarian Recipe Collection"
 excerpt: "A collection of tasty pescetarian recipes that I've gathered over the
           years with my personal tweaks and suggestions included."
 categories: cooking

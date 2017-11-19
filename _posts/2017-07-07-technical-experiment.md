@@ -1,6 +1,7 @@
 ---
 layout:  single
 banner:  "How Joe Shmoe and I Can Track Your Every Move Through Your Devices"
+title:   "How Joe Shmoe and I Can Track Your Every Move Through Your Devices"
 excerpt: "Or, abusing MAC addresses for fun and profit (well, no profit unless
     you're a massive corporation or the government...)."
 categories: privacy
@@ -57,7 +58,7 @@ called a [MAC address](https://en.wikipedia.org/wiki/Mac_address) (**M**edia
 WiFi-enabled device_ -- in this case, the router in the coffee shop. So this
 value coupled with the WiFi network name will be automatically joined if your
 device picks it up. If it's not that smart, it'll just try any WiFi network
-that matches the name<sup><a href="#footnote-1">[1]</a></sup>.
+that matches the name.<sup><a href="#footnote-1">[1]</a></sup>
 {: #footnote-1-root}
 
 In addition to this automatic search & connect, most mobile devices also try

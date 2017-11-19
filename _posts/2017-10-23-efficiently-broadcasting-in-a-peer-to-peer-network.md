@@ -1,5 +1,6 @@
 ---
 layout:  single
+title:   "Efficiently Broadcasting in a Peer to Peer Network"
 banner:  "Efficiently Broadcasting in a Peer to Peer Network"
 excerpt: "A memory-less solution that minimizes extra message duplication."
 categories: networking

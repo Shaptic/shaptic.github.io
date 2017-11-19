@@ -1,5 +1,6 @@
 ---
 layout:   single
+title:    "Securing Communications Among Adversarial Peers"
 banner:   "Securing Communications Among Adversarial Peers"
 excerpt : "A technical musing on the inherent privacy limitations of a 
            peer-to-peer architecture."

@@ -1,8 +1,9 @@
 ---
-layout: splash
-title: "Cicada"
-banner: ""
-excerpt: "A scalable, resilient peer-to-peer networking framework for the future of the Internet."
+layout:  splash
+title:   "Cicada"
+banner:  "Cicada Project"
+excerpt: "A scalable, resilient peer-to-peer networking framework for 
+          the future of the Internet."
 
 header:
     overlay_image: /assets/img/banner-sized.jpg
@@ -37,7 +38,7 @@ feature_row:
     btn_class: "btn--inverse"
 ---
 
-# Cicada #
+# Cicada
 In today's inherently centralized Internet world, scaling a cloud-based application is complicated, expensive, and fragile. Cloud providers frantically build and tear down virtual machines and containers on-the-fly, elastically responding to increased server load, charging the service provider all the while. Why not let your users take the load off your shoulders and share some of the work? Introducing: **Cicada**.
 
 {% include feature_row %}
