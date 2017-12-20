@@ -15,7 +15,7 @@ header:
 {% include toc title="Contents" %}
 
 
-I'm currently developing an app as a side-project. This is my first time developing a full-fledged application that requires both a back-end server to store data (for which I've chosen [Flask](http://flask.pocoo.org/)) and a front-end client that users interact with (for which I've chosen [Qt](https://www.qt.io/). I've reached the stage at which I need to add proper support for "users," so different users will query different data from the server (like a Twitter feed is different depending on who you're logged in as). 
+I'm currently developing an app as a side-project. This is my first time developing a full-fledged application that requires both a back-end server to store data (for which I've chosen [Flask](http://flask.pocoo.org/)) and a front-end client that users interact with (for which I've chosen [Qt](https://www.qt.io/)). I've reached the stage at which I need to add authentication, so that different users can query different data from the server (like a Twitter feed is different depending on who you're logged in as). 
 
 This post is a look into the research and design that I put into the authentication scheme for the app.
 
@@ -23,13 +23,12 @@ This post is a look into the research and design that I put into the authenticat
 # Authentication Methods #
 For authenticating and tracking users and their respective logins, there are many standard approaches:
 
-  - HTTP's "basic authentication" support
   - Session management with cookies
   - OAuth 2.0, or other token-based authentication methods 
-  - Token in HTTP headers (e.g. OAuth 2.0)
+  - HTTP's "basic authentication" support
   - Additional query parameters
 
-I'm only going to touch on the first two methods, and go into detail of the token-based authentication method I'll be using. 
+I'm only going to touch on the first two methods, and go into detail of the token-based authentication method I'll be using.
 
 # Session Cookies #
 In general, sessions are used to store per-user information, such as the contents of your shopping cart, online documents, or other long-term data.
@@ -45,7 +44,7 @@ This is probably the most wide-spread approach for most applications. In this im
     Date: Wed, 20 Dec 2017 12:52:37 GMT
 ```
 
-Here, the cookie is `session=7dbbb1c5-89f4-...`, etc. If you include this data with any subsequent requests to the server, it will know that you are the same person as before. 
+Here, the cookie is `session=7dbbb1c5-89f4-...`, etc. If you include this data with any subsequent requests to the server, it will know that you are the same person as before.
 
 
 ### Why They're No Good ###
@@ -70,14 +69,15 @@ And the server responds with a unique token:
 
     Token: 2retnuhegroeg
 
-This can _only_ be associated with this particular user.<sup><a href="#footnote-1">[1]</a></sup> Obviously you wouldn't use this as a token, since it clearly exposes the username and password if anyone else were to see it, but the point stands. Any request can include this value as a token and the server will know that this person is logged in. We can achieve the same effect in a secure way using cryptography.
+This can _only_ be associated with this particular user.<sup><a href="#footnote-1">[1]</a></sup> Obviously you wouldn't use this as a token, since it clearly exposes the username and password if anyone else were to see it, but the point stands. Any request can include this value as a token and the server will know that this person is logged in as "george". We can achieve the same effect in a secure way using cryptography.
 {: #footnote-1-root}
+
 
 ### Message Authentication Codes ###
 This section gets pretty technical, but I will try to make things simple for those not familiar with cryptography.
 {: .notice--warning}
 
-An [HMAC](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code), or hash-based message authentication code, is used to create a one-way association between a value with another unique value. One-way means that the unique value is _no longer associatable with the original value_. To create an HMAC, you start with the value you wish to convert and some secret value, then run them through a hashing algorithm.
+An [HMAC](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code), or hash-based message authentication code, is used to create a one-way association between a value and another unique value. One-way means that the unique value is _no longer associatable with the original value_. To create an HMAC, you start with the value you wish to convert and some secret value, then run them through a hashing algorithm.
 
 > For example, using [this tool](https://www.freeformatter.com/hmac-generator.html), the HMAC of the value "george" with the secret key "secret" using the MD5 hashing algorithm is  
 > `b94624b9274af8d0843d8dea6108577a`
@@ -109,7 +109,8 @@ X-Auth-Token: id=5;token=090b4d082bd7adc1b223086d1d9f8dc4
 
 Both of these pieces of information are critical for the server to believe we are who we say we are. The token alone isn't enough; it's a one-way value, so it _only_ proves that we logged in successfully at some point in time. Hence, the user ID is also necessary so that the server also knows _who_ we are. Then, the server can then verify the token by calculating it themselves. They know the credentials associated with the ID, and they know the secret, so they can follow the same formula and make sure the tokens match.
 
-Why is this secure? Because **users can't fake tokens** due to the fact that they don't know the server's secret.
+Why is this secure? Because **users don't know the server's secret,** so they can't fake tokens. The only way they can acquire a valid one is by successfully logging into the server.
+
 
 # Conclusion #
 With this method, we can have fully memory-less sessions. This improves scalability, and also let's us do some fancy cryptography. It comes with the price that we now have to query the database whenever we need something (like the user information), so we can't do any session caching, but it also comes with the benefit that, well, we don't have to do any session caching.
