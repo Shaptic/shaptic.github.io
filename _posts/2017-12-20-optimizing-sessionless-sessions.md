@@ -113,7 +113,7 @@ Why is this secure? Because **users don't know the server's secret,** so they ca
 
 
 # Conclusion #
-With this method, we can have fully memory-less sessions. This improves scalability, and also let's us do some fancy cryptography. It comes with the price that we now have to query the database whenever we need something (like the user information), so we can't do any session caching, but it also comes with the benefit that, well, we don't have to do any session caching.
+With this method, we can have fully memory-less sessions. This improves scalability, and also lets us do some fancy cryptography. It comes with the price that we now have to query the database whenever we need something (like the user information), so we can't do any session caching, but it also comes with the benefit that, well, we don't have to do any session caching.
 
 Most importantly, though, it means I don't need to rewrite my requests and callbacks in C++ in my Qt front-end.
 
