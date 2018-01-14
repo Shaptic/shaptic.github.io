@@ -20,6 +20,34 @@ If these recipes look tasty and you want pictures, varieties, and more recipes, 
 
 {% include toc icon="cutlery" title="Jump to a recipe!" %} 
 
+## Shrimp Chowder ##
+👌👌👌
+
+### Ingredients ###
+  - 1 lb,       peeled & deveined shrimp
+  - 4 tbsp,     butter
+  - 1,          yellow onion, diced
+  - 1/2 cup,    celery, diced
+  - 4 cloves,   garlic, minced
+  - 2 tbsp,     all-purpose flour
+  - 1 1/2 tbsp, smoked paprika
+  - 1,          bay leaf
+  - 4 cups,     stock, preferably seafood
+  - 1 lb,       Yukon gold potatoes, diced
+  - 2 1/2 cups, frozen corn kernels
+  - 1 cup,      half & half or heavy cream
+  - garnish,    green onions (scallions)
+
+### Preparation ###
+  - In a _large pot_ or _dutch oven_, heat **1 tbsp of the butter** over medium-high heat. When it has melted, cook the **shrimp** for 4-7 minutes or until they become completely opaque. Remove and set them aside.
+  - Heat the remaining **3 tbsp of butter** and cook the **onions** and **celery** for 3-4 minutes. Add the **garlic** and **flour**, cooking for an additional 2 minutes. When the flour begins to brown, add the **smoked paprika**, **bay leaf**, **stock**, and **potatoes**. 
+  - Bring the soup to a boil, stirring occasionally. Reduce the heat to low and simmer (uncovered!) for 15 minutes. Add the **frozen corn** and simmer for another 15 minutes.
+  - While the soup is simmering, set aside 8-10 shrimp as a finishing garnish. Chop the rest into bite-sized pieces. Add the chopped shrimp, heavy cream, and Old Bay seasoning into the soup. Stir until the cream is incorporated and turn the heat up to low to allow the chowder to heat through.
+  - Serve warm, topped with scallions and whole shrimp.
+
+**Tip**: I prefer to mince about half of the shrimp into tiny, rather than chopping them into bite-sized ones. This gets more shrimp flavor into every bite!
+
+
 ## Spinach Tagliatelle with Shrimp ##
 This is a fantastic dinner dish and looks very fancy when presented properly. For best results, apply the cheese when serving and don't toss the shrimp after adding the cilantro. Just sliiiide it onto a plate of the tagliatelle. 
 
