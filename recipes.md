@@ -35,6 +35,7 @@ This chowder is fantastic. It's _very_ heavy in fat content, though, so keep por
   - 4 cups,     stock, preferably seafood
   - 1 lb,       Yukon gold potatoes, diced
   - 2 1/2 cups, frozen corn kernels
+  - 2 tbsp,     Old Bay seasoning
   - 1 cup,      half & half or heavy cream
   - garnish,    green onions (scallions)
 
@@ -42,10 +43,11 @@ This chowder is fantastic. It's _very_ heavy in fat content, though, so keep por
   - In a _large pot_ or _dutch oven_, heat **1 tbsp of the butter** over medium-high heat. When it has melted, cook the **shrimp** for 4-7 minutes or until they become completely opaque. Remove and set them aside.
   - Heat the remaining **3 tbsp of butter** and cook the **onions** and **celery** for 3-4 minutes. Add the **garlic** and **flour**, cooking for an additional 2 minutes. When the flour begins to brown, add the **smoked paprika**, **bay leaf**, **stock**, and **potatoes**. 
   - Bring the soup to a boil, stirring occasionally. Reduce the heat to low and simmer (uncovered!) for 15 minutes. Add the **frozen corn** and simmer for another 15 minutes.
-  - While the soup is simmering, set aside 8-10 shrimp as a finishing garnish. Chop the rest into bite-sized pieces. Add the chopped shrimp, heavy cream, and Old Bay seasoning into the soup. Stir until the cream is incorporated and turn the heat up to low to allow the chowder to heat through.
-  - Serve warm, topped with scallions and whole shrimp.
+  - While the soup is simmering, set aside 8-10 **shrimp** as a finishing garnish. Chop the rest into bite-sized pieces. Add the chopped shrimp, **heavy cream**, and **Old Bay** into the soup. Stir until the cream is incorporated and turn the heat up to low to allow the chowder to heat through.
+  - Serve warm, topped with **scallions** and whole shrimp.
 
-**Tip**: I prefer to mince about half of the shrimp into tiny, rather than chopping them into bite-sized ones. This gets more shrimp flavor into every bite! {: .notice--info}
+**Tip**: I prefer to mince about half of the shrimp into tiny, rather than chopping them into bite-sized ones. This gets more shrimp flavor into every bite!
+{: .notice--info}
 
 
 ## Spinach Tagliatelle with Shrimp ##
@@ -107,7 +109,8 @@ This makes for an excellent snack (if you can control yourself) or lunch dish (i
 
 **Note**: This means that a single quesadilla uses two tortillas, one on top and one on bottom. The tortilla will shrink as you toast it. This means the top tortilla will be larger if placed directly.
 
-**Tip**: I recommend preparing the two sides individually -- one with cheese and the other with the guacamole -- and then combining them. This can be much easier than flipping a full quesadilla. {: .notice--info}
+**Tip**: I recommend preparing the two sides individually -- one with cheese and the other with the guacamole -- and then combining them. This can be much easier than flipping a full quesadilla.
+{: .notice--info}
 
 ## Avocado Baked Eggs ##
 This makes for an incredibly rich and simple breakfast dish, but the prep work can be a little tedious without experience. [Source](https://pescetarian.kitchen/avocado-baked-eggs/).
@@ -158,7 +161,8 @@ This recipe is a fantastic way to replicate restaurant-style fried rice and know
   - Add **sesame oil** and mix well.
   - Garnish with **sesame seeds** if desired.
 
-**Tip**: if there's a lot of liquid after sautéing the vegetables, drain about half of it so that the final product isn't too soggy. {: .notice--info}
+**Tip**: if there's a lot of liquid after sautéing the vegetables, drain about half of it so that the final product isn't too soggy.
+{: .notice--info}
 
 ## Spanish-Style Egg Muffins ##
 These make a perfect breakfast snack. The recipe makes 12, but they taste fantastic reheated.
