@@ -21,7 +21,9 @@ If these recipes look tasty and you want pictures, varieties, and more recipes, 
 {% include toc icon="cutlery" title="Jump to a recipe!" %} 
 
 ## Shrimp Chowder ##
-This chowder is fantastic. It's _very_ heavy in fat content, though, so keep portions small if you're on a diet. ;) You can try replacing the butter with olive oil for a healthier option, but I have not tried this so I cannot say how it affects the final taste. 👌👌👌 [Source](http://littlespicejar.com/shrimp-and-corn-chowder/).
+This chowder is fantastic.  👌👌👌 It's _very_ heavy in fat content, though, so keep portions small if you're on a diet. ;) You can try replacing the butter with olive oil for a healthier option, but I have not tried this so I cannot say how it affects the final taste. 
+
+If you want a simple "veggie chowder" (is that a thing?), simply omit the shrimp and use vegetable stock. It still makes an excellent soup. [Source](http://littlespicejar.com/shrimp-and-corn-chowder/).
 
 ### Ingredients ###
   - 1 lb,       peeled & deveined shrimp
@@ -108,6 +110,7 @@ This makes for an excellent snack (if you can control yourself) or lunch dish (i
   - After 2 minutes, the second tortilla should also be toasted. Remove the quesadilla from the pan and serve.
 
 **Note**: This means that a single quesadilla uses two tortillas, one on top and one on bottom. The tortilla will shrink as you toast it. This means the top tortilla will be larger if placed directly.
+{: .notice}
 
 **Tip**: I recommend preparing the two sides individually -- one with cheese and the other with the guacamole -- and then combining them. This can be much easier than flipping a full quesadilla.
 {: .notice--info}
@@ -132,6 +135,7 @@ This makes for an incredibly rich and simple breakfast dish, but the prep work c
   - Let stand 1 minute before serving, unless you have a mouth of steel.
 
 **Note**: the eggs will not be cooked solid (and will wobble), but this is intentional and they are fully cooked.
+{: .notice}
 
 ## Vegetable Fried Rice ##
 This recipe is a fantastic way to replicate restaurant-style fried rice and know exactly what is in it! [Source](http://allrecipes.com/recipe/21186/vegetable-fried-rice/).
