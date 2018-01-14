@@ -21,7 +21,7 @@ If these recipes look tasty and you want pictures, varieties, and more recipes, 
 {% include toc icon="cutlery" title="Jump to a recipe!" %} 
 
 ## Shrimp Chowder ##
-👌👌👌
+This chowder is fantastic. It's _very_ heavy in fat content, though, so keep portions small if you're on a diet. ;) You can try replacing the butter with olive oil for a healthier option, but I have not tried this so I cannot say how it affects the final taste. 👌👌👌 [Source](http://littlespicejar.com/shrimp-and-corn-chowder/).
 
 ### Ingredients ###
   - 1 lb,       peeled & deveined shrimp
