@@ -37,7 +37,7 @@ If you want a simple "veggie chowder" (is that a thing?), simply omit the shrimp
   - 4 cups,     stock, preferably seafood
   - 1 lb,       Yukon gold potatoes, diced
   - 2 1/2 cups, frozen corn kernels
-  - 2 tbsp,     Old Bay seasoning
+  - 2 tsp,      Old Bay seasoning
   - 1 cup,      half & half or heavy cream
   - garnish,    green onions (scallions)
 
@@ -48,7 +48,7 @@ If you want a simple "veggie chowder" (is that a thing?), simply omit the shrimp
   - While the soup is simmering, set aside 8-10 **shrimp** as a finishing garnish. Chop the rest into bite-sized pieces. Add the chopped shrimp, **heavy cream**, and **Old Bay** into the soup. Stir until the cream is incorporated and turn the heat up to low to allow the chowder to heat through.
   - Serve warm, topped with **scallions** and whole shrimp.
 
-**Tip**: I prefer to mince about half of the shrimp into tiny, rather than chopping them into bite-sized ones. This gets more shrimp flavor into every bite!
+**Tip**: I prefer to mince about half of the shrimp into tiny pieces, rather than chopping them into bite-sized ones. This gets more shrimp flavor into every bite!
 {: .notice--info}
 
 
