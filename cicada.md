@@ -51,5 +51,3 @@ In today's inherently centralized Internet world, scaling a cloud-based applicat
 
 ## Resilient Architecture ##
 {: #section-resilient}
-
-[Beacon](https://s3.amazonaws.com/aws-website-beacon-0mhh5/whitepaper.pdf)
