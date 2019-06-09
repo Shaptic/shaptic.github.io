@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bits, Bytes, Late Nights</title>
-    <link>http://teapowered.dev/</link>
+    <link>https://teapowered.dev/</link>
     <description>Recent content on Bits, Bytes, Late Nights</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://teapowered.dev/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://teapowered.dev/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hello there,</title>
-      <link>http://teapowered.dev/about/</link>
+      <link>https://teapowered.dev/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://teapowered.dev/about/</guid>
+      <guid>https://teapowered.dev/about/</guid>
       <description>* { text-align: justify; } I&amp;rsquo;m George.
 I study computer science and sometimes cook nice things. I&amp;rsquo;m particularly interested in cryptography, peer-to-peer technologies, and applications of virtual and augmented reality. I also enjoy longboarding, rock climbing, and searching for the perfect nacho dish.
 You can check out my resume, or my \(\LaTeX\)&amp;rsquo;d notes for some of the graduate courses I&amp;rsquo;ve taken at the Georgia Institute of Technology. So far, I have compiled a comprehensive introduction to computer vision as well as a brief overview of the applications of machine learning algorithms to financial trading.</description>
