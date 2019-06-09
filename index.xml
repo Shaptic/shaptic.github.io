@@ -6,9 +6,39 @@
     <description>Recent content on Bits, Bytes, Late Nights</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Fri, 07 Jun 2019 01:35:47 -0700</lastBuildDate>
     
 	<atom:link href="https://teapowered.dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Notes</title>
+      <link>https://teapowered.dev/notes/</link>
+      <pubDate>Fri, 07 Jun 2019 01:35:47 -0700</pubDate>
+      
+      <guid>https://teapowered.dev/notes/</guid>
+      <description>li { margin-bottom: 1.5em };   Computer Vision &amp;mdash; this guide provides a (relatively) gentle introduction to computer vision starting from &amp;ldquo;old school&amp;rdquo; techniques and building up to modern machine learning algorithms. It does require a mathematical foundation; a basic understanding of concepts from linear algebra and calculus are assumed, though links to outside resources are provided where it&amp;rsquo;s relevant.
+ Machine Learning for Trading
+  </description>
+    </item>
+    
+    <item>
+      <title>My Pescetarian Recipe Collection</title>
+      <link>https://teapowered.dev/recipes/</link>
+      <pubDate>Thu, 06 Jun 2019 23:14:16 -0700</pubDate>
+      
+      <guid>https://teapowered.dev/recipes/</guid>
+      <description>A collection of tasty pescetarian recipes that I&amp;rsquo;ve gathered over the years with my personal tweaks and suggestions included.</description>
+    </item>
+    
+    <item>
+      <title>Tracking Your Every Move Through Your Devices</title>
+      <link>https://teapowered.dev/posts/mac-address-tracking/</link>
+      <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/posts/mac-address-tracking/</guid>
+      <description>Or, abusing MAC addresses for fun and profit (well, no profit unless you&amp;rsquo;re a massive corporation or the government&amp;hellip;).</description>
+    </item>
     
     <item>
       <title>Hello there,</title>
