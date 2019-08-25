@@ -5,7 +5,6 @@
   <url>
     <loc>https://teapowered.dev/</loc>
     <lastmod>2019-06-07T01:35:47-07:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -21,7 +20,6 @@
   <url>
     <loc>https://teapowered.dev/posts/</loc>
     <lastmod>2017-07-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -31,7 +29,6 @@
   
   <url>
     <loc>https://teapowered.dev/categories/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -40,7 +37,6 @@
   
   <url>
     <loc>https://teapowered.dev/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
