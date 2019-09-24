@@ -17,7 +17,7 @@
       <pubDate>Fri, 07 Jun 2019 01:35:47 -0700</pubDate>
       
       <guid>https://teapowered.dev/notes/</guid>
-      <description>li { margin-bottom: 1.5em };   Computer Vision &amp;mdash; this guide provides a (relatively) gentle introduction to computer vision starting from &amp;ldquo;old school&amp;rdquo; techniques like the Hough transform for shape detection and Lucas-Kanade for motion estimation, building up to modern machine learning algorithms like principal component analysis and hidden Markov models for facial recognition. It requires a strong mathematical foundation: a basic understanding of concepts from linear algebra and calculus is assumed, though helpful links to outside resources are provided where it&amp;rsquo;s relevant.</description>
+      <description>li { margin-bottom: 1.5em };   Computer Vision and Computational Photography &amp;mdash; this guide provides a (relatively) gentle introduction to concepts and algorithms in both computer vision and computational photography, starting from basic image processing, building up to &amp;ldquo;old school&amp;rdquo; vision techniques like the Hough transform for shape detection and Lucas-Kanade for motion estimation, and closing out with modern machine learning algorithms like principal component analysis and hidden Markov models for facial recognition.</description>
     </item>
     
     <item>
