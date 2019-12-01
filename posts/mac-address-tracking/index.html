@@ -109,7 +109,7 @@ Tracking Your Every Move Through Your Devices - Bits, Bytes, Late Nights
 
         
 <div class="section" id="content">
-    July 7 &#183; 1443 words
+    July 7 &#183; 1514 words
     
     <hr/>
     <p>If you don't want to read this post at all: <a href="https://en.wikipedia.org/wiki/Mac_address#Tracking">here's the tl;dr</a>. This post dives into the details of how this is possible, and what the average person can do to make it less possible.</p>
@@ -122,10 +122,24 @@ Tracking Your Every Move Through Your Devices - Bits, Bytes, Late Nights
 <p>If it's done intelligently, the device will identify the network by what's called a <a href="https://en.wikipedia.org/wiki/Mac_address">MAC address</a> (<strong>M</strong>edia <strong>A</strong>ccess <strong>C</strong>ontrol address). This is a value that <em>uniquely identifies any WiFi-enabled device</em> &ndash; in this case, the router in the coffee shop. So this value coupled with the WiFi network name will be automatically joined if your device picks it up. If it's not that smart, it'll just try any WiFi network that matches the name.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <p>In addition to this automatic search &amp; connect, most mobile devices also try out <em>any</em> open WiFi networks to try to get Internet access and save that precious data plan.</p>
 <h3 id="the-implications-of-a-universally-unique-identifier">The Implications of a Universally Unique Identifier</h3>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div class="notice warning">
+  <p><strong>Warning</strong>: This section is a bit more technical, but will highlight the
+implications of this device-specific, unique ID<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> known as the MAC address.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>MAC addresses can be spoofed (faked), and not every manufacturer   generates a unique ID for each their devices, but this applies as a general  rule.<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
+</li>
+</ol>
+</section>
+</div>
 <p>A MAC address is just a value made of 6 pairs of <a href="https://en.wikipedia.org/wiki/Hexadecimal">hexadecimal numbers</a>. The first 3 pairs are usually assigned and associated with a particular hardware manufacturer, such as Apple or Samsung:</p>
-<!-- raw HTML omitted -->
+<p style="align-self: center">
+  $$ \underbrace{\texttt{A4:B8:05}}_{
+          \rlap{\text{one of the Apple Inc. prefixes}}
+      }\texttt{:44:D3:AD} $$
+</p>
 <p>These MAC addresses are used for routing Internet traffic &ndash; it's (part of) how Facebook knows to send your ex-girlfriend's new profile picture to <em>you</em>, not your neighbor. Facebook itself doesn't see the MAC address, but your router does and keeps track of it.</p>
 <p><strong>So what?</strong> Well, any time you're connected to a WiFi network, anyone else on that same network can <em>also</em> find out your MAC address. This isn't a big deal on the surface, because that information is necessary for them to be able to communicate with you, but remember, it's a <em>unique ID for your device</em>.</p>
 <p>For example, on my home network, I can find all of my devices:</p>
@@ -133,7 +147,9 @@ Tracking Your Every Move Through Your Devices - Bits, Bytes, Late Nights
     EC:08:xx:xx:xx:xx   <span style="color:#228b22"># my router</span>
     B8:27:xx:xx:xx:xx   <span style="color:#228b22"># my laptop</span>
     D4:63:xx:xx:xx:xx   <span style="color:#228b22"># my TV</span>
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><div class="notice info">
+  For simplicity, let's call the MAC address the &ldquo;device ID&rdquo; from now on.
+</div>
 <p>Now imagine you're sitting in a coffee shop on their WiFi and find the device
 IDs of everyone else in the coffee shop. Then, you write them down on a napkin,
 pack your bags, and head to the coffee shop down the street. Here, you do the
@@ -241,7 +257,7 @@ might conclude that we have destroyed our privacy in exchange for convenience
 and false security.<br>
         &ndash; <em>John Twelve Hawks</em></p>
 </blockquote>
-<!-- raw HTML omitted -->
+<!-- #### Footnotes #### -->
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
