@@ -39,7 +39,7 @@ Optimizing Sessionless Sessions - Bits, Bytes, Late Nights
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [['$','$'], ['\\(','\\)']],
-      displayMath: [['$$','$$'], ['\[','\]']],
+      displayMath: [['$$','$$']],
       processEscapes: true,
       processEnvironments: true,
       skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
@@ -184,9 +184,9 @@ tool</a>, the HMAC of the value
 <p>From now on, we'll refer to this resulting unique, one-way HMAC value as the
 <strong>token</strong>.</p>
 <p>Now, how do we use these for sessions? We will create these tokens based on the login data! The user logs in as usual sending their username and password, and the server responds with the user ID and the token:<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
-<p>[
+<p>$$
 t = \text{HMAC}_{s}\left(u ,|, p\right)
-]</p>
+$$</p>
 <p>Where $t$ is the resulting token, $s$ is the secret key that only the server knows, and $u, p$ are the username and password, respectively.</p>
 <div class="notice info">
   <strong>An Aside on User IDs</strong><br>
