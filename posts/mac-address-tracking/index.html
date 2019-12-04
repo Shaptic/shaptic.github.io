@@ -26,17 +26,18 @@ Tracking Your Every Move Through Your Devices - Bits, Bytes, Late Nights
 
 
 
-<link rel="stylesheet" href="/css/main.min.9fd69632a5cadf940df22c9a64c72906ed2fd6e010718dd1f0a11f6985826630.css" integrity="sha256-n9aWMqXK35QN8iyaZMcpBu0v1uAQcY3R8KEfaYWCZjA=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.b7f47cd02fb9210be6b3bc82891ec497101a07563a2b27f42b9388306d121c63.css" integrity="sha256-t/R80C&#43;5IQvms7yCiR7ElxAaB1Y6Kyf0K5OIMG0SHGM=" crossorigin="anonymous" media="screen">
 
 
 
  
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML">
 </script>
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
       inlineMath: [['$','$'], ['\\(','\\)']],
       displayMath: [['$$','$$']],
@@ -45,24 +46,20 @@ Tracking Your Every Move Through Your Devices - Bits, Bytes, Late Nights
       skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
       TeX: { equationNumbers: { autoNumber: "AMS" },
            extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax": {
+          "padding-left": "2em",
+        }
+      }
     }
   });
 </script>
 
 
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tracking Your Every Move Through Your Devices"/>
-<meta name="twitter:description" content="Or, abusing MAC addresses for fun and profit (well, no profit unless you&#39;re a massive corporation or the government&hellip;)."/>
-
-<meta property="og:title" content="Tracking Your Every Move Through Your Devices" />
-<meta property="og:description" content="Or, abusing MAC addresses for fun and profit (well, no profit unless you&#39;re a massive corporation or the government&hellip;)." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://teapowered.dev/posts/mac-address-tracking/" />
-<meta property="article:published_time" content="2017-07-07T00:00:00+00:00" />
-<meta property="article:modified_time" content="2017-07-07T00:00:00+00:00" />
-
 
 
 
@@ -131,7 +128,7 @@ Tracking Your Every Move Through Your Devices - Bits, Bytes, Late Nights
 
         
 <div class="section" id="content">
-    July 7 &#183; 1514 words
+    July 7 &#183; 1511 words
     
     <hr/>
     <p>If you don't want to read this post at all: <a href="https://en.wikipedia.org/wiki/Mac_address#Tracking">here's the tl;dr</a>. This post dives into the details of how this is possible, and what the average person can do to make it less possible.</p>
@@ -140,23 +137,15 @@ Tracking Your Every Move Through Your Devices - Bits, Bytes, Late Nights
 <p>This proliferation of technology provides us with a whirlwind of convenience, accessibility, customization, and more. But, it comes at a very severe cost that isn't obvious on the surface: <strong>privacy</strong>. Now I'm not talking about your always-on GPS constantly transmitting exact coordinates (because disabling location means you can't use Snapchat filters), <a href="https://panopticlick.eff.org/">full device information</a> being available to any website, <a href="https://en.wikipedia.org/wiki/Exif#Privacy_and_security">location and other metadata</a> in any online photo uploads, <a href="https://www.dailydot.com/news/facebook-shadow-profiles-privacy-faq/">&ldquo;shadow profiles&rdquo; created by social networks</a> to track those of you that don't even <em>use</em> them, <a href="https://en.wikipedia.org/wiki/Tracking_cookies#Tracking">tracking cookies</a> that are <a href="http://i3.kym-cdn.com/photos/images/newsfeed/000/594/192/596.gif">&ldquo;only&rdquo;</a> used for targeted advertisement, or any of the other privacy concerns that have risen in the recent data-mining craze.</p>
 <p>I'm talking about a <em>universal</em> method to track a person's location regardless of the type of device they use, what software they have installed, or what websites they visit. I'm talking about <strong>open WiFi networks.</strong></p>
 <h2 id="who-doesnt-love-free-wifi">Who Doesn't Love Free WiFi?</h2>
-<p>When was the last time you checked your email on your phone or caught up on some studying on your laptop at a coffee shop while waiting for your double-fat whole soy milk upside-down whatever using their free WiFi? Well, your device remembered that WiFi network so that you can join it automatically the next time your there. To do this, it actually actively searches for it any time you aren't connected to WiFi.</p>
+<p>When was the last time you checked your email on your phone or caught up on some studying on your laptop at a coffee shop while waiting for your upside-down oat milk latté using their free WiFi? Well, your device remembered that WiFi network so that you can join it automatically the next time your there. To do this, it actually actively searches for it any time you aren't connected to WiFi.</p>
 <p>If it's done intelligently, the device will identify the network by what's called a <a href="https://en.wikipedia.org/wiki/Mac_address">MAC address</a> (<strong>M</strong>edia <strong>A</strong>ccess <strong>C</strong>ontrol address). This is a value that <em>uniquely identifies any WiFi-enabled device</em> &ndash; in this case, the router in the coffee shop. So this value coupled with the WiFi network name will be automatically joined if your device picks it up. If it's not that smart, it'll just try any WiFi network that matches the name.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <p>In addition to this automatic search &amp; connect, most mobile devices also try out <em>any</em> open WiFi networks to try to get Internet access and save that precious data plan.</p>
 <h3 id="the-implications-of-a-universally-unique-identifier">The Implications of a Universally Unique Identifier</h3>
 <div class="notice warning">
-  <p><strong>Warning</strong>: This section is a bit more technical, but will highlight the
-implications of this device-specific, unique ID<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> known as the MAC address.</p>
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p>MAC addresses can be spoofed (faked), and not every manufacturer   generates a unique ID for each their devices, but this applies as a general  rule.<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
-</li>
-</ol>
-</section>
+  <strong>Warning</strong>: This section is a bit more technical, but will highlight the
+implications of this device-specific, unique ID known as the MAC address.
 </div>
-<p>A MAC address is just a value made of 6 pairs of <a href="https://en.wikipedia.org/wiki/Hexadecimal">hexadecimal numbers</a>. The first 3 pairs are usually assigned and associated with a particular hardware manufacturer, such as Apple or Samsung:</p>
+<p>A MAC address is just a value made of 6 pairs of <a href="https://en.wikipedia.org/wiki/Hexadecimal">hexadecimal numbers</a>. The first 3 pairs are usually assigned and associated with a particular hardware manufacturer,<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> such as Apple or Samsung:</p>
 <p style="align-self: center">
   $$ \underbrace{\texttt{A4:B8:05}}_{
           \rlap{\text{one of the Apple Inc. prefixes}}
@@ -172,38 +161,10 @@ implications of this device-specific, unique ID<sup id="fnref:1"><a href="#fn:1"
 </code></pre></div><div class="notice info">
   For simplicity, let's call the MAC address the &ldquo;device ID&rdquo; from now on.
 </div>
-<p>Now imagine you're sitting in a coffee shop on their WiFi and find the device
-IDs of everyone else in the coffee shop. Then, you write them down on a napkin,
-pack your bags, and head to the coffee shop down the street. Here, you do the
-same thing, but this time, you hang out for a bit and enjoy your latte.
-Eventually, you scan for device IDs again and guess what you see&hellip; A new one
-that <em>matches one on your napkin</em>. That means&hellip; <em>someone from the last coffee
-shop is here, too</em>. You don't know who they are yet (but you do know what kind
-of device it is! remember the prefix from before?), but you <em>have</em> tracked
-their location!</p>
-<p>Let's extrapolate this scenario further. You've created 25 clones of yourself
-(while holding your laptop, so that got cloned too! 🙌) and are now hanging out
-at 26 coffee shops at once. You are sipping your lattes and scanning for
-devices. You'll see the coffee shop patrons, obviously, but because the
-passerby's phones will occasionally try to connect to these free coffee shop
-WiFis, you'll see their device IDs too. At the end of the day, you and your
-clones gather together and compare notes. You notice that there is a device
-that goes near coffee shop #1 to #7 to #8. Boom, you're now tracking someone's
-location. How do you know the location? Well, either your clones wrote down
-where they were, or you just <a href="https://developers.google.com/maps/documentation/geolocation/">ask Google to tell
-you</a>, because of
-course Google has an extensive database of open WiFi in the entire country. You
-can thank Street View drivers and Android users for that.</p>
+<p>Now imagine you're sitting in a coffee shop on their WiFi and find the device IDs of everyone else in the coffee shop. Then, you write them down on a napkin, pack your bags, and head to the coffee shop down the street. Here, you do the same thing, but this time, you hang out for a bit and enjoy your latte. Eventually, you scan for device IDs again and guess what you see&hellip; A new one that <em>matches one on your napkin</em>. That means&hellip; <em>someone from the last coffee shop is here, too</em>. You don't know who they are yet (but you do know what kind of device it is! remember the prefix from before?), but you <em>have</em> tracked their location!</p>
+<p>Let's extrapolate this scenario further. You've created 25 clones of yourself (while holding your laptop, so that got cloned too! 🙌) and are now hanging out at 26 coffee shops at once. You are sipping your lattes and scanning for devices. You'll see the coffee shop patrons, obviously, but because the passerby's phones will occasionally try to connect to these free coffee shop WiFis, you'll see their device IDs too. At the end of the day, you and your clones gather together and compare notes. You notice that there is a device that goes near coffee shop #1 to #7 to #8. Boom, you're now tracking someone's location. How do you know the location? Well, either your clones wrote down where they were, or you just <a href="https://developers.google.com/maps/documentation/geolocation/">ask Google to tell you</a>, because of course Google has an extensive database of open WiFi in the entire country. You can thank Street View drivers and Android users for that.</p>
 <h2 id="putting-it-all-together">Putting It All Together</h2>
-<p>Instead of unrealistic clones that are limited by the speed of a human's brain,
-let's harness the power of computers to gather this information for us. What if
-we had a program that would automatically scan &amp; connect to all open WiFi
-networks, found all of the device IDs, and transmitted them to a central
-server. Then, we set up [tiny devices](<a href="https://www.raspberrypi.org/products">https://www.raspberrypi.org/products</a>
-/raspberry-pi-zero-w/) all over the place to create a sort of surveillance
-network. Then, we can correlate device IDs at the central server in order to
-track individual devices across the network (and, the exact GPS location via
-Google).</p>
+<p>Instead of unrealistic clones that are limited by the speed of a human's brain, let's harness the power of computers to gather this information for us. What if we had a program that would automatically scan &amp; connect to all open WiFi networks, found all of the device IDs, and transmitted them to a central server. Then, we set up <a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">tiny devices</a> all over the place to create a sort of surveillance network. Then, we can correlate device IDs at the central server in order to track individual devices across the network (and, the exact GPS location via Google).</p>
 <p>In fact, I wrote a set of scripts to do this. You can <a href="https://github.com/Shaptic/Big-Brother">find it here [Linux
 only]</a>. Here is how it looks:</p>
 <h4 id="on-the-correlation-server">On the correlation server</h4>
@@ -231,37 +192,22 @@ Detected open WiFi network: &quot;I-Dont-Use-A-Password&quot;... connected.
 ...
 Transmitting findings to surveillance server... done.
 </code></pre>
-<p>Creepy, right? And I'm just an average person. Imagine if I had the resources
-of a massive corporation or the government.</p>
+<p>Creepy, right? And I'm just an average person. Imagine if I had the resources of a massive corporation or the government.</p>
 <figure>
     <img src="/img/iphone-wifi-sized.png"
          alt="iPhone connecting to Google Starbucks"/> 
 </figure>
 
-<p>Someone like Google doesn't even need to go so far as to set up devices, they
-just need to <em>become the free WiFi provider</em>. Case in point&hellip; You can actually
-see your browser transmit this information when you click &ldquo;Accept &amp; Connect&rdquo;
-(or whatever variation there-of), in your browser:</p>
+<p>Someone like Google doesn't even need to go so far as to set up devices, they just need to <em>become the free WiFi provider</em>. Case in point&hellip; You can actually see your browser transmit this information when you click &ldquo;Accept &amp; Connect&rdquo; (or whatever variation there-of), in your browser:</p>
 <pre><code>http://sbux-portal.appspot.com/splash?mac=[your-device-id]&amp;apname=[wifi-device-id]
 </code></pre>
-<p>Do you really think they're providing this out of the goodness of their virtual
-hearts? The government goes a step further: they can just use their <a href="https://wikileaks.org/vault7/releases/#Cherry%20Blossom">arsenal of
-hacking tools</a> to take
-over <em>any</em> wireless hotspot and transmit this same data, as evidenced by their
-<em>Cherry Blossom</em> project:</p>
+<p>Do you really think they're providing this out of the goodness of their virtual hearts? The government goes a step further: they can just use their <a href="https://wikileaks.org/vault7/releases/#Cherry%20Blossom">arsenal of hacking tools</a> to take over <em>any</em> wireless hotspot and transmit this same data, as evidenced by their <em>Cherry Blossom</em> project:</p>
 <blockquote>
-<p><em>CherryBlossom</em> is focused on <strong>compromising wireless networking devices,
-such as wireless routers</strong> and access points (APs), to achieve these goals.</p>
-<p>Tasks for a <em>Flytrap</em> include (among others) the scan for <em>email addresses</em>,
-<em>chat usernames</em>, <em><strong>MAC addresses</strong></em> and <em>VoIP numbers</em> in passing network
-traffic to trigger additional actions, &hellip;</p>
+<p><em>CherryBlossom</em> is focused on <strong>compromising wireless networking devices, such as wireless routers</strong> and access points (APs), to achieve these goals.</p>
+<p>Tasks for a <em>Flytrap</em> include (among others) the scan for <em>email addresses</em>, <em>chat usernames</em>, <em><strong>MAC addresses</strong></em> and <em>VoIP numbers</em> in passing network traffic to trigger additional actions, &hellip;</p>
 </blockquote>
 <h1 id="conclusion">Conclusion</h1>
-<p>At the end of the day, what can we do about it? Well, it's near-impossible to
-ensure your privacy across the Internet at large (especially not from the
-government) but for this particular <a href="https://en.wikipedia.org/wiki/Vector_(malware)">attack
-vector</a>, here is what you can
-try:</p>
+<p>At the end of the day, what can we do about it? Well, it's near-impossible to ensure your privacy across the Internet at large (especially not from the government) but for this particular <a href="https://en.wikipedia.org/wiki/Vector_(malware)">attack vector</a>, here is what you can try:</p>
 <ul>
 <li>Don't use open wireless networks.</li>
 <li>Only have WiFi enabled when you're using it.</li>
@@ -269,14 +215,9 @@ try:</p>
 <li>If your device supports it, change your MAC address frequently (MAC
 spoofing).</li>
 </ul>
-<p>If you decide that connecting to an open WiFi network is worth it, <em>never</em> do
-anything involving secure data (passwords, account numbers, etc.). Anything you
-do on a wireless network can be seen, intercepted, and even modified by other
-users.</p>
+<p>If you decide that connecting to an open WiFi network is worth it, <em>never</em> do anything involving secure data (passwords, account numbers, etc.). Anything you do on a wireless network can be seen, intercepted, and even modified by other users.</p>
 <blockquote>
-<p>Anyone who steps back for a minute and observes our modern digital world
-might conclude that we have destroyed our privacy in exchange for convenience
-and false security.<br>
+<p>Anyone who steps back for a minute and observes our modern digital world might conclude that we have destroyed our privacy in exchange for convenience and false security.<br>
         &ndash; <em>John Hawks</em></p>
 </blockquote>
 <!-- #### Footnotes #### -->
@@ -285,6 +226,9 @@ and false security.<br>
 <ol>
 <li id="fn:1" role="doc-endnote">
 <p>This is actually an exploitation technique called a <a href="https://blog.lookout.com/spoofed-wifi-60-minutes">Man-in-the-Middle attack</a> where you create a custom WiFi network and call it something generic (like &ldquo;Starbucks&rdquo;) and then devices will automatically try to connect to it because they recognize the name.<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>MAC addresses can be spoofed (faked), and not every manufacturer   generates a unique ID for each their devices, but this applies as a general  rule.<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
 </li>
 </ol>
 </section>
