@@ -17,7 +17,7 @@ Tracking Your Every Move Through Your Devices - Bits, Bytes, Late Nights
 
 
 
-<link rel="shortcut icon" href="/assets/pic.png">
+<link rel="shortcut icon" href="/favicon.ico">
 
 
 
@@ -26,7 +26,7 @@ Tracking Your Every Move Through Your Devices - Bits, Bytes, Late Nights
 
 
 
-<link rel="stylesheet" href="/css/main.min.b7f47cd02fb9210be6b3bc82891ec497101a07563a2b27f42b9388306d121c63.css" integrity="sha256-t/R80C&#43;5IQvms7yCiR7ElxAaB1Y6Kyf0K5OIMG0SHGM=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.cf90adce0d772e2c31242f0fa94977619d741d4199dd23bcd9ad9e29d87bf480.css" integrity="sha256-z5Ctzg13LiwxJC8PqUl3YZ10HUGZ3SO82a2eKdh79IA=" crossorigin="anonymous" media="screen">
 
 
 
@@ -59,7 +59,25 @@ Tracking Your Every Move Through Your Devices - Bits, Bytes, Late Nights
 
 
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+<style>
+   
+   
+  @font-face {
+    font-family: 'Didact Gothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/font/didact-gothic-v13-latin-regular.eot');  
+    src: local('Didact Gothic Regular'), local('DidactGothic-Regular'),
+         url('/font/didact-gothic-v13-latin-regular.eot?#iefix') format('embedded-opentype'),  
+         url('/font/didact-gothic-v13-latin-regular.woff2') format('woff2'),  
+         url('/font/didact-gothic-v13-latin-regular.woff') format('woff'),  
+         url('/font/didact-gothic-v13-latin-regular.ttf') format('truetype'),  
+         url('/font/didact-gothic-v13-latin-regular.svg#DidactGothic') format('svg');  
+  }
+</style>
+
 
 
 
@@ -193,10 +211,43 @@ Detected open WiFi network: &quot;I-Dont-Use-A-Password&quot;... connected.
 Transmitting findings to surveillance server... done.
 </code></pre>
 <p>Creepy, right? And I'm just an average person. Imagine if I had the resources of a massive corporation or the government.</p>
-<figure>
-    <img src="/img/iphone-wifi-sized.png"
-         alt="iPhone connecting to Google Starbucks"/> 
-</figure>
+
+
+
+
+  
+  
+  
+  
+    
+    
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  <img
+    
+    srcset='
+              /posts/mac-address-tracking/iphone-wifi_hu27678625a9a820c74c85d262e3764680_51632_480x0_resize_lanczos_2.png 480w
+            
+            '
+    
+      sizes="(max-width: 320px) 320px,
+             (max-width: 480px) 460px,
+             320px"
+    
+    src="/posts/mac-address-tracking/iphone-wifi_hu27678625a9a820c74c85d262e3764680_51632_320x0_resize_lanczos_2.png"
+    
+      alt="iPhone connecting to Google Starbucks"
+    
+  >
+
 
 <p>Someone like Google doesn't even need to go so far as to set up devices, they just need to <em>become the free WiFi provider</em>. Case in point&hellip; You can actually see your browser transmit this information when you click &ldquo;Accept &amp; Connect&rdquo; (or whatever variation there-of), in your browser:</p>
 <pre><code>http://sbux-portal.appspot.com/splash?mac=[your-device-id]&amp;apname=[wifi-device-id]
