@@ -6,10 +6,19 @@
     <description>Recent content in Thoughts on Bits, Bytes, Late Nights</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://teapowered.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Why (Not) Peer-to-Peer?</title>
+      <link>https://teapowered.dev/posts/p2p/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/posts/p2p/</guid>
+      <description>An overview of the Internet&#39;s growth in the 2010s and some questions about what&#39;s to come&amp;hellip;</description>
+    </item>
     
     <item>
       <title>Optimizing Sessionless Sessions</title>
@@ -21,7 +30,7 @@
     </item>
     
     <item>
-      <title>Tracking Your Every Move Through Your Devices</title>
+      <title>Tracking Your Every Move</title>
       <link>https://teapowered.dev/posts/mac-address-tracking/</link>
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       

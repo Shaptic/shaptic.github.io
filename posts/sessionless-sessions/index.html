@@ -26,7 +26,7 @@ Optimizing Sessionless Sessions - Bits, Bytes, Late Nights
 
 
 
-<link rel="stylesheet" href="/css/main.min.e17a9fa5da9b9989b242c63e462db223f714ff6dfdd472e5089830d712cac366.css" integrity="sha256-4XqfpdqbmYmyQsY&#43;Ri2yI/cU/2391HLlCJgw1xLKw2Y=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.f4558e13fe932a36803a29bc8920d72a24398aebc50e7a9fd162260369c3417b.css" integrity="sha256-9FWOE/6TKjaAOim8iSDXKiQ5iuvFDnqf0WImA2nDQXs=" crossorigin="anonymous" media="screen">
 
 
 
@@ -50,7 +50,6 @@ Optimizing Sessionless Sessions - Bits, Bytes, Late Nights
     "HTML-CSS": {
       styles: {
         ".MathJax": {
-          "padding-left": "2em",
         }
       }
     }
@@ -146,7 +145,9 @@ Optimizing Sessionless Sessions - Bits, Bytes, Late Nights
 
         
 <div class="section" id="content">
-    December 12 &#183; 1207 words
+    <p class="subtitle"><i></i></p>
+    Wed Dec 20, 2017 &#183; 1207 words
+
     
     <hr/>
     <p>I'm currently developing an app as a side-project. This is my first time developing a full-fledged application that requires both a back-end server to store data (for which I've chosen <a href="http://flask.pocoo.org/">Flask</a>) and a front-end client that users interact with (for which I've chosen <a href="https://www.qt.io/">Qt</a>). I've reached the stage at which I need to add authentication, so that different users can query different data from the server (like a Twitter feed is different depending on who you're logged in as).</p>
@@ -160,7 +161,7 @@ Optimizing Sessionless Sessions - Bits, Bytes, Late Nights
 <li>Additional query parameters</li>
 </ul>
 <p>I'm only going to touch on the first two methods, and go into detail of the token-based authentication method I'll be using.</p>
-<h1 id="session-cookies">Session Cookies</h1>
+<h2 id="session-cookies">Session Cookies</h2>
 <p>In general, sessions are used to store per-user information, such as the
 contents of your shopping cart, online documents, or other long-term data.
 Cookies are probably the most wide-spread approach for most applications. In
@@ -177,7 +178,7 @@ person as before.</p>
 <h3 id="why-theyre-no-good">Why They're No Good</h3>
 <p>The primary downside to this method is that now the server needs to remember the session cookies that it has distributed (i.e. for every user). This is an increase in necessary resources over time.</p>
 <p>For my purposes, I wasn't concerned with this, as I don't expect my application to have that many users. The thing that <em>did</em> concern me was the fact that Qt <a href="https://stackoverflow.com/a/15453429">doesn't have support</a> for modifying cookies from QML JavaScript code&hellip; This would mean I'd need to (re)write all of my requests in C++, which I really don't feel like doing. This led to an interesting investigation into alternative authentication methods that didn't rely on session cookies!</p>
-<h1 id="token-authentication">Token Authentication</h1>
+<h2 id="token-authentication">Token Authentication</h2>
 <p>This investigation led me to research a <em>purely stateless</em> method, which
 authenticates via a cryptographically-signed token. By <em>stateless</em> I mean that
 the server does not remember anything between requests. This is an improvement
