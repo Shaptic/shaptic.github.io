@@ -6,10 +6,19 @@
     <description>Recent content in Thoughts on Bits, Bytes, Late Nights</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://teapowered.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Algorithms</title>
+      <link>https://teapowered.dev/posts/algorithms/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/posts/algorithms/</guid>
+      <description>A master post for all of the additional resources I reference in my notes for Georgia Tech&#39;s CS 6515: &lt;em&gt;Graduate Algorithms&lt;/em&gt;.</description>
+    </item>
     
     <item>
       <title>Why (Not) Peer-to-Peer?</title>
@@ -17,7 +26,7 @@
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://teapowered.dev/posts/p2p/</guid>
-      <description>An overview of the Internet&#39;s growth in the 2010s and some questions about what&#39;s to come&amp;hellip;</description>
+      <description>An overview of the Internet&#39;s growth in the 2010s and some questions about what&#39;s to come&amp;hellip; With the current state of centralized content distribution, why aren&#39;t we moving to a peer-to-peer model?</description>
     </item>
     
     <item>
