@@ -17,7 +17,7 @@
       <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://teapowered.dev/posts/algorithms/</guid>
-      <description>A master post for all of the additional resources I reference in my notes for Georgia Tech&#39;s CS 6515: &lt;em&gt;Graduate Algorithms&lt;/em&gt;.</description>
+      <description>A master post for all of the additional resources I reference in my notes for Georgia Tech&amp;rsquo;s CS 6515: &lt;em&gt;Graduate Algorithms&lt;/em&gt;.</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://teapowered.dev/posts/p2p/</guid>
-      <description>An overview of the Internet&#39;s growth in the 2010s and some questions about what&#39;s to come&amp;hellip; With the current state of centralized content distribution, why aren&#39;t we moving to a peer-to-peer model?</description>
+      <description>An overview of the Internet&amp;rsquo;s growth in the 2010s and some questions about what&amp;rsquo;s to come&amp;hellip; With the current state of centralized content distribution, why aren&amp;rsquo;t we moving to a peer-to-peer model?</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@
       <pubDate>Thu, 06 Jun 2019 23:14:16 -0700</pubDate>
       
       <guid>https://teapowered.dev/recipes/</guid>
-      <description>A collection of tasty pescetarian recipes that I&#39;ve gathered over the years with my personal tweaks and suggestions included.</description>
+      <description>A collection of tasty pescetarian recipes that I&amp;rsquo;ve gathered over the years with my personal tweaks and suggestions included.</description>
     </item>
     
     <item>
@@ -63,7 +63,7 @@
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://teapowered.dev/posts/mac-address-tracking/</guid>
-      <description>Or, abusing MAC addresses for fun and profit (well, no profit unless you&#39;re a massive corporation or the government&amp;hellip;).</description>
+      <description>Or, abusing MAC addresses for fun and profit (well, no profit unless you&amp;rsquo;re a massive corporation or the government&amp;hellip;).</description>
     </item>
     
     <item>
@@ -72,9 +72,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://teapowered.dev/about/</guid>
-      <description>I&#39;m George.
-I study computer science and sometimes cook things. I&#39;m particularly interested in cryptography, peer-to-peer technologies, and applications of virtual and augmented reality. I like to write about these topics in various (albeit rare) posts. I also enjoy longboarding, rock climbing, and searching for the perfect nacho dish.
-You can also check out my $\LaTeX$&#39;d notes for some of the graduate courses I&#39;ve taken at the Georgia Institute of Technology.</description>
+      <description>I&amp;rsquo;m George.
+I study computer science and sometimes cook things. I&amp;rsquo;m particularly interested in cryptography, peer-to-peer technologies, and applications of virtual and augmented reality. I like to write about these topics in various (albeit rare) posts. I also enjoy longboarding, rock climbing, and searching for the perfect nacho dish.
+You can also check out my $\LaTeX$&#39;d notes for some of the graduate courses I&amp;rsquo;ve taken at the Georgia Institute of Technology.</description>
     </item>
     
   </channel>

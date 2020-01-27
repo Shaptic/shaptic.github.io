@@ -153,17 +153,17 @@ Optimizing Sessionless Sessions - Bits, Bytes, Late Nights
         
      </span>
     <hr/>
-    <p>I'm currently developing an app as a side-project. This is my first time developing a full-fledged application that requires both a back-end server to store data (for which I've chosen <a href="http://flask.pocoo.org/">Flask</a>) and a front-end client that users interact with (for which I've chosen <a href="https://www.qt.io/">Qt</a>). I've reached the stage at which I need to add authentication, so that different users can query different data from the server (like a Twitter feed is different depending on who you're logged in as).</p>
+    <p>I&rsquo;m currently developing an app as a side-project. This is my first time developing a full-fledged application that requires both a back-end server to store data (for which I&rsquo;ve chosen <a href="http://flask.pocoo.org/">Flask</a>) and a front-end client that users interact with (for which I&rsquo;ve chosen <a href="https://www.qt.io/">Qt</a>). I&rsquo;ve reached the stage at which I need to add authentication, so that different users can query different data from the server (like a Twitter feed is different depending on who you&rsquo;re logged in as).</p>
 <p>This post is a look into the research and design that I put into the authentication scheme for the app.</p>
 <h1 id="authentication-methods-">Authentication Methods</h1>
 <p>For authenticating and tracking users and their respective logins, there are many standard approaches:</p>
 <ul>
 <li>Session management with cookies</li>
 <li>OAuth 2.0, or other token-based authentication methods</li>
-<li>HTTP's &ldquo;basic authentication&rdquo; support</li>
+<li>HTTP&rsquo;s &ldquo;basic authentication&rdquo; support</li>
 <li>Additional query parameters</li>
 </ul>
-<p>I'm only going to touch on the first two methods, and go into detail of the token-based authentication method I'll be using.</p>
+<p>I&rsquo;m only going to touch on the first two methods, and go into detail of the token-based authentication method I&rsquo;ll be using.</p>
 <h2 id="session-cookies-">Session Cookies</h2>
 <p>In general, sessions are used to store per-user information, such as the
 contents of your shopping cart, online documents, or other long-term data.
@@ -178,14 +178,14 @@ Date: Wed, 20 Dec 2017 12:52:37 GMT
 </code></pre></div><p>Here, the cookie is <code>session=7dbbb1c5-89f4-...</code>, etc. If you include this data
 with any subsequent requests to the server, it will know that you are the same
 person as before.</p>
-<h3 id="why-theyre-no-good-">Why They're No Good</h3>
+<h3 id="why-theyre-no-good-">Why They&rsquo;re No Good</h3>
 <p>The primary downside to this method is that now the server needs to remember the session cookies that it has distributed (i.e. for every user). This is an increase in necessary resources over time.</p>
-<p>For my purposes, I wasn't concerned with this, as I don't expect my application to have that many users. The thing that <em>did</em> concern me was the fact that Qt <a href="https://stackoverflow.com/a/15453429">doesn't have support</a> for modifying cookies from QML JavaScript code&hellip; This would mean I'd need to (re)write all of my requests in C++, which I really don't feel like doing. This led to an interesting investigation into alternative authentication methods that didn't rely on session cookies!</p>
+<p>For my purposes, I wasn&rsquo;t concerned with this, as I don&rsquo;t expect my application to have that many users. The thing that <em>did</em> concern me was the fact that Qt <a href="https://stackoverflow.com/a/15453429">doesn&rsquo;t have support</a> for modifying cookies from QML JavaScript code&hellip; This would mean I&rsquo;d need to (re)write all of my requests in C++, which I really don&rsquo;t feel like doing. This led to an interesting investigation into alternative authentication methods that didn&rsquo;t rely on session cookies!</p>
 <h2 id="token-authentication-">Token Authentication</h2>
 <p>This investigation led me to research a <em>purely stateless</em> method, which
 authenticates via a cryptographically-signed token. By <em>stateless</em> I mean that
 the server does not remember anything between requests. This is an improvement
-over <a href="#session-cookies">session cookies</a> because the server doesn't need to
+over <a href="#session-cookies">session cookies</a> because the server doesn&rsquo;t need to
 track the cookie data. It comes with its own tradeoff, though, since the state
 needs to be &ldquo;rebuilt&rdquo; for every request instead of stored once.</p>
 <p>Upon logging in, the server responds with a unique token that can only be associated with that particular user. Before getting technical, assume that a user logs in like so:</p>
@@ -196,7 +196,7 @@ Password: hunter2
 <pre><code>Token: 2retnuhegroeg
 </code></pre>
 <p>This can <em>only</em> be associated with this particular user.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> Obviously you
-wouldn't use this as a token, since it clearly exposes the username and
+wouldn&rsquo;t use this as a token, since it clearly exposes the username and
 password if anyone else were to see it, but the point stands. Any request can
 include this value as a token and the server will know that this person is
 logged in as &ldquo;george&rdquo;. We can achieve the same effect in a secure way using
@@ -208,7 +208,7 @@ cryptography.</p>
 tool</a>, the HMAC of the value
 &ldquo;george&rdquo; with the secret key &ldquo;secret&rdquo; using the MD5 hashing algorithm is
 <code>b94624b9274af8d0843d8dea6108577a</code>. This is something that will always be true, and the original value is completely indeterminable from the HMAC (well, aside from the fact that I just told you they were associated).<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
-<p>From now on, we'll refer to this resulting unique, one-way HMAC value as the
+<p>From now on, we&rsquo;ll refer to this resulting unique, one-way HMAC value as the
 <strong>token</strong>.</p>
 <p>Now, how do we use these for sessions? We will create these tokens based on the login data! The user logs in as usual sending their username and password, and the server responds with the user ID and the token:<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
 <p>$$
@@ -217,15 +217,15 @@ $$</p>
 <p>Where $t$ is the resulting token, $s$ is the secret key that only the server knows, and $u, p$ are the username and password, respectively.</p>
 <div class="notice info">
   <strong>An Aside on User IDs</strong><br>
-Whether using this authentication method or not, the user is stored in a database where (for simplicity) a user's ID is represented its row number in a table. In our running example, pretend that this is the user's row: <code>5 | &quot;george&quot; | &quot;hunter2&quot;</code>, so <strong>the user ID is 5</strong>.
+Whether using this authentication method or not, the user is stored in a database where (for simplicity) a user&rsquo;s ID is represented its row number in a table. In our running example, pretend that this is the user&rsquo;s row: <code>5 | &quot;george&quot; | &quot;hunter2&quot;</code>, so <strong>the user ID is 5</strong>.
 </div>
 <p>Then, with <em>every subsequent request</em>, we send the token and the user ID (instead of the login info) as part of our request using the <code>X-Auth-Token</code> header (which is just part of the HTTP request):</p>
 <pre><code>X-Auth-Token: id=5;token=090b4d082bd7adc1b223086d1d9f8dc4
-</code></pre><p>Both of these pieces of information are critical for the server to believe we are who we say we are. The token alone isn't enough; it's a one-way value, so it <em>only</em> proves that we logged in successfully at some point in time. Hence, the user ID is also necessary so that the server also knows <em>who</em> we are. Then, the server can then verify the token by calculating it themselves. They know the credentials associated with the ID, and they know the secret, so they can follow the same formula and make sure the tokens match.</p>
-<p>Why is this secure? Because <strong>users don't know the server's secret,</strong> so they can't fake tokens. The only way they can acquire a valid one is by successfully logging into the server.</p>
+</code></pre><p>Both of these pieces of information are critical for the server to believe we are who we say we are. The token alone isn&rsquo;t enough; it&rsquo;s a one-way value, so it <em>only</em> proves that we logged in successfully at some point in time. Hence, the user ID is also necessary so that the server also knows <em>who</em> we are. Then, the server can then verify the token by calculating it themselves. They know the credentials associated with the ID, and they know the secret, so they can follow the same formula and make sure the tokens match.</p>
+<p>Why is this secure? Because <strong>users don&rsquo;t know the server&rsquo;s secret,</strong> so they can&rsquo;t fake tokens. The only way they can acquire a valid one is by successfully logging into the server.</p>
 <h1 id="conclusion-">Conclusion</h1>
-<p>With this method, we can have fully memory-less sessions. This improves scalability, and also lets us do some fancy cryptography. It comes with the price that we now have to query the database whenever we need something (like the user information), so we can't do any session caching, but it also comes with the benefit that, well, we don't have to do any session caching.</p>
-<p>Most importantly, though, it means I don't need to rewrite my requests and callbacks in C++ in my Qt front-end.</p>
+<p>With this method, we can have fully memory-less sessions. This improves scalability, and also lets us do some fancy cryptography. It comes with the price that we now have to query the database whenever we need something (like the user information), so we can&rsquo;t do any session caching, but it also comes with the benefit that, well, we don&rsquo;t have to do any session caching.</p>
+<p>Most importantly, though, it means I don&rsquo;t need to rewrite my requests and callbacks in C++ in my Qt front-end.</p>
 <p>If you want to use a robust, standardized solution, you can look into JSON Web
 Tokens (JWTs). For me, though, this simple solution is more than enough to
 provide authentication for my application.</p>
@@ -233,12 +233,12 @@ provide authentication for my application.</p>
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>Obviously this isn't strictly true. Consider <code>Username: georgeh</code> and
+<p>Obviously this isn&rsquo;t strictly true. Consider <code>Username: georgeh</code> and
 <code>Password: unter2</code>; this combination would likewise result in the same token.
-It's just an analogy to avoid getting mathy. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+It&rsquo;s just an analogy to avoid getting mathy. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p>For the value to be truly indeterminable, you need to use a cryptographically-secure hashing algorithm like SHA256 (rather than MD5, which is known to be breakable). Here, the resulting HMAC would've been too long and scary-looking, so I used MD5 for a simpler example. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>For the value to be truly indeterminable, you need to use a cryptographically-secure hashing algorithm like SHA256 (rather than MD5, which is known to be breakable). Here, the resulting HMAC would&rsquo;ve been too long and scary-looking, so I used MD5 for a simpler example. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3" role="doc-endnote">
 <p>The $|$ operator here is concatenation, just slapping the two
