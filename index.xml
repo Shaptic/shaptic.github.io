@@ -26,8 +26,8 @@
       <pubDate>Fri, 07 Jun 2019 01:35:47 -0700</pubDate>
       
       <guid>https://teapowered.dev/notes/</guid>
-      <description>Applied Cryptography and Machine Learning are the latest additions to the note family for the current Spring 2020 semester; these will be updated very frequently.
-  Computational Perception &amp;mdash; this guide provides a (relatively) gentle introduction to computer vision and computational photography. It starts with basic image processing, builds up to &amp;ldquo;old school&amp;rdquo; vision techniques, and eventually closes out with applications of machine learning algorithms to vision. It requires a strong mathematical foundation: a basic understanding of concepts from linear algebra and calculus is assumed, though helpful links to outside resources are provided where it&amp;rsquo;s relevant.</description>
+      <description>Applied Cryptography and Machine Learning are the latest additions to the note family for the current Spring 2020 semester; these will be updated very frequently. I also added an abridged version of the cryptography notes for printing purposes.
+  Computational Perception &amp;mdash; this guide provides a (relatively) gentle introduction to computer vision and computational photography. It starts with basic image processing, builds up to &amp;ldquo;old school&amp;rdquo; vision techniques, and eventually closes out with applications of machine learning algorithms to vision.</description>
     </item>
     
     <item>
