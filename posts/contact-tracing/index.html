@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<title>
+Contact Tracing Privacy - Bits, Bytes, Late Nights
+</title>
+
+
+
+
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.cf6f1703d21bd19e2b707538977f5ad93b460c64fc6920e7c186970711856370.css" integrity="sha256-z28XA9Ib0Z4rcHU4l39a2TtGDGT8aSDnwYaXBxGFY3A=" crossorigin="anonymous" media="screen">
+
+
+
+ 
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax": {
+        }
+      }
+    }
+  });
+</script>
+
+
+
+
+
+<style>
+   
+   
+  @font-face {
+    font-family: 'Didact Gothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/font/didact-gothic-v13-latin-regular.eot');  
+    src: local('Didact Gothic Regular'), local('DidactGothic-Regular'),
+         url('/font/didact-gothic-v13-latin-regular.eot?#iefix') format('embedded-opentype'),  
+         url('/font/didact-gothic-v13-latin-regular.woff2') format('woff2'),  
+         url('/font/didact-gothic-v13-latin-regular.woff') format('woff'),  
+         url('/font/didact-gothic-v13-latin-regular.ttf') format('truetype'),  
+         url('/font/didact-gothic-v13-latin-regular.svg#DidactGothic') format('svg');  
+  }
+</style>
+
+
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Contact Tracing Privacy
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        
+            
+                <div class="section top-menu">
+                    
+<p>
+    
+    <a href="https://teapowered.dev/">
+        home</a>
+
+    
+        
+            &#183;
+            <a href="/posts">
+                thoughts</a>
+        
+
+        
+            
+                &#183;
+                <a href="/recipes">
+                    recipes</a>
+            
+                &#183;
+                <a href="/notes">
+                    notes</a>
+            
+                &#183;
+                <a href="/about">
+                    me</a>
+            
+        
+    
+</p>
+
+
+                </div>
+            
+        
+
+        <div class="section" id="title">Contact Tracing Privacy</div>
+
+        
+        
+        
+        
+        
+        
+        
+
+        
+<div class="section" id="content">
+    <p class="subtitle"><i></i></p>
+    <span>
+        Mon Apr 27, 2020
+        &#183;
+        2122 words
+        
+     </span>
+    <hr/>
+    <p>In an effort to combat the COVID-19 crisis, Apple and Google have partnered to implement a way to leverage smartphones for determining whether or not individuals have come in contact with infected patients that they claim preserves user privacy. The techique is called <em>contact tracing</em> and the full list of specifications for the algorithms is in an Apple press release <a href="https://www.apple.com/covid19/contacttracing">here</a>. Here&rsquo;s a high-level summary taken directly from the FAQ:</p>
+<blockquote>
+<p>The solution harness[es] the power of Bluetooth technology to aid in exposure notification. Once enabled, users&rsquo; devices will regularly send out a beacon via Bluetooth that includes a privacy-preserving identifier&mdash;basically, a string of random numbers that aren&rsquo;t tied to a user&rsquo;s identity and change every 10-20 minutes for additional protection. Other phones will be listening for these beacons and broadcasting theirs as well. When each phone receives another beacon, it will record and securely store that beacon on the device.</p>
+<p>At least once per day, the system will download a list of beacons that have been verified as belonging to people confirmed as positive for COVID-19 from the relevant public health authority. Each device will check the list of beacons it has recorded against the list downloaded from the server. If there is a match between the beacons stored on the device and the positive diagnosis list, the user may be notified and advised on steps to take next.</p>
+</blockquote>
+<h1 id="why-should-we-care-">Why Should We Care?</h1>
+<blockquote>
+<p>Never waste a good crisis.<br>
+        &ndash; <em>Winston Churchill</em></p>
+</blockquote>
+<p>When a head of state advises something like this&mdash;a mantra followed by governments, businesses, and yes, tech companies&mdash;it&rsquo;s not unreasonable to view initiatives by big, data-hungry players like Google to provide &ldquo;safety&rdquo; to the general populous through a paranoid lens.</p>
+<p>A person&rsquo;s health is an incredibly personal, private matter. <strong>It&rsquo;s as simple as that</strong> and I shouldn&rsquo;t need to say more. Do you want your health insurance premiums going up in the future because of this data point? Do you <em>really</em> want an advertiser knowing whether or not you contracted the novel coronavirus? Even further still, do you want watchful eyes to have the power to track where you&rsquo;ve been and who you&rsquo;ve interacted with during a lockdown?</p>
+<p>The crux of the issue is that even though tracking infected patients is a useful tool for both modeling the pandemic and keeping people safe, it needs to be done in a way that doesn&rsquo;t enable data harvesting or power grabs by unrelated parties.</p>
+<h1 id="protocol-analysis-">Protocol Analysis</h1>
+<p>This section will analyze the efficacy of the proposed <a href="https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-BluetoothSpecificationv1.1.pdf">Bluetooth</a> and <a href="https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-CryptographySpecificationv1.1.pdf">cryptographic protocols</a> through an ultra-conservative lens to determine how &ldquo;private&rdquo; their proposed  tracing method really is; feel free to follow along with the PDF! I&rsquo;m going to try to avoid a discussion of the cryptographic merits of the protocol (smarter folk than I have looked at things from that angle already) and focus on privacy.</p>
+<p>It&rsquo;s worth noting that these are <em>just protocols</em>; implementations are delegated to the local public health authorities, and we all know writing secure code is much harder than just musing about it.</p>
+<h2 id="cryptographic-primitives-">Cryptographic Primitives</h2>
+<p>Let&rsquo;s start with the basics. The protocol only needs symmetric encryption provided by the following primitives:</p>
+<ul>
+<li>An <code>HKDF</code> (HMAC-based key derivation function) using SHA-256. ✅</li>
+<li><code>AES</code> using 128-bit keys and in CTR mode. ✅</li>
+<li>A cryptographically-secure psuedorandom number generator (<code>CSPRNG</code>). ✅</li>
+</ul>
+<p>The HKDF is well-known, standardized, and considered secure; both the <a href="https://www.schneier.com/blog/archives/2009/07/another_new_aes.html">key length</a> and mode of operation for AES
+are considered secure against chosen-plaintext attacks; and the CSPRNG is secure by definition.</p>
+<p>So far, so good.</p>
+<h2 id="key-management-">Key Management</h2>
+<p>Let&rsquo;s look at how these keys are used. The final data payload that will be transmitted to other users contains two key pieces of information:</p>
+<ul>
+<li>the <strong>rolling proximity identifier</strong> (RPI), which is a random secret value, and</li>
+<li>the <strong>associated encrypted metadata</strong>, which is <em>unspecified</em>, though it must be &ldquo;non-user identifying.&rdquo;</li>
+</ul>
+<p>The key management schedule discretizes time into 10-minute intervals since the UNIX epoch. This called the current &ldquo;interval number.&rdquo; For example, the 5th interval is the 10-minute period starting 50 minutes into January 1st, 1970.</p>
+<p>Then, the &ldquo;rolling period&rdquo; is 144 intervals which comes out to 24 hours. The <strong>temporary exposure key</strong> is a 16-byte value pulled from the <code>CSPRNG</code> every time the current interval number becomes a multiple of the rolling period (in other words, daily).</p>
+<p>Up to 14 temporary exposure keys are stored on the device at once, meaning inter-user contact can be traced for two weeks.</p>
+<h2 id="rolling-proximity-identifier-">Rolling Proximity Identifier</h2>
+<p>First, the 16-byte RPI key is derived by applying the <code>HKDF</code> to the daily temporary exposure key:
+$$
+k_{\text{RPI}} = \mathrm{HKDF}\left(
+\substack{\text{temporary} \\ \text{exposure key}},
+\text{&ldquo;EN-RPIK&rdquo;},
+16
+\right)
+$$</p>
+<p>The actual RPI is the ciphertext resulting from encrypting the current interval number along with data to pad the input to 16-bytes:<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
+$$
+\text{RPI} = \mathrm{AES}_{k_{\text{RPI}}}\left(
+\text{&ldquo;EN-RPI&rdquo;} \;\big\Vert\;
+00 \cdots 00 \;\big\Vert\;
+\substack{\text{interval} \\ \text{number}}
+\right)
+$$</p>
+<p>A fresh RPI is generated every time the Bluetooth broadcasting address is randomized (more on this latter part in the next section). This is definitely a good thing; we can essentially coalesce Bluetooth tracking with RPI tracking into the same attack vector.</p>
+<h2 id="metadata-">Metadata</h2>
+<p>The metadata key is derived much like the RPI key via the <code>HKDF</code>:
+$$
+k_{\text{M}} = \mathrm{HKDF}\left(
+\substack{\text{temporary} \\ \text{exposure key}},
+\text{&ldquo;CT-AEMK&rdquo;},
+16
+\right)
+$$</p>
+<p>The Bluetooth document highlights the content of this metadata:<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<blockquote>
+<p>The privacy preserving encrypted metadata shall be used to carry
+protocol versioning and transmit (Tx) power for better distance approximation. The metadata changes about every 15 minutes at the same cadence as the Rolling Proximity Identifier to prevent wireless tracking of the device.</p>
+</blockquote>
+<p>It makes sense given that Apple and Google want to allow implementors to &ldquo;fill in the blanks&rdquo; as they see fit for the rest of the metadata. However, I have a hard time imagining metadata that&rsquo;s useful to a public health authority that is truly non-identifiable&hellip;</p>
+<p>The encryption itself is pretty standard. Note that the RPI acts as the IV; this should be safe since it appears as a random 16-byte bitstring (even though it&rsquo;s a meaningful ciphertext):
+$$
+\text{ciphertext} = \text{AES-CTR}_{k_{\text{M}}}\left(
+\text{RPI}, \text{metadata}
+\right)
+$$</p>
+<h2 id="revealing-information-">Revealing Information</h2>
+<p>To summarize, the full payload broadcast over Bluetooth to other devices is the
+following (encrypted) information:
+$$
+\boxed{
+\substack{\text{time} \\ \text{interval}} +
+\text{metadata}
+}
+$$
+The idea is that when a user is infected, they voluntarily reveal their recent temporary exposure keys, which would allow a centralized authority to update a global list that it periodically distributes to all users. Then, the users can cross-reference their own history of observed payloads and see if any matched.</p>
+<p>Unfortunately, this is where things can easily break down. How does a user reveal their keys <em>and</em> stay anonymous? There&rsquo;s no such thing as a truly &ldquo;anonymous tip&rdquo; on the Internet. By willingly uploading your keys to the &ldquo;Diagnosis Server,&rdquo; you are revealing (at <em>least</em>) a good location approximation from your IP address. The location result from <a href="https://tools.keycdn.com/geo">this geolocation service</a> is within 3km of my true location.</p>
+<p>Fortunately, an approximate location like that is not nearly enough to personally identify an individual. Since these apps would (ideally) be operated by a local health authority, they already know their users&rsquo; county.</p>
+<h2 id="bluetooth-broadcasting-">Bluetooth Broadcasting</h2>
+<p>The following two points from the Bluetooth specification are the key to keeping the broadcasts hardware-anonymous:</p>
+<ul>
+<li>The advertiser address type is a random, non-resolveable MAC address.</li>
+<li>The address rotation period is a random value between 10 and 20 minutes.</li>
+</ul>
+<p>Crucially, both of these features <strong>require hardware support</strong>, so keep that in mind if you have an older device. If you broadcast your keys on an unchanging Bluetooth MAC address, you are <em>trivial</em> to identify, correlate, and track by anyone.</p>
+<h1 id="attack-vectors-">Attack Vectors</h1>
+<p>The protocol seems pretty air-tight as far as anonymizing each user&rsquo;s hardware from other participants aside from a single huge flaw.</p>
+<h2 id="correlating-key-rotations-">Correlating Key Rotations</h2>
+<p>Suppose you, as a user of the app, see the following Bluetooth beacons in a grocery store:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Tx (Power)</th>
+<th align="center">BT address</th>
+<th align="center">RPI</th>
+<th align="center">Metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">42</td>
+<td align="center">AA:12:E4</td>
+<td align="center">0xABCD</td>
+<td align="center">0x1234</td>
+</tr>
+<tr>
+<td align="center">78</td>
+<td align="center">BB:65:51</td>
+<td align="center">0xEFAB</td>
+<td align="center">0x1010</td>
+</tr>
+<tr>
+<td align="center">56</td>
+<td align="center">CC:13:C3</td>
+<td align="center">0xA2D4</td>
+<td align="center">0x2020</td>
+</tr>
+<tr>
+<td align="center">89</td>
+<td align="center">DD:86:0C</td>
+<td align="center">0x04D3</td>
+<td align="center">0x3030</td>
+</tr>
+</tbody>
+</table>
+<p>The data here is arbitrary and inaccurate, but that doesn&rsquo;t matter. The key comes from the data you see immediately after one of the users decides to roll its keys:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Tx (Power)</th>
+<th align="center">BT address</th>
+<th align="center">RPI</th>
+<th align="center">Metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">74</td>
+<td align="center">BB:65:51</td>
+<td align="center">0xEFAB</td>
+<td align="center">0x1010</td>
+</tr>
+<tr>
+<td align="center">60</td>
+<td align="center">C2:42:12</td>
+<td align="center">0xDEAD</td>
+<td align="center">0x5186</td>
+</tr>
+<tr>
+<td align="center">88</td>
+<td align="center">DD:86:0C</td>
+<td align="center">0x04D3</td>
+<td align="center">0x3030</td>
+</tr>
+<tr>
+<td align="center">38</td>
+<td align="center">EE:51:32</td>
+<td align="center">0xC4F3</td>
+<td align="center">0x6194</td>
+</tr>
+</tbody>
+</table>
+<p><sup style="font-style: italic; line-height: 0em">(the adjusted power ratings here are supposed to simulate that people nearby may have moved, but not by much since their last broadcast; suppose the first user is now out of range and the last user is a new broadcaster)</sup></p>
+<p>Take a guess at who the &ldquo;new&rdquo; user on the second row is&hellip; It&rsquo;s obviously just the previous user from the third row! What are the chances that someone (Bluetooth user <code>CC:13:C3</code>) completely disappeared and was replaced by a new person with a similar transmission power (user <code>C2:42:12</code>)? Extremely unlikely.</p>
+<p>This correlation creates a trivial vector for associating users and tracking them across rolls of their identifiers. Remember, rolling of keys and addresses happens at <em>random</em> intervals between 10 and 20 minutes <em>for each user</em> according to the specification. That means that rolls will not happen simultaneously. <strong>Even if they did,</strong> inaccuracies in the local time of each device still creates a window in which to create this correlation if you act fast enough.</p>
+<p>Even if this is somehow addressed, there are also a few minor pain points that come to mind.</p>
+<h2 id="the-human-element-deduction-">The Human Element: Deduction</h2>
+<p>Consider Bob, an uninfected user who went out a single time today to pick up food from the In-n-Out drive through. Later that night, he checks the contact tracing app and gets a notification that he&rsquo;s been near an infected individual. I wonder where he encountered them?</p>
+<p>This is even more problematic at scale: users are cross-referencing known infections to <strong>all</strong> of the Bluetooth broadcasts they&rsquo;ve captured locally. Yes, they may be limited to 14 days of infected key data, but finding correlations across more than one day dramatically lowers the pool of people they interacted with. The chance of running into any random person more than once in two weeks is pretty low&hellip;</p>
+<p>This obviously isn&rsquo;t privacy-preserving, and unfortunately the mitigation&mdash;delaying the release of infected keys&mdash;can be detrimental to the public health response. It&rsquo;s worth keeping in mind that <strong>this protocol does its job best when we do the exact thing we&rsquo;re not supposed to be doing</strong>: spend time near many different people.</p>
+<p>Maybe this isn&rsquo;t really a problem, though. If someone you know catches the virus after you interacted with them many times, they&rsquo;ll (hopefully) tell you directly.</p>
+<h2 id="the-human-element-malice-">The Human Element: Malice</h2>
+<p>Another problem worth considering is <strong>spam</strong>. Malicious users could simply spam their Bluetooth with keys and then self-report as infected, creating a sleugh of false positives. This would require a coordinated effort to be impactful at scale, though.</p>
+<h2 id="deanonymizing-ble-">Deanonymizing BLE</h2>
+<p>Unfortunately, there&rsquo;s a wealth of attacks out there such as <a href="https://petsymposium.org/2019/files/papers/issue3/popets-2019-0036.pdf">this one</a> that allow tracking of anonymous Bluetooth devices. Furthermore, the realities of the physical world are unavoidable: using things like signal strength to triangulate people in a sea of Bluetooth beacons is something retailers have been <a href="https://www.nytimes.com/interactive/2019/06/14/opinion/bluetooth-wireless-tracking-privacy.html">doing</a> <a href="https://www.vox.com/recode/2019/12/19/21011527/retail-tracking-apps-wifi-bluetooth-facebook-ads">for</a> <a href="https://news.ycombinator.com/item?id=20183968">a while</a> (you know how you can unlock your Mac just by getting close with your Apple Watch on? yeah).</p>
+<p>This problem is largely inherent to the hardware itself, though, and isn&rsquo;t a explicit fault of the protocol.</p>
+<h1 id="summary-">Summary</h1>
+<p>Overall, I&rsquo;m impressed with the approach taken by Apple and Google. Thankfully,
+Bluetooth hardware has progressed to a point that makes this possible. The idea of a random, non-resolveable Bluetooth address is at the core of all of this.</p>
+<p>Unfortunately though, the complexity of time sychronization in a distributed system creates an unavoidable attack vector in which attackers can correlate users across key updates <em>because</em> of the key update&hellip; This completely negates any semblance of privacy because now <em>anyone</em> observing the Bluetooth signals (at a sufficient scale, granted) can track users.</p>
+<p>There are further issues with the human element as described above, and sophisticated attacks that apply any Bluetooth Low Energy device, but they are minor compared to the gaping hole time-based correlation creates.</p>
+<p>This is a fantastic effort towards both keeping the public informed and enabling future epidemiological study, but not one I&rsquo;ll be participating in.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>The syntax <code>a || b</code> is common in cryptography to represent bit-string concatenation. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>There&rsquo;s a bit of a discrepancy here: the quote claims the metadata is updated every 15 minutes, yet the RPI claims to update every 10 minutes. This is just a documentation error, since the Bluetooth spec clearly states that &ldquo;the advertiser address, RPI, and metadata shall be changed synchronously so that they cannot be linked.&rdquo; The true rotation interval is randomly chosen to be within 10 and 20 minutes. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+    
+    <a href="https://teapowered.dev/">
+        home</a>
+
+    
+        
+            &#183;
+            <a href="/posts">
+                thoughts</a>
+        
+
+        
+            
+                &#183;
+                <a href="/recipes">
+                    recipes</a>
+            
+                &#183;
+                <a href="/notes">
+                    notes</a>
+            
+                &#183;
+                <a href="/about">
+                    me</a>
+            
+        
+    
+</p>
+
+</div>
+
+
+        <div class="section footer"></div>
+    </div>
+</body>
+
+</html>
