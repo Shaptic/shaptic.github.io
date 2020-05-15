@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<title>
+Minecraft and the Simulation Hypothesis - Bits, Bytes, Late Nights
+</title>
+
+
+
+
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.795f38eff27afe875b4a468d2ed8f1a51dfa57872be025466173e7af1daf1e58.css" integrity="sha256-eV847/J6/odbSkaNLtjxpR36V4cr4CVGYXPnrx2vHlg=" crossorigin="anonymous" media="screen">
+
+
+
+ 
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax": {
+        }
+      }
+    }
+  });
+</script>
+
+
+
+
+
+<style>
+   
+   
+  @font-face {
+    font-family: 'Didact Gothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/font/didact-gothic-v13-latin-regular.eot');  
+    src: local('Didact Gothic Regular'), local('DidactGothic-Regular'),
+         url('/font/didact-gothic-v13-latin-regular.eot?#iefix') format('embedded-opentype'),  
+         url('/font/didact-gothic-v13-latin-regular.woff2') format('woff2'),  
+         url('/font/didact-gothic-v13-latin-regular.woff') format('woff'),  
+         url('/font/didact-gothic-v13-latin-regular.ttf') format('truetype'),  
+         url('/font/didact-gothic-v13-latin-regular.svg#DidactGothic') format('svg');  
+  }
+</style>
+
+
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Minecraft and the Simulation Hypothesis
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        
+            
+                <div class="section top-menu">
+                    
+<p>
+    
+    <a href="https://teapowered.dev/">
+        home</a>
+
+    
+        
+            &#183;
+            <a href="/posts">
+                thoughts</a>
+        
+
+        
+            
+                &#183;
+                <a href="/recipes">
+                    recipes</a>
+            
+                &#183;
+                <a href="/notes">
+                    notes</a>
+            
+                &#183;
+                <a href="/about">
+                    me</a>
+            
+        
+    
+</p>
+
+
+                </div>
+            
+        
+
+        <div class="section" id="title">Minecraft and the Simulation Hypothesis</div>
+
+        
+        
+        
+        
+        
+        
+        
+
+        
+<div class="section" id="content">
+    <p class="subtitle"><i></i></p>
+    <span>
+        Thu May 14, 2020
+        &#183;
+        1055 words
+        
+     </span>
+    <hr/>
+    <p>There are a lot of fun theories out there, and the simulation hypothesis is one of them. As usual, <a href="https://en.wikipedia.org/wiki/Simulation_hypothesis">Wikipedia</a> puts it best:</p>
+<blockquote>
+<p>The simulation hypothesis or simulation theory proposes that all of reality,
+including the Earth and the universe, is in fact an artificial simulation,
+most likely a computer simulation.</p>
+</blockquote>
+<p>The idea that our universe might simply be a computer program running on an alien&rsquo;s Raspberry Pi is fun to entertain, but most of us don&rsquo;t take the idea seriously. It&rsquo;s a thought experiment, if anything.</p>
+
+
+
+
+  
+  
+  
+  
+    
+    
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  <img
+    
+    srcset='
+            '
+    
+      sizes='
+             
+             160px'
+    
+    src="/posts/simulation/morty_hua2c5fd97041a4e0dbd476a4f729e46b0_44123_320x0_resize_lanczos_2.png"
+    
+      alt="Rick holding a knife to Morty&#39;s throat"
+    
+  >
+
+
+<p>However, there are people out there who decided to take the idea to its limits. Some physicists raised over $200,000 in an effort to conduct some experiments based on the assumption; they even <a href="https://www.ijqf.org/archives/4105">published a paper</a> on their results (not very compelling). It&rsquo;s strange to think it&rsquo;s possible to determine whether or not you&rsquo;re in a simulation <em>while abiding by its rules</em>, but this is exactly the topic of George Hotz&rsquo; <a href="https://www.youtube.com/watch?v=ESXOAJRdcwQ">talk</a> on &ldquo;hacking&rdquo; our way out of the simulation.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>So where am I going with this?</p>
+<p>Well, IF we continue to operate under the premise that our world is an accurate simulation of a larger world (and that&rsquo;s quite a big &ldquo;if&rdquo;), then it&rsquo;s possible that our collective feeling of increasingly-unsettling uncertainty in the world is caused by the fact that we&rsquo;re reaching the hardware limitations of the computer our simulation is running on.</p>
+<h1 id="on-minecraft-">On Minecraft</h1>
+<p>The voxel-based survival simulator Minecraft that jolted the indie game industry into overdrive is, weirdly enough, the inspiration for my reasoning. Minecraft is a procedurally-generated game, meaning everything from the shape of the trees to the mineral deposits hidden deep within caves is randomly generated. It&rsquo;s the result of a mathematical process involving <a href="https://www.redblobgames.com/maps/terrain-from-noise/">Perlin noise</a> which is at the core of many games that generate content as the user explores.</p>
+<p>Because this process, the world is essentially infinite: you can go as far as you want in any given direction and there will always be something fresh and exciting waiting for you. Of course, &ldquo;infinity&rdquo; can&rsquo;t actually exist on a computer: for example, an <code>Int32</code> type can only store ~4 billion numbers, so if you&rsquo;re using one to store the 3D positional coordinates of a player, they can&rsquo;t go more than 2 billion steps from their starting point along a particular axis.</p>
+<p>Obviously, 2 billion steps is still huge, so players don&rsquo;t ever naturally encounter these limits. Minecraft stays <em>effectively</em> infinite, but that does not mean the world is without problems. Players of the game may already be aware of the <a href="https://minecraft.gamepedia.com/Far_Lands">Far Lands</a>: the oddities that occur when you reach these &ldquo;edges&rdquo; of the generated world. Things start to look <a href="https://www.youtube.com/watch?v=oODlSgpiIWM">really strange</a> when you get there:</p>
+<figure >
+  
+  
+
+
+
+  
+  
+  
+  
+    
+    
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  <img
+    
+    srcset='
+              /posts/simulation/far-lands_hu268edf31e7060f2f1408a317535ec9b4_1367420_480x0_resize_lanczos_2.png 480w
+            
+            '
+    
+      sizes='
+               (max-width: 320px) 320px,
+             
+             
+               (max-width: 480px) 460px,
+             
+             1200'
+    
+    src="/posts/simulation/far-lands.png"
+    
+      alt=""
+    
+  >
+
+
+
+  
+    <figcaption>
+      <p>A view of the Minecraft&rsquo;s <em>Far Lands</em>.</p>
+    </figcaption>
+  
+</figure>
+
+<p>This erratic-yet-structured pattern of blocks is a result of the terrain-generating algorithm going haywire. Fundamentally, it&rsquo;s a result of <strong>floating point imprecision</strong> which is a natural, unavoidable limitation of modern computer hardware.</p>
+<h1 id="on-floating-point-">On Floating Point</h1>
+<p>Without getting too technical, it&rsquo;s worth quickly explaining how decimal numbers work on a computer. At the end of the day, bits are bits, and decimal numbers are simply a human-defined way of interpreting those bits. To drive this home, the following 32 bits can be interpreted as the decimal <code>123456.789</code>, the number <code>1206984820</code>, or even as the nonsensical string <code>Gñ e</code>:
+$$
+01000111 \; 11110001 \; 00100000 \; 01100101
+$$</p>
+<p>We (as in, the collective &ldquo;we&rdquo; of computer scientists) have agreed to interpret bits as decimals using the IEEE-754 standard, which essentially specifies that a certain number of bits is the exponent while the rest are the actual value.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> The decimal or &ldquo;floating point&rdquo; type is supposed to be able to represent values from $2^{-127}$ to $2^{127}$.</p>
+<p>For example the decimal above is actually interpreted in three chunks:
+$$
+\underbrace{
+0
+}_{\text{sign}}
+\underbrace{
+10001111
+}_{\text{exponent}} \;
+\underbrace{
+11100010 \; 01000000 \; 1100101
+}_\text{mantissa}
+$$</p>
+<p>The exponent is interpreted as 16 while the mantissa is interpreted as 1.8838011026382446. Then, the final value is just their product; for our specific bits, this comes out to
+$$
+2^{16} \times 1.8838011026382446 = 123456.789063
+$$</p>
+<p>Hold on, didn&rsquo;t we want exactly 123456.789? Yup, but we instead got a value that was 0.000063 larger. Therein lies the rub: <strong>computers can&rsquo;t store decimals exactly</strong>, and the error gets worse as the numbers get larger. For example, if we instead wanted to represent the decimal 123456789.123456789, the best a computer could do is 123456792! That&rsquo;s off by ~2.87&hellip; pretty significant.</p>
+<p>This behavior is the cause of the Far Lands above: the terrain generating starts behaving strangely because it can&rsquo;t properly interpolate between large decimal values as your $(x,y,z)$ position in the world grows.</p>
+<h1 id="our-simulation-">Our Simulation</h1>
+<p>It&rsquo;s hard to truly put a finger on what&rsquo;s out of the ordinary. Perhaps it&rsquo;s that the U.S. has a TV star as a president; regardless of your political stance, this is <em>weird</em>. Maybe it&rsquo;s the increased severity in natural disasters: earthquakes, fires, and viruses all feel more common than they used to, and let&rsquo;s hope we don&rsquo;t see another <a href="https://www.businessinsider.com/san-francisco-bay-area-nightmare-according-to-science-2018-4">Big One</a> in our lifetimes. It could just be the whacky weather patterns, like certain places seeing snow in May or heat records being broken seemingly every year.</p>
+<p>It just seems like we&rsquo;re on the brink of <em>some</em>thing&hellip; Regardless of the root cause, I think you know the feeling I&rsquo;m talking about.</p>
+<p>If we really do live in a simulation, the ever-increasing oddities could be explained by the fact that we&rsquo;re reaching the limits of the hardware that powers it, just like the limitations of floating points created the Far Lands in Minecraft. Naturally, if such a hypothesis were to hold true, we should be able to observe things get weirder and weirder as time goes on. With the direction the political, economic and literal climates are trending, that seems likely. Under this theory, though, we might even see a law of physics break; wouldn&rsquo;t that be something?</p>
+<!-- 
+Though the idea that we are a simulation may be a comforting thought, the idea that we're reaching its unpredictable limits is not.  -->
+<p>For now, I&rsquo;ll try to find solace in the idea that our simulation must soon be coming to an end.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Yes, this is the &ldquo;got sued by Sony for letting people run Linux on their PlayStation 3&rsquo;s,&rdquo; &ldquo;jailbroke the iPhone,&rdquo; and &ldquo;founded an open source autonomous driving software startup&rdquo; George Hotz. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>For a visualization of the floating point format, check out the neat converter <a href="https://www.h-schmidt.net/FloatConverter/IEEE754.html">here</a>. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+    
+    <a href="https://teapowered.dev/">
+        home</a>
+
+    
+        
+            &#183;
+            <a href="/posts">
+                thoughts</a>
+        
+
+        
+            
+                &#183;
+                <a href="/recipes">
+                    recipes</a>
+            
+                &#183;
+                <a href="/notes">
+                    notes</a>
+            
+                &#183;
+                <a href="/about">
+                    me</a>
+            
+        
+    
+</p>
+
+</div>
+
+
+        <div class="section footer"></div>
+    </div>
+</body>
+
+</html>
