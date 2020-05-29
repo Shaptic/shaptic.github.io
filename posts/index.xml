@@ -41,10 +41,19 @@
     <item>
       <title>Optimizing Sessionless Sessions</title>
       <link>https://teapowered.dev/posts/sessionless-sessions/</link>
-      <pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://teapowered.dev/posts/sessionless-sessions/</guid>
       <description>Or, arriving at the rationale behind the existence of JSON Web Tokens.</description>
+    </item>
+    
+    <item>
+      <title>Efficient P2P Broadcasting</title>
+      <link>https://teapowered.dev/posts/p2p-broadcast/</link>
+      <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/posts/p2p-broadcast/</guid>
+      <description>A memory-less solution that minimizes extra message duplication.</description>
     </item>
     
     <item>

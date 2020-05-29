@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<title>
+Efficient P2P Broadcasting - Bits, Bytes, Late Nights
+</title>
+
+
+
+
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.795f38eff27afe875b4a468d2ed8f1a51dfa57872be025466173e7af1daf1e58.css" integrity="sha256-eV847/J6/odbSkaNLtjxpR36V4cr4CVGYXPnrx2vHlg=" crossorigin="anonymous" media="screen">
+
+
+
+ 
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax": {
+        }
+      }
+    }
+  });
+</script>
+
+
+
+
+
+<style>
+   
+   
+  @font-face {
+    font-family: 'Didact Gothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/font/didact-gothic-v13-latin-regular.eot');  
+    src: local('Didact Gothic Regular'), local('DidactGothic-Regular'),
+         url('/font/didact-gothic-v13-latin-regular.eot?#iefix') format('embedded-opentype'),  
+         url('/font/didact-gothic-v13-latin-regular.woff2') format('woff2'),  
+         url('/font/didact-gothic-v13-latin-regular.woff') format('woff'),  
+         url('/font/didact-gothic-v13-latin-regular.ttf') format('truetype'),  
+         url('/font/didact-gothic-v13-latin-regular.svg#DidactGothic') format('svg');  
+  }
+</style>
+
+
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Efficient P2P Broadcasting
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        
+            
+                <div class="section top-menu">
+                    
+<p>
+    
+    <a href="https://teapowered.dev/">
+        home</a>
+
+    
+        
+            &#183;
+            <a href="/posts">
+                thoughts</a>
+        
+
+        
+            
+                &#183;
+                <a href="/recipes">
+                    recipes</a>
+            
+                &#183;
+                <a href="/notes">
+                    notes</a>
+            
+                &#183;
+                <a href="/about">
+                    me</a>
+            
+        
+    
+</p>
+
+
+                </div>
+            
+        
+
+        <div class="section" id="title">Efficient P2P Broadcasting</div>
+
+        
+        
+        
+        
+        
+        
+        
+
+        
+<div class="section" id="content">
+    <p class="subtitle"><i></i></p>
+    <span>
+        Mon Oct 23, 2017
+        &#183;
+        880 words
+        
+     </span>
+    <hr/>
+    <h1 id="introduction-">Introduction</h1>
+<p>In an decentralized network, not every user is aware of every other. In the case of <a href="/cicada"><em>Cicada</em></a>, for example, a packet may hop through many users before reaching its destination. How, then, does a user ensure that its broadcast message is received by everyone?</p>
+<h2 id="solution-1-the-shotgun-approach-">Solution 1: The Shotgun Approach</h2>
+
+
+
+
+  
+  
+  
+  
+    
+    
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  <img
+    
+    srcset='
+            '
+    
+      sizes='
+             
+             200px'
+    
+    src="/posts/p2p-broadcast/graph-dl_hu2e8f9e9da79da57fdd7b6575d3ea56aa_3649_320x0_resize_lanczos_2.png"
+    
+      width="200px"
+    
+    
+      alt=""
+    
+  >
+
+
+<p>Suppose a pretty simple network oriented like the one above. Clearly, not every node is directly connected to every other. How does node $C$ ensure that node $D$ receives an arbitrary message?</p>
+<p>The simplest approach is very straightforward:</p>
+<blockquote>
+<p>When a node receives a broadcast message, it sends it to everyone it&rsquo;s connected to, except for whomever it received the message from.
+This guarantees that every node will receive the message, but comes with a host of problems. Notice the amount of duplicate messages this will generate! A node like $B$ will still get two copies of the data (from $A$ and from $C$). Furthermore, how do we know when to &ldquo;stop&rdquo; broadcasting? In the network, there is a cycle of $C \rightarrow A \rightarrow B \rightarrow C$ that will infinitely &ldquo;broadcast.&rdquo;</p>
+</blockquote>
+<h3 id="caching-broadcasts-">Caching Broadcasts</h3>
+<p>To solve the loop problem, nodes could simply track the messages they&rsquo;ve seen. If a node has seen a message, it doesn&rsquo;t re-broadcast. This, unfortunately, opens up the network to a [distributed] denial-of-service attack! A user can endlessly spam massive broadcast messages to hog all of the storage space on the nodes! Even if we store unique hashes of messages (which would usually be smaller than the message content), the problem remains; it just requires more messages.</p>
+<p>We need another option. The solution should have <strong>minimal message duplication</strong> as well as <strong>no node memory usage</strong>.</p>
+<h3 id="analysis-">Analysis</h3>
+<p>Even with caching, how much message duplication will there be in our simple sample network? Well:</p>
+<ul>
+<li>$C$ sends to ${ A, B }$.</li>
+<li>$A$ sends to ${ B, D }$ (duplicates = 1).</li>
+<li>$B$ sends to ${ A, E }$ (duplicates = 2). Remember, even though $A$ sent to $B$ above, this likely happened after $B$ already got the message from $C$, so the &ldquo;return to sender&rdquo; optimization doesn&rsquo;t apply.</li>
+<li>$E$ sends to $D$ (duplicates = 3).</li>
+<li>$D$ sends to ${ F, E }$ (duplicates = 4).</li>
+</ul>
+<p>This value highly varies depending on the network structure, and the &ldquo;connectivity&rdquo; of the network graph.</p>
+<h2 id="solution-2-packet-caching-">Solution 2: Packet Caching</h2>
+<p>We can solve both of these problems in one go by <em>using the message itself for memory</em>. Inside of the message, we store a fixed-size stack of the nodes that this broadcast message has visited thus far. Once the stack reaches its maximum limit, the oldest nodes are removed to make way for the new ones. This means that messages always contain more relevant information based on the location of the message itself! Obviously, the bigger this stack, the less duplication will occur.</p>
+<p>Formally, we could have a message format like this:
+$$
+\begin{aligned}
+&amp;D,   &amp;\small\text{the size of the stack}     \\<br>
+&amp;I_1, &amp;\small\text{oldest visited node}       \\<br>
+&amp;I_2, &amp;\small\text{next oldest visited node}  \\
+&amp;I_3, &amp;\small\text{and so on}\ldots           \\
+&amp;L,   &amp;\small\text{the message length}        \\<br>
+&amp;M    &amp;\small\text{the actual message}        \\<br>
+\end{aligned}
+$$</p>
+<h3 id="analysis--1">Analysis</h3>
+<p>Here&rsquo;s the sample network again:
+
+
+
+
+  
+  
+  
+  
+    
+    
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  <img
+    
+    srcset='
+            '
+    
+      sizes='
+             
+             200px'
+    
+    src="/posts/p2p-broadcast/graph-dl_hu2e8f9e9da79da57fdd7b6575d3ea56aa_3649_320x0_resize_lanczos_2.png"
+    
+      width="200px"
+    
+    
+      alt=""
+    
+  >
+
+</p>
+<p>Let&rsquo;s analyze the number of duplicates this generates. Suppose we choose a &ldquo;stack size&rdquo; of $\lceil{\log_2{n}}\rceil = 3$, where $n$ is the number of nodes:</p>
+<ul>
+<li>$C$ sends to $A$ and $B$, the stack is ${ A, B }$.</li>
+<li>$A$ re-broadcasts to $D$ and $B$ re-broadcasts to $E$, adding each of these to the stack, respectively.</li>
+<li>$D$ sends to $E$ (first duplicate!), setting the stack to ${ B, E, F }$.</li>
+<li>$E$ sends to $D$ (from $B$'s message, not from the above message); the stack is ${ A, B, D }$ and this is the 2nd duplicate.</li>
+<li>Finally, $F$ gets the message and does nothing.</li>
+</ul>
+<p>Thus, we only got 2 duplicates in the network at absolutely <em>no memory cost</em> to each node. Furthermore, in a more intelligent network nodes might be more aware of their direct neighbors and have even less duplication! For example, if $B$ sees a stack of ${ A, B }$ and knows that there&rsquo;s an edge between $A \longleftrightarrow D$, it could preemptively set the stack to be ${ A, D, E }$, eliminating <em><strong>all</strong></em> possible duplicates!</p>
+<h1 id="conclusion-">Conclusion</h1>
+<p>Even for the small sample network, we cut the amount of duplicates in half; furthermore, none of the nodes need to store anything in memory. We&rsquo;ve achieved the two goals we were looking for in the beginning! I use this <a href="https://github.com/Shaptic/Cicada/blob/461e62c0ddfec31c932386fcbb43b977790186e9/cicada/swarmlib/swarmnode.py#L133-L137">technique</a> in <em>Cicada</em> for <a href="https://github.com/Shaptic/Cicada/blob/461e62c0ddfec31c932386fcbb43b977790186e9/cicada/packetlib/cicada.py#L50-L134">broadcast packets</a>.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> It can actually be further optimized since each node in a <em>Cicada</em> swarm knows a few details (like immediate neighbors) about a handful of other nodes in the network.</p>
+<p>This kind of optimal broadcasting can be extremely important in a P2P content distribution platform. For example, in a live-streaming network in which a single user broadcasts their data to the rest of the swarm, this minimizes the strain on the content broadcaster as well as on the viewers.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>This links to commits in time rather than the current code so that the link will always be valid. Check out the repo if you want to see improvements over time (such as the future neighbor optimization). <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Special thanks to <a href="http://mckinziebrandon.me">Brandon</a> for his thoughts on these ideas on a random late night. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+    
+    <a href="https://teapowered.dev/">
+        home</a>
+
+    
+        
+            &#183;
+            <a href="/posts">
+                thoughts</a>
+        
+
+        
+            
+                &#183;
+                <a href="/recipes">
+                    recipes</a>
+            
+                &#183;
+                <a href="/notes">
+                    notes</a>
+            
+                &#183;
+                <a href="/about">
+                    me</a>
+            
+        
+    
+</p>
+
+</div>
+
+
+        <div class="section footer"></div>
+    </div>
+</body>
+
+</html>
