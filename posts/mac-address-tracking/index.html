@@ -28,7 +28,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.min.6dd9a7292bbc0793f9261eb47bfe457ececabc2312e3d429eb84c16bb7cf279a.css" integrity="sha256-bdmnKSu8B5P5Jh60e/5Ffs7KvCMS49Qp64TBa7fPJ5o=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.d47fe1e2e71fff898de307d807396c24cafdedeb4a99c2820395283777ff7d7e.css" integrity="sha256-1H/h4ucf/4mN4wfYBzlsJMr97etKmcKCA5UoN3f/fX4=" crossorigin="anonymous" media="screen">
 
 
 
@@ -177,11 +177,11 @@
 implications of this device-specific, unique ID known as the MAC address.
 </div>
 <p>A MAC address is just a value made of 6 pairs of <a href="https://en.wikipedia.org/wiki/Hexadecimal">hexadecimal numbers</a>. The first 3 pairs are usually assigned and associated with a particular hardware manufacturer,<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> such as Apple or Samsung:</p>
-<p style="align-self: center">
-  $$ \underbrace{\texttt{A4:B8:05}}_{
-          \rlap{\text{one of the Apple Inc. prefixes}}
-      }\texttt{:44:D3:AD} $$
-</p>
+<p>$$
+\underbrace{\texttt{A4:B8:05}}_{
+\rlap{\text{one of the Apple Inc. prefixes}}
+}\texttt{:44:D3:AD}
+$$</p>
 <p>These MAC addresses are used for routing Internet traffic &ndash; it&rsquo;s (part of) how Facebook knows to send your ex-girlfriend&rsquo;s new profile picture to <em>you</em>, not your neighbor. Facebook itself doesn&rsquo;t see the MAC address, but your router does and keeps track of it.</p>
 <p><strong>So what?</strong> Well, any time you&rsquo;re connected to a WiFi network, anyone else on that same network can <em>also</em> find out your MAC address. This isn&rsquo;t a big deal on the surface, because that information is necessary for them to be able to communicate with you, but remember, it&rsquo;s a <em>unique ID for your device</em>.</p>
 <p>For example, on my home network, I can find all of my devices:</p>
@@ -251,11 +251,11 @@ Transmitting findings to surveillance server... done.
     
       sizes='
              
-             320px'
+             240px'
     
     src="/posts/mac-address-tracking/iphone-wifi_hu27678625a9a820c74c85d262e3764680_51632_320x0_resize_lanczos_2.png"
     
-      width="320px"
+      width="240px"
     
     
       alt="iPhone connecting to Google Starbucks"
@@ -282,9 +282,18 @@ spoofing).</li>
 </ul>
 <p>If you decide that connecting to an open WiFi network is worth it, <em>never</em> do anything involving secure data (passwords, account numbers, etc.). Anything you do on a wireless network can be seen, intercepted, and even modified by other users.</p>
 <blockquote>
-<p>Anyone who steps back for a minute and observes our modern digital world might conclude that we have destroyed our privacy in exchange for convenience and false security.<br>
-        &ndash; <em>John Hawks</em></p>
+  <p style="margin-bottom: 0.5rem">
+  Anyone who steps back for a minute and observes our modern digital world
+  might conclude that we have destroyed our privacy in exchange for convenience
+  and false security.
+</p>
+  
+    <p style="font-size: smaller; font-style: normal; margin-left: 3rem">
+      &mdash; John Hawks
+    </p>
+  
 </blockquote>
+
 <!-- #### Footnotes #### -->
 <section class="footnotes" role="doc-endnotes">
 <hr>
