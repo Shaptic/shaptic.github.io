@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tech on Bits, Bytes, Late Nights</title>
+    <link>https://teapowered.dev/tags/tech/</link>
+    <description>Recent content in tech on Bits, Bytes, Late Nights</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://teapowered.dev/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Optimizing Sessionless Sessions</title>
+      <link>https://teapowered.dev/posts/sessionless-sessions/</link>
+      <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/posts/sessionless-sessions/</guid>
+      <description>Or, arriving at the rationale behind the existence of JSON Web Tokens.</description>
+    </item>
+    
+    <item>
+      <title>Efficient P2P Broadcasting</title>
+      <link>https://teapowered.dev/posts/p2p-broadcast/</link>
+      <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/posts/p2p-broadcast/</guid>
+      <description>A memory-less solution that minimizes extra message duplication.</description>
+    </item>
+    
+  </channel>
+</rss>
