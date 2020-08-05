@@ -91,8 +91,19 @@
       
       <guid>https://teapowered.dev/about/</guid>
       <description>I&amp;rsquo;m George.
-I study computer science and sometimes cook things. I&amp;rsquo;m a bit of a cypherpunk at heart, particularly interested in cryptography, peer-to-peer technologies, and applications of virtual and augmented reality. I like to write about these topics in various (albeit rare) posts. I also enjoy full sending down Lombard Street on my longboard and finding new Bay Area views on hikes.
-Feel free to check out my $\LaTeX$&#39;d notes for some of the graduate courses I&amp;rsquo;ve taken at the Georgia Institute of Technology.</description>
+I study computer science and sometimes cook things. I&amp;rsquo;m a bit of a cypherpunk at heart, particularly interested in cryptography, peer-to-peer technologies, and applications of virtual and augmented reality. Fittingly, I work at Stellar, creating (hopefully) useful abstractions to the underlying protocol for developers to create apps on our blockchain.
+I write about these topics and others in various (albeit rare) posts. I also enjoy full sending down Lombard Street on my longboard and finding new Bay Area views on hikes.</description>
+    </item>
+    
+    <item>
+      <title>Privacy &lt;3</title>
+      <link>https://teapowered.dev/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/privacy/</guid>
+      <description>Woah, how&amp;rsquo;d you get here? This page isn&amp;rsquo;t even linked from anywhere 😜
+This site has no tracking, no ads, and no nonsense. I have no idea who reads it, so if you like (or hate!) a post, shoot me an email and tell me!
+JavaScript is only used to render math with $\LaTeX$ (I might change this at some point to pre-render images, instead). I believe this is the way the Web should always be.</description>
     </item>
     
   </channel>
