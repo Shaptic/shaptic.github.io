@@ -6,10 +6,19 @@
     <description>Recent content on Bits, Bytes, Late Nights</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://teapowered.dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>On Pascal&#39;s Wager</title>
+      <link>https://teapowered.dev/posts/pascals-wager/</link>
+      <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/posts/pascals-wager/</guid>
+      <description>A guy who took two philosophy courses questions the premises of a 400-year-old argument for the necessity of believing in God.</description>
+    </item>
     
     <item>
       <title>Minecraft and the Simulation Hypothesis</title>

@@ -27,7 +27,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.min.e85330349c71cdc272fd4a40200a2f81b1904a5e5d63721b0d342c31aedd4e4c.css" integrity="sha256-6FMwNJxxzcJy/UpAIAovgbGQSl5dY3IbDTQsMa7dTkw=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.eebc3eebccb9285c51cb8436bea56500c6c9eb0e0da64c22411acc350f0aa33b.css" integrity="sha256-7rw&#43;68y5KFxRy4Q2vqVlAMbJ6w4NpkwiQRrMNQ8Kozs=" crossorigin="anonymous" media="screen">
 
 
 
@@ -54,6 +54,17 @@
 </style>
 
 
+
+<style type="text/css">
+  ::selection {
+    background: #fcf8eb;  
+    color: black;
+  }
+  ::-moz-selection {
+    background: #fcf8eb;  
+    color: black;
+  }
+</style>
 
 
     
@@ -145,9 +156,9 @@
     </aside>
     <hr />
     <article role="article">
-        <h1 id="introduction-">Introduction</h1>
+        <h1 id="introduction">Introduction</h1>
 <p>In an decentralized network, not every user is aware of every other. In the case of <a href="/cicada"><em>Cicada</em></a>, for example, a packet may hop through many users before reaching its destination. How, then, does a user ensure that its broadcast message is received by everyone?</p>
-<h2 id="solution-1-the-shotgun-approach-">Solution 1: The Shotgun Approach</h2>
+<h2 id="solution-1-the-shotgun-approach">Solution 1: The Shotgun Approach</h2>
 
 
 
@@ -193,10 +204,10 @@
 <p>When a node receives a broadcast message, it sends it to everyone it&rsquo;s connected to, except for whomever it received the message from.
 This guarantees that every node will receive the message, but comes with a host of problems. Notice the amount of duplicate messages this will generate! A node like $B$ will still get two copies of the data (from $A$ and from $C$). Furthermore, how do we know when to &ldquo;stop&rdquo; broadcasting? In the network, there is a cycle of $C \rightarrow A \rightarrow B \rightarrow C$ that will infinitely &ldquo;broadcast.&rdquo;</p>
 </blockquote>
-<h3 id="caching-broadcasts-">Caching Broadcasts</h3>
+<h3 id="caching-broadcasts">Caching Broadcasts</h3>
 <p>To solve the loop problem, nodes could simply track the messages they&rsquo;ve seen. If a node has seen a message, it doesn&rsquo;t re-broadcast. This, unfortunately, opens up the network to a [distributed] denial-of-service attack! A user can endlessly spam massive broadcast messages to hog all of the storage space on the nodes! Even if we store unique hashes of messages (which would usually be smaller than the message content), the problem remains; it just requires more messages.</p>
 <p>We need another option. The solution should have <strong>minimal message duplication</strong> as well as <strong>no node memory usage</strong>.</p>
-<h3 id="analysis-">Analysis</h3>
+<h3 id="analysis">Analysis</h3>
 <p>Even with caching, how much message duplication will there be in our simple sample network? Well:</p>
 <ul>
 <li>$C$ sends to ${ A, B }$.</li>
@@ -206,7 +217,7 @@ This guarantees that every node will receive the message, but comes with a host 
 <li>$D$ sends to ${ F, E }$ (duplicates = 4).</li>
 </ul>
 <p>This value highly varies depending on the network structure, and the &ldquo;connectivity&rdquo; of the network graph.</p>
-<h2 id="solution-2-packet-caching-">Solution 2: Packet Caching</h2>
+<h2 id="solution-2-packet-caching">Solution 2: Packet Caching</h2>
 <p>We can solve both of these problems in one go by <em>using the message itself for memory</em>. Inside of the message, we store a fixed-size stack of the nodes that this broadcast message has visited thus far. Once the stack reaches its maximum limit, the oldest nodes are removed to make way for the new ones. This means that messages always contain more relevant information based on the location of the message itself! Obviously, the bigger this stack, the less duplication will occur.</p>
 <p>Formally, we could have a message format like this:
 $$
@@ -219,7 +230,7 @@ $$
 &amp;M    &amp;\small\text{the actual message}        \\<br>
 \end{aligned}
 $$</p>
-<h3 id="analysis--1">Analysis</h3>
+<h3 id="analysis-1">Analysis</h3>
 <p>Here&rsquo;s the sample network again:
 
 
@@ -269,7 +280,7 @@ $$</p>
 <li>Finally, $F$ gets the message and does nothing.</li>
 </ul>
 <p>Thus, we only got 2 duplicates in the network at absolutely <em>no memory cost</em> to each node. Furthermore, in a more intelligent network nodes might be more aware of their direct neighbors and have even less duplication! For example, if $B$ sees a stack of ${ A, B }$ and knows that there&rsquo;s an edge between $A \longleftrightarrow D$, it could preemptively set the stack to be ${ A, D, E }$, eliminating <em><strong>all</strong></em> possible duplicates!</p>
-<h1 id="conclusion-">Conclusion</h1>
+<h1 id="conclusion">Conclusion</h1>
 <p>Even for the small sample network, we cut the amount of duplicates in half; furthermore, none of the nodes need to store anything in memory. We&rsquo;ve achieved the two goals we were looking for in the beginning! I use this <a href="https://github.com/Shaptic/Cicada/blob/461e62c0ddfec31c932386fcbb43b977790186e9/cicada/swarmlib/swarmnode.py#L133-L137">technique</a> in <em>Cicada</em> for <a href="https://github.com/Shaptic/Cicada/blob/461e62c0ddfec31c932386fcbb43b977790186e9/cicada/packetlib/cicada.py#L50-L134">broadcast packets</a>.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> It can actually be further optimized since each node in a <em>Cicada</em> swarm knows a few details (like immediate neighbors) about a handful of other nodes in the network.</p>
 <p>This kind of optimal broadcasting can be extremely important in a P2P content distribution platform. For example, in a live-streaming network in which a single user broadcasts their data to the rest of the swarm, this minimizes the strain on the content broadcaster as well as on the viewers.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <section class="footnotes" role="doc-endnotes">

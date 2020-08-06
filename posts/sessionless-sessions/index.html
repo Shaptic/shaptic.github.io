@@ -27,7 +27,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.min.e85330349c71cdc272fd4a40200a2f81b1904a5e5d63721b0d342c31aedd4e4c.css" integrity="sha256-6FMwNJxxzcJy/UpAIAovgbGQSl5dY3IbDTQsMa7dTkw=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.eebc3eebccb9285c51cb8436bea56500c6c9eb0e0da64c22411acc350f0aa33b.css" integrity="sha256-7rw&#43;68y5KFxRy4Q2vqVlAMbJ6w4NpkwiQRrMNQ8Kozs=" crossorigin="anonymous" media="screen">
 
 
 
@@ -54,6 +54,17 @@
 </style>
 
 
+
+<style type="text/css">
+  ::selection {
+    background: #fcf8eb;  
+    color: black;
+  }
+  ::-moz-selection {
+    background: #fcf8eb;  
+    color: black;
+  }
+</style>
 
 
     
@@ -147,7 +158,7 @@
     <article role="article">
         <p>I&rsquo;m currently developing an app as a side-project. This is my first time developing a full-fledged application that requires both a back-end server to store data (for which I&rsquo;ve chosen <a href="http://flask.pocoo.org/">Flask</a>) and a front-end client that users interact with (for which I&rsquo;ve chosen <a href="https://www.qt.io/">Qt</a>). I&rsquo;ve reached the stage at which I need to add authentication, so that different users can query different data from the server (like a Twitter feed is different depending on who you&rsquo;re logged in as).</p>
 <p>This post is a look into the research and design that I put into the authentication scheme for the app.</p>
-<h1 id="authentication-methods-">Authentication Methods</h1>
+<h1 id="authentication-methods">Authentication Methods</h1>
 <p>For authenticating and tracking users and their respective logins, there are many standard approaches:</p>
 <ul>
 <li>Session management with cookies</li>
@@ -156,7 +167,7 @@
 <li>Additional query parameters</li>
 </ul>
 <p>I&rsquo;m only going to touch on the first two methods, and go into detail of the token-based authentication method I&rsquo;ll be using.</p>
-<h2 id="session-cookies-">Session Cookies</h2>
+<h2 id="session-cookies">Session Cookies</h2>
 <p>In general, sessions are used to store per-user information, such as the
 contents of your shopping cart, online documents, or other long-term data.
 Cookies are probably the most wide-spread approach for most applications. In
@@ -170,10 +181,10 @@ Date: Wed, 20 Dec 2017 12:52:37 GMT
 </code></pre></div><p>Here, the cookie is <code>session=7dbbb1c5-89f4-...</code>, etc. If you include this data
 with any subsequent requests to the server, it will know that you are the same
 person as before.</p>
-<h3 id="why-theyre-no-good-">Why They&rsquo;re No Good</h3>
+<h3 id="why-theyre-no-good">Why They&rsquo;re No Good</h3>
 <p>The primary downside to this method is that now the server needs to remember the session cookies that it has distributed (i.e. for every user). This is an increase in necessary resources over time.</p>
 <p>For my purposes, I wasn&rsquo;t concerned with this, as I don&rsquo;t expect my application to have that many users. The thing that <em>did</em> concern me was the fact that Qt <a href="https://stackoverflow.com/a/15453429">doesn&rsquo;t have support</a> for modifying cookies from QML JavaScript code&hellip; This would mean I&rsquo;d need to (re)write all of my requests in C++, which I really don&rsquo;t feel like doing. This led to an interesting investigation into alternative authentication methods that didn&rsquo;t rely on session cookies!</p>
-<h2 id="token-authentication-">Token Authentication</h2>
+<h2 id="token-authentication">Token Authentication</h2>
 <p>This investigation led me to research a <em>purely stateless</em> method, which
 authenticates via a cryptographically-signed token. By <em>stateless</em> I mean that
 the server does not remember anything between requests. This is an improvement
@@ -193,7 +204,7 @@ password if anyone else were to see it, but the point stands. Any request can
 include this value as a token and the server will know that this person is
 logged in as &ldquo;george&rdquo;. We can achieve the same effect in a secure way using
 cryptography.</p>
-<h3 id="message-authentication-codes-">Message Authentication Codes</h3>
+<h3 id="message-authentication-codes">Message Authentication Codes</h3>
 <p>This section gets pretty technical, but I will try to make things simple for those not familiar with cryptography.</p>
 <p>An <a href="https://en.wikipedia.org/wiki/Hash-based_message_authentication_code">HMAC</a>, or hash-based message authentication code, is used to create a one-way association between a value and another unique value. One-way means that the unique value is <em>no longer associatable with the original value</em>. To create an HMAC, you start with the value you wish to convert and some secret value, then run them through a hashing algorithm.</p>
 <p>For example, using <a href="https://www.freeformatter.com/hmac-generator.html">this
@@ -215,7 +226,7 @@ Whether using this authentication method or not, the user is stored in a databas
 <pre><code>X-Auth-Token: id=5;token=090b4d082bd7adc1b223086d1d9f8dc4
 </code></pre><p>Both of these pieces of information are critical for the server to believe we are who we say we are. The token alone isn&rsquo;t enough; it&rsquo;s a one-way value, so it <em>only</em> proves that we logged in successfully at some point in time. Hence, the user ID is also necessary so that the server also knows <em>who</em> we are. Then, the server can then verify the token by calculating it themselves. They know the credentials associated with the ID, and they know the secret, so they can follow the same formula and make sure the tokens match.</p>
 <p>Why is this secure? Because <strong>users don&rsquo;t know the server&rsquo;s secret,</strong> so they can&rsquo;t fake tokens. The only way they can acquire a valid one is by successfully logging into the server.</p>
-<h1 id="conclusion-">Conclusion</h1>
+<h1 id="conclusion">Conclusion</h1>
 <p>With this method, we can have fully memory-less sessions. This improves scalability, and also lets us do some fancy cryptography. It comes with the price that we now have to query the database whenever we need something (like the user information), so we can&rsquo;t do any session caching, but it also comes with the benefit that, well, we don&rsquo;t have to do any session caching.</p>
 <p>Most importantly, though, it means I don&rsquo;t need to rewrite my requests and callbacks in C++ in my Qt front-end.</p>
 <p>If you want to use a robust, standardized solution, you can look into JSON Web

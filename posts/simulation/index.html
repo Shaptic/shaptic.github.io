@@ -27,7 +27,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.min.e85330349c71cdc272fd4a40200a2f81b1904a5e5d63721b0d342c31aedd4e4c.css" integrity="sha256-6FMwNJxxzcJy/UpAIAovgbGQSl5dY3IbDTQsMa7dTkw=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.eebc3eebccb9285c51cb8436bea56500c6c9eb0e0da64c22411acc350f0aa33b.css" integrity="sha256-7rw&#43;68y5KFxRy4Q2vqVlAMbJ6w4NpkwiQRrMNQ8Kozs=" crossorigin="anonymous" media="screen">
 
 
 
@@ -54,6 +54,17 @@
 </style>
 
 
+
+<style type="text/css">
+  ::selection {
+    background: #fcf8eb;  
+    color: black;
+  }
+  ::-moz-selection {
+    background: #fcf8eb;  
+    color: black;
+  }
+</style>
 
 
     
@@ -194,7 +205,7 @@ most likely a computer simulation.</p>
 <p>However, there are people out there who decided to take the idea to its limits. Some physicists raised over $200,000 in an effort to conduct some experiments based on the assumption; they even <a href="https://www.ijqf.org/archives/4105">published a paper</a> on their results (not very compelling). It&rsquo;s strange to think it&rsquo;s possible to determine whether or not you&rsquo;re in a simulation <em>while abiding by its rules</em>, but this is exactly the topic of George Hotz&rsquo; <a href="https://www.youtube.com/watch?v=ESXOAJRdcwQ">talk</a> on &ldquo;hacking&rdquo; our way out of the simulation.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <p>So where am I going with this?</p>
 <p>Well, IF we continue to operate under the premise that our world is an accurate simulation of a larger world (and that&rsquo;s quite a big &ldquo;if&rdquo;), then it&rsquo;s possible that our collective feeling of increasingly-unsettling uncertainty in the world is caused by the fact that we&rsquo;re reaching the hardware limitations of the computer our simulation is running on.</p>
-<h1 id="on-minecraft-">On Minecraft</h1>
+<h1 id="on-minecraft">On Minecraft</h1>
 <p>The voxel-based survival simulator Minecraft that jolted the indie game industry into overdrive is, weirdly enough, the inspiration for my reasoning. Minecraft is a procedurally-generated game, meaning everything from the shape of the trees to the mineral deposits hidden deep within caves is randomly generated. It&rsquo;s the result of a mathematical process involving <a href="https://www.redblobgames.com/maps/terrain-from-noise/">Perlin noise</a> which is at the core of many games that generate content as the user explores.</p>
 <p>Because this process, the world is essentially infinite: you can go as far as you want in any given direction and there will always be something fresh and exciting waiting for you. Of course, &ldquo;infinity&rdquo; can&rsquo;t actually exist on a computer: for example, an <code>Int32</code> type can only store ~4 billion numbers, so if you&rsquo;re using one to store the 3D positional coordinates of a player, they can&rsquo;t go more than 2 billion steps from their starting point along a particular axis.</p>
 <p>Obviously, 2 billion steps is still huge, so players don&rsquo;t ever naturally encounter these limits. Minecraft stays <em>effectively</em> infinite, but that does not mean the world is without problems. Players of the game may already be aware of the <a href="https://minecraft.gamepedia.com/Far_Lands">Far Lands</a>: the oddities that occur when you reach these &ldquo;edges&rdquo; of the generated world. Things start to look <a href="https://www.youtube.com/watch?v=oODlSgpiIWM">really strange</a> when you get there:</p>
@@ -252,7 +263,7 @@ most likely a computer simulation.</p>
 </figure>
 
 <p>This erratic-yet-structured pattern of blocks is a result of the terrain-generating algorithm going haywire. Fundamentally, it&rsquo;s a result of <strong>floating point imprecision</strong> which is a natural, unavoidable limitation of modern computer hardware.</p>
-<h1 id="on-floating-point-">On Floating Point</h1>
+<h1 id="on-floating-point">On Floating Point</h1>
 <p>Without getting too technical, it&rsquo;s worth quickly explaining how decimal numbers work on a computer. At the end of the day, bits are bits, and decimal numbers are simply a human-defined way of interpreting those bits. To drive this home, the following 32 bits can be interpreted as the decimal <code>123456.789</code>, the number <code>1206984820</code>, or even as the nonsensical string <code>Gñ e</code>:
 $$
 01000111 \; 11110001 \; 00100000 \; 01100101
@@ -276,7 +287,7 @@ $$
 $$</p>
 <p>Hold on, didn&rsquo;t we want exactly 123456.789? Yup, but we instead got a value that was 0.000063 larger. Therein lies the rub: <strong>computers can&rsquo;t store decimals exactly</strong>, and the error gets worse as the numbers get larger. For example, if we instead wanted to represent the decimal 123456789.123456789, the best a computer could do is 123456792! That&rsquo;s off by ~2.87&hellip; pretty significant.</p>
 <p>This behavior is the cause of the Far Lands above: the terrain generating starts behaving strangely because it can&rsquo;t properly interpolate between large decimal values as your $(x,y,z)$ position in the world grows.</p>
-<h1 id="our-simulation-">Our Simulation</h1>
+<h1 id="our-simulation">Our Simulation</h1>
 <p>It&rsquo;s hard to truly put a finger on what&rsquo;s out of the ordinary. Perhaps it&rsquo;s that the U.S. has a TV star as a president; regardless of your political stance, this is <em>weird</em>. Maybe it&rsquo;s the increased severity in natural disasters: earthquakes, fires, and viruses all feel more common than they used to, and let&rsquo;s hope we don&rsquo;t see another <a href="https://www.businessinsider.com/san-francisco-bay-area-nightmare-according-to-science-2018-4">Big One</a> in our lifetimes. It could just be the whacky weather patterns, like certain places seeing snow in May or heat records being broken seemingly every year.</p>
 <p>It just seems like we&rsquo;re on the brink of <em>some</em>thing&hellip; Regardless of the root cause, I think you know the feeling I&rsquo;m talking about.</p>
 <p>If we really do live in a simulation, the ever-increasing oddities could be explained by the fact that we&rsquo;re reaching the limits of the hardware that powers it, just like the limitations of floating points created the Far Lands in Minecraft. Naturally, if such a hypothesis were to hold true, we should be able to observe things get weirder and weirder as time goes on. With the direction the political, economic and literal climates are trending, that seems likely. Under this theory, though, we might even see a law of physics break; wouldn&rsquo;t that be something?</p>
