@@ -6,10 +6,19 @@
     <description>Recent content on Bits, Bytes, Late Nights</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://teapowered.dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>On Apple&#39;s Ecosystem</title>
+      <link>https://teapowered.dev/posts/apple-and-epic/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/posts/apple-and-epic/</guid>
+      <description>A short blurb on an interesting (if not worrying) possible byproduct if Apple is forced to release their iron grip on the AppStore.</description>
+    </item>
     
     <item>
       <title>On Pascal&#39;s Wager</title>
@@ -100,7 +109,7 @@
       
       <guid>https://teapowered.dev/about/</guid>
       <description>I&amp;rsquo;m George.
-I study computer science and sometimes cook things. I&amp;rsquo;m a bit of a cypherpunk at heart, particularly interested in cryptography, peer-to-peer technologies, and applications of virtual and augmented reality. Fittingly, I work at Stellar, creating (hopefully) useful abstractions to the underlying protocol for developers to create apps on our blockchain.
+I study computer science and sometimes cook things. I&amp;rsquo;m a bit of a cypherpunk at heart, particularly interested in cryptography, peer-to-peer technologies, and applications of virtual and augmented reality. Fittingly, I work at the Stellar Development Foundation, creating (hopefully) useful abstractions to the underlying protocol for developers to create apps on our blockchain.
 I write about these topics and others in various (albeit rare) posts. I also enjoy full sending down Lombard Street on my longboard and finding new Bay Area views on hikes.</description>
     </item>
     

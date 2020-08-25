@@ -6,10 +6,19 @@
     <description>Recent content in misc on Bits, Bytes, Late Nights</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://teapowered.dev/tags/misc/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>On Apple&#39;s Ecosystem</title>
+      <link>https://teapowered.dev/posts/apple-and-epic/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/posts/apple-and-epic/</guid>
+      <description>A short blurb on an interesting (if not worrying) possible byproduct if Apple is forced to release their iron grip on the AppStore.</description>
+    </item>
     
     <item>
       <title>On Pascal&#39;s Wager</title>
