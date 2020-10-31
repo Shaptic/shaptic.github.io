@@ -27,7 +27,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.min.7cedb010753a266c39505e31f196700d2fc7987d648ad62eaf13909e48a0b963.css" integrity="sha256-fO2wEHU6Jmw5UF4x8ZZwDS/HmH1kitYurxOQnkiguWM=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.15cdc21386affc1f08041556dadf0dcfa3d38788d9cb9c97df4a412f8bdfecd3.css" integrity="sha256-Fc3CE4av/B8IBBVW2t8Nz6PTh4jZy5yX30pBL4vf7NM=" crossorigin="anonymous" media="screen">
 
 
 
@@ -134,7 +134,7 @@
             </div>
             <div>&nbsp;&#183;&nbsp;</div>
             <div>
-                1477 words
+                1476 words
             </div>
             <div>&nbsp;&#183;&nbsp;</div>
             <div>
@@ -174,10 +174,10 @@ $$</p>
 <p>These MAC addresses are used for routing Internet traffic &ndash; it&rsquo;s (part of) how Facebook knows to send your ex-girlfriend&rsquo;s new profile picture to <em>you</em>, not your neighbor. Facebook itself doesn&rsquo;t see the MAC address, but your router does and keeps track of it.</p>
 <p><strong>So what?</strong> Well, any time you&rsquo;re connected to a WiFi network, anyone else on that same network can <em>also</em> find out your MAC address. This isn&rsquo;t a big deal on the surface, because that information is necessary for them to be able to communicate with you, but remember, it&rsquo;s a <em>unique ID for your device</em>.</p>
 <p>For example, on my home network, I can find all of my devices:</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    $ sudo nmap -sn 192.168.0.0/24 | grep <span style="color:#cd5555">&#34;MAC Address&#34;</span> | awk <span style="color:#cd5555">&#39;{print $3}&#39;</span>
-    EC:08:xx:xx:xx:xx   <span style="color:#228b22"># my router</span>
-    B8:27:xx:xx:xx:xx   <span style="color:#228b22"># my laptop</span>
-    D4:63:xx:xx:xx:xx   <span style="color:#228b22"># my TV</span>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nmap -sn 192.168.0.0/24 | grep <span style="color:#cd5555">&#34;MAC Address&#34;</span> | awk <span style="color:#cd5555">&#39;{print $3}&#39;</span>
+EC:08:xx:xx:xx:xx   <span style="color:#228b22"># my router</span>
+B8:27:xx:xx:xx:xx   <span style="color:#228b22"># my laptop</span>
+D4:63:xx:xx:xx:xx   <span style="color:#228b22"># my TV</span>
 </code></pre></div><div class="notice info">
   For simplicity, let&rsquo;s call the MAC address the &ldquo;device ID&rdquo; from now on.
 </div>
