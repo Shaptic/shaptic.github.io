@@ -27,7 +27,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.min.eebc3eebccb9285c51cb8436bea56500c6c9eb0e0da64c22411acc350f0aa33b.css" integrity="sha256-7rw&#43;68y5KFxRy4Q2vqVlAMbJ6w4NpkwiQRrMNQ8Kozs=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.7cedb010753a266c39505e31f196700d2fc7987d648ad62eaf13909e48a0b963.css" integrity="sha256-fO2wEHU6Jmw5UF4x8ZZwDS/HmH1kitYurxOQnkiguWM=" crossorigin="anonymous" media="screen">
 
 
 
@@ -141,12 +141,10 @@
                 a 10 minute read
             </div>
             <div class="tag-container">
-                &nbsp;&#183;
                 
                 
-                <span class="tag">
-                    <a href="/tags/privacy/">#privacy</a>
-                </span>
+                &#183;
+                <span class="tag"><a href="/tags/privacy/">#privacy</a></span>
                 
                 
             </div>
@@ -156,7 +154,7 @@
     <article role="article">
         <p>In an effort to combat the COVID-19 crisis, Apple and Google have partnered to implement a way to leverage smartphones for determining whether or not individuals have come in contact with infected patients that they claim preserves user privacy. The techique is called <em>contact tracing</em> and the full list of specifications for the algorithms is in an Apple press release <a href="https://www.apple.com/covid19/contacttracing">here</a>. Here&rsquo;s a high-level summary taken directly from the FAQ:</p>
 <blockquote>
-<p>The solution harness[es] the power of Bluetooth technology to aid in exposure notification. Once enabled, users&rsquo; devices will regularly send out a beacon via Bluetooth that includes a privacy-preserving identifier&mdash;basically, a string of random numbers that aren&rsquo;t tied to a user&rsquo;s identity and change every 10-20 minutes for additional protection. Other phones will be listening for these beacons and broadcasting theirs as well. When each phone receives another beacon, it will record and securely store that beacon on the device.</p>
+<p>The solution harness[es] the power of Bluetooth technology to aid in exposure notification. Once enabled, users' devices will regularly send out a beacon via Bluetooth that includes a privacy-preserving identifier&mdash;basically, a string of random numbers that aren&rsquo;t tied to a user&rsquo;s identity and change every 10-20 minutes for additional protection. Other phones will be listening for these beacons and broadcasting theirs as well. When each phone receives another beacon, it will record and securely store that beacon on the device.</p>
 <p>At least once per day, the system will download a list of beacons that have been verified as belonging to people confirmed as positive for COVID-19 from the relevant public health authority. Each device will check the list of beacons it has recorded against the list downloaded from the server. If there is a match between the beacons stored on the device and the positive diagnosis list, the user may be notified and advised on steps to take next.</p>
 </blockquote>
 <h1 id="why-should-we-care">Why Should We Care?</h1>
@@ -239,7 +237,7 @@ $$
 $$
 The idea is that when a user is infected, they voluntarily reveal their recent temporary exposure keys, which would allow a centralized authority to update a global list that it periodically distributes to all users. Then, the users can cross-reference their own history of observed payloads and see if any matched.</p>
 <p>Unfortunately, this is where things can easily break down. How does a user reveal their keys <em>and</em> stay anonymous? There&rsquo;s no such thing as a truly &ldquo;anonymous tip&rdquo; on the Internet. By willingly uploading your keys to the &ldquo;Diagnosis Server,&rdquo; you are revealing (at <em>least</em>) a good location approximation from your IP address. The location result from <a href="https://tools.keycdn.com/geo">this geolocation service</a> is within 3km of my true location.</p>
-<p>Fortunately, an approximate location like that is not nearly enough to personally identify an individual. Since these apps would (ideally) be operated by a local health authority, they already know their users&rsquo; county.</p>
+<p>Fortunately, an approximate location like that is not nearly enough to personally identify an individual. Since these apps would (ideally) be operated by a local health authority, they already know their users' county.</p>
 <h2 id="bluetooth-broadcasting">Bluetooth Broadcasting</h2>
 <p>The following two points from the Bluetooth specification are the key to keeping the broadcasts hardware-anonymous:</p>
 <ul>
@@ -254,36 +252,36 @@ The idea is that when a user is infected, they voluntarily reveal their recent t
 <table>
 <thead>
 <tr>
-<th align="center">Tx (Power)</th>
-<th align="center">BT address</th>
-<th align="center">RPI</th>
-<th align="center">Metadata</th>
+<th style="text-align:center">Tx (Power)</th>
+<th style="text-align:center">BT address</th>
+<th style="text-align:center">RPI</th>
+<th style="text-align:center">Metadata</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">42</td>
-<td align="center">AA:12:E4</td>
-<td align="center">0xABCD</td>
-<td align="center">0x1234</td>
+<td style="text-align:center">42</td>
+<td style="text-align:center">AA:12:E4</td>
+<td style="text-align:center">0xABCD</td>
+<td style="text-align:center">0x1234</td>
 </tr>
 <tr>
-<td align="center">78</td>
-<td align="center">BB:65:51</td>
-<td align="center">0xEFAB</td>
-<td align="center">0x1010</td>
+<td style="text-align:center">78</td>
+<td style="text-align:center">BB:65:51</td>
+<td style="text-align:center">0xEFAB</td>
+<td style="text-align:center">0x1010</td>
 </tr>
 <tr>
-<td align="center">56</td>
-<td align="center">CC:13:C3</td>
-<td align="center">0xA2D4</td>
-<td align="center">0x2020</td>
+<td style="text-align:center">56</td>
+<td style="text-align:center">CC:13:C3</td>
+<td style="text-align:center">0xA2D4</td>
+<td style="text-align:center">0x2020</td>
 </tr>
 <tr>
-<td align="center">89</td>
-<td align="center">DD:86:0C</td>
-<td align="center">0x04D3</td>
-<td align="center">0x3030</td>
+<td style="text-align:center">89</td>
+<td style="text-align:center">DD:86:0C</td>
+<td style="text-align:center">0x04D3</td>
+<td style="text-align:center">0x3030</td>
 </tr>
 </tbody>
 </table>
@@ -291,36 +289,36 @@ The idea is that when a user is infected, they voluntarily reveal their recent t
 <table>
 <thead>
 <tr>
-<th align="center">Tx (Power)</th>
-<th align="center">BT address</th>
-<th align="center">RPI</th>
-<th align="center">Metadata</th>
+<th style="text-align:center">Tx (Power)</th>
+<th style="text-align:center">BT address</th>
+<th style="text-align:center">RPI</th>
+<th style="text-align:center">Metadata</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">74</td>
-<td align="center">BB:65:51</td>
-<td align="center">0xEFAB</td>
-<td align="center">0x1010</td>
+<td style="text-align:center">74</td>
+<td style="text-align:center">BB:65:51</td>
+<td style="text-align:center">0xEFAB</td>
+<td style="text-align:center">0x1010</td>
 </tr>
 <tr>
-<td align="center">60</td>
-<td align="center">C2:42:12</td>
-<td align="center">0xDEAD</td>
-<td align="center">0x5186</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">C2:42:12</td>
+<td style="text-align:center">0xDEAD</td>
+<td style="text-align:center">0x5186</td>
 </tr>
 <tr>
-<td align="center">88</td>
-<td align="center">DD:86:0C</td>
-<td align="center">0x04D3</td>
-<td align="center">0x3030</td>
+<td style="text-align:center">88</td>
+<td style="text-align:center">DD:86:0C</td>
+<td style="text-align:center">0x04D3</td>
+<td style="text-align:center">0x3030</td>
 </tr>
 <tr>
-<td align="center">38</td>
-<td align="center">EE:51:32</td>
-<td align="center">0xC4F3</td>
-<td align="center">0x6194</td>
+<td style="text-align:center">38</td>
+<td style="text-align:center">EE:51:32</td>
+<td style="text-align:center">0xC4F3</td>
+<td style="text-align:center">0x6194</td>
 </tr>
 </tbody>
 </table>

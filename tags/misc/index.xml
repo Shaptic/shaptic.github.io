@@ -6,10 +6,15 @@
     <description>Recent content in misc on Bits, Bytes, Late Nights</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://teapowered.dev/tags/misc/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 11 Oct 2020 19:47:59 -0700</lastBuildDate><atom:link href="https://teapowered.dev/tags/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On the Ethics of the Subjective Theory of Value</title>
+      <link>https://teapowered.dev/posts/theory-of-value/</link>
+      <pubDate>Sun, 11 Oct 2020 19:47:59 -0700</pubDate>
+      
+      <guid>https://teapowered.dev/posts/theory-of-value/</guid>
+      <description>A guy who barely passed AP Econ in high school muses about the ethical rationales of modern economic theory and capitalism.</description>
+    </item>
     
     <item>
       <title>On Apple&#39;s Ecosystem</title>
