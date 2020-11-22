@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blurbs on Bits, Bytes, Late Nights</title>
+    <link>https://teapowered.dev/blurbs/</link>
+    <description>Recent content in Blurbs on Bits, Bytes, Late Nights</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Nov 2020 22:47:24 -0800</lastBuildDate><atom:link href="https://teapowered.dev/blurbs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://teapowered.dev/blurbs/blurb-1606114044/</link>
+      <pubDate>Sun, 22 Nov 2020 22:47:24 -0800</pubDate>
+      
+      <guid>https://teapowered.dev/blurbs/blurb-1606114044/</guid>
+      <description>At what point did America&amp;rsquo;s materialistic superiority over the Soviet Union transition into a religion of consumerism?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://teapowered.dev/blurbs/blurb-1606086434/</link>
+      <pubDate>Sun, 22 Nov 2020 15:07:14 -0800</pubDate>
+      
+      <guid>https://teapowered.dev/blurbs/blurb-1606086434/</guid>
+      <description>Has anyone ever considered the fact that since Google is often the provider of free WiFi at most Starbucks, it can secretly man-in-the-middle all of the hotspot&amp;rsquo;s traffic since it&amp;rsquo;s also a trusted SSL certificate provider? Of course, this would be relatively easy to catch (for example, by noticing that Bing&amp;rsquo;s cert is verified by Google rather than Microsoft), but the potential is still unnerving&amp;hellip; All it would take is a few targeted, hard-to-spot interceptions to gain backdoors on many, many systems.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://teapowered.dev/blurbs/blurb-1606005885/</link>
+      <pubDate>Sat, 21 Nov 2020 16:44:45 -0800</pubDate>
+      
+      <guid>https://teapowered.dev/blurbs/blurb-1606005885/</guid>
+      <description>Isn&amp;rsquo;t it odd how more and more normalized it is to have a chemical buffer between our conscious mind and the real world? From the innocence of sipping on a work-day beer to dependence on caffeine consumption for productivity to the absurdity of same-hour marijuana delivery, it seems our grasp on the world around us slips deeper and deeper into the murky waters of substance-induced thought with each passing day / normalized drug.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://teapowered.dev/blurbs/blurb-1605610261/</link>
+      <pubDate>Tue, 17 Nov 2020 02:51:01 -0800</pubDate>
+      
+      <guid>https://teapowered.dev/blurbs/blurb-1605610261/</guid>
+      <description>There are only two classes worth thinking about: worker and ruler.</description>
+    </item>
+    
+  </channel>
+</rss>
