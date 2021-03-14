@@ -1,137 +1,83 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://teapowered.dev/blurbs/blurb-1607986302/</loc>
     <lastmod>2020-12-14T14:51:35-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/</loc>
     <lastmod>2020-12-14T14:51:35-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/blurbs/</loc>
     <lastmod>2020-12-14T14:51:35-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/blurbs/blurb-1607986295/</loc>
     <lastmod>2020-12-08T21:40:01-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/blurbs/blurb-1607203804/</loc>
     <lastmod>2020-12-05T13:30:04-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/blurbs/blurb-1606114044/</loc>
     <lastmod>2020-11-22T22:47:24-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/blurbs/blurb-1606086434/</loc>
     <lastmod>2020-11-22T15:07:14-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/blurbs/blurb-1606005885/</loc>
     <lastmod>2020-11-21T16:44:45-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/blurbs/blurb-1605610261/</loc>
     <lastmod>2020-11-17T02:51:01-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/tags/misc/</loc>
     <lastmod>2020-08-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/posts/apple-and-epic/</loc>
     <lastmod>2020-08-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/tags/</loc>
     <lastmod>2020-08-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/posts/</loc>
     <lastmod>2020-08-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/posts/pascals-wager/</loc>
     <lastmod>2020-08-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/posts/simulation/</loc>
     <lastmod>2020-05-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/posts/contact-tracing/</loc>
     <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/tags/privacy/</loc>
     <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/posts/p2p/</loc>
     <lastmod>2019-12-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/recipes/</loc>
     <lastmod>2019-06-06T23:14:16-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/notes/</loc>
     <lastmod>2019-06-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/posts/sessionless-sessions/</loc>
     <lastmod>2018-12-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/tags/tech/</loc>
     <lastmod>2018-12-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/posts/p2p-broadcast/</loc>
     <lastmod>2017-10-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/posts/mac-address-tracking/</loc>
     <lastmod>2017-07-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/about/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://teapowered.dev/privacy/</loc>
   </url>
-  
 </urlset>
