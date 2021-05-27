@@ -2,10 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://teapowered.dev/blurbs/blurb-1607986302/</loc>
-    <lastmod>2020-12-14T14:51:35-08:00</lastmod>
-  </url><url>
     <loc>https://teapowered.dev/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/posts/self-driving-surveillance/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/tags/privacy/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/tags/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/tags/tech/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/posts/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/blurbs/blurb-1607986302/</loc>
     <lastmod>2020-12-14T14:51:35-08:00</lastmod>
   </url><url>
     <loc>https://teapowered.dev/blurbs/</loc>
@@ -35,12 +50,6 @@
     <loc>https://teapowered.dev/posts/apple-and-epic/</loc>
     <lastmod>2020-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://teapowered.dev/tags/</loc>
-    <lastmod>2020-08-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://teapowered.dev/posts/</loc>
-    <lastmod>2020-08-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://teapowered.dev/posts/pascals-wager/</loc>
     <lastmod>2020-08-03T00:00:00+00:00</lastmod>
   </url><url>
@@ -48,9 +57,6 @@
     <lastmod>2020-05-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://teapowered.dev/posts/contact-tracing/</loc>
-    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://teapowered.dev/tags/privacy/</loc>
     <lastmod>2020-04-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://teapowered.dev/posts/p2p/</loc>
@@ -63,9 +69,6 @@
     <lastmod>2019-06-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://teapowered.dev/posts/sessionless-sessions/</loc>
-    <lastmod>2018-12-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://teapowered.dev/tags/tech/</loc>
     <lastmod>2018-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://teapowered.dev/posts/p2p-broadcast/</loc>
