@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<title>
+    Why Does 0.999&hellip; = 1? - Bits, Bytes, Late Nights
+</title>
+
+
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.fcd10c3e0fe44e4ae1a0ce3ab48f06cec42312f2779c3fcfacea01c703b2efba.css" integrity="sha256-/NEMPg/kTkrhoM46tI8GzsQjEvJ3nD/PrOoBxwOy77o=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+
+
+
+<style>
+   
+   
+  @font-face {
+    font-family: 'Didact Gothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/font/didact-gothic-v13-latin-regular.eot');  
+    src: local('Didact Gothic Regular'), local('DidactGothic-Regular'),
+         url('/font/didact-gothic-v13-latin-regular.eot?#iefix') format('embedded-opentype'),  
+         url('/font/didact-gothic-v13-latin-regular.woff2') format('woff2'),  
+         url('/font/didact-gothic-v13-latin-regular.woff') format('woff'),  
+         url('/font/didact-gothic-v13-latin-regular.ttf') format('truetype'),  
+         url('/font/didact-gothic-v13-latin-regular.svg#DidactGothic') format('svg');  
+  }
+</style>
+
+
+
+<style type="text/css">
+  ::selection {
+    background: #fcf8eb;  
+    color: black;
+  }
+  ::-moz-selection {
+    background: #fcf8eb;  
+    color: black;
+  }
+</style>
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Why Does 0.999&hellip; = 1?
+        
+    </title>
+</head>
+
+<body>
+    
+    
+    
+        <div class="section top-menu">
+            
+<p>
+    <a href="https://teapowered.dev/">home</a>
+    
+        
+            &#183;
+            <a href="/posts">thoughts</a>
+        
+            &#183;
+            <a href="/recipes">recipes</a>
+        
+            &#183;
+            <a href="/notes">notes</a>
+        
+            &#183;
+            <a href="/about">me</a>
+        
+    
+</p>
+
+
+        </div>
+    
+    
+
+    <main class="wrap">
+        
+        <header>
+            Why Does 0.999&hellip; = 1?
+        </header>
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+        
+<div class="flex-container">
+    <aside role="complementary">
+        <div class="subtitle"></div>
+        <div id="metadata">
+            <div>
+                Aug 04, 2020
+            </div>
+            <div>&nbsp;&#183;&nbsp;</div>
+            <div>
+                128 words
+            </div>
+            <div>&nbsp;&#183;&nbsp;</div>
+            <div>
+                a 1 minute read
+            </div>
+            <div class="tag-container">
+                
+                
+                &#183;
+                <span class="tag"><a href="/tags/fun/">#fun</a></span>
+                
+                
+            </div>
+        </div>
+    </aside>
+    <hr />
+    <article role="article">
+        <p>In math, we often deal with numbers that have an infinite amount of decimal places. For example, $\pi=3.14159265\ldots$ going on forever. Similarly, $e=2.178282\ldots$ going on forever. These are special in that they are <strong>irrational numbers</strong>: they never repeat and never terminate. In another vein are <em>repeating</em> decimals, like $0.\overline{45}$, which means $0.454545\ldots$</p>
+<p>A number that gets infinitely closer and closer to another value, like 0.99999&hellip; is considered to be equal to that value. Namely,
+$$
+0.99999\ldots = 1
+$$</p>
+<p>This often throws people for a loop. Shouldn&rsquo;t there be &ldquo;some number&rdquo; between the infinitely-repeating decimal and 1? There&rsquo;s a simple way to explain why this isn&rsquo;t the case:</p>
+<p>$$
+\begin{aligned}
+3 \times \frac{1}{3} &amp;= 1
+\\<br>
+3 \times 0.\overline{333} &amp;= 1 \\<br>
+0.\overline{999} &amp;= 1
+\end{aligned}
+$$</p>
+<p>QED.</p>
+
+    </article>
+</div>
+
+
+        
+<nav role="navigation" class="flex-container bottom-menu">
+    
+<hr />
+<p>
+    
+    <a href="https://teapowered.dev/">home</a>
+    
+        
+            &#183;
+            <a href="/posts">thoughts</a>
+        
+            &#183;
+            <a href="/recipes">recipes</a>
+        
+            &#183;
+            <a href="/notes">notes</a>
+        
+            &#183;
+            <a href="/about">me</a>
+        
+    
+</p>
+
+
+</nav>
+
+    </main>
+    
+    <footer class="flex-container footer">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax": {
+        }
+      }
+    }
+  });
+</script>
+
+</footer>
+    
+    
+</body>
+
+</html>
