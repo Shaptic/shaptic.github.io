@@ -6,7 +6,35 @@
     <description>Recent content on Bits, Bytes, Late Nights</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://teapowered.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Jul 2021 14:40:04 -0700</lastBuildDate><atom:link href="https://teapowered.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://teapowered.dev/blurbs/blurb-1626471604/</link>
+      <pubDate>Fri, 16 Jul 2021 14:40:04 -0700</pubDate>
+      
+      <guid>https://teapowered.dev/blurbs/blurb-1626471604/</guid>
+      <description>Machine &amp;ldquo;learning&amp;rdquo; is a misnomer: The modern black-box algorithms that show us things they think we want to see start by learning from our behavior but end by manipulating it.
+After all, isn&amp;rsquo;t it much more optimal (and ML just cares about optimality) to slowly convince 10 users that they all want to see 1 thing rather than to show them 10 uniquely-relevant things.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://teapowered.dev/blurbs/blurb-1626471682/</link>
+      <pubDate>Wed, 07 Jul 2021 18:26:13 -0700</pubDate>
+      
+      <guid>https://teapowered.dev/blurbs/blurb-1626471682/</guid>
+      <description>America is one of the only first-world countries out there that allows pharmaceuticals to advertise to the public directly. And then we wonder why we&amp;rsquo;re over-medicated&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://teapowered.dev/blurbs/blurb-1623443719/</link>
+      <pubDate>Fri, 11 Jun 2021 13:36:30 -0800</pubDate>
+      
+      <guid>https://teapowered.dev/blurbs/blurb-1623443719/</guid>
+      <description>Just learned about parallel construction, where the story that law enforcement tells the public is completely fabricated in order to keep the juicy details secret. It&amp;rsquo;s fascinating to think about this in the context of the recent Bitcoin ransomware bust.</description>
+    </item>
+    
     <item>
       <title>Do Self-Driving Cars Dream of Snitching?</title>
       <link>https://teapowered.dev/posts/self-driving-surveillance/</link>
