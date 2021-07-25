@@ -6,22 +6,31 @@
     <description>Recent content in Tags on Bits, Bytes, Late Nights</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://teapowered.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://teapowered.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>privacy</title>
-      <link>https://teapowered.dev/tags/privacy/</link>
-      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      <title>politics</title>
+      <link>https://teapowered.dev/tags/politics/</link>
+      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://teapowered.dev/tags/privacy/</guid>
+      <guid>https://teapowered.dev/tags/politics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tech</title>
       <link>https://teapowered.dev/tags/tech/</link>
-      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://teapowered.dev/tags/tech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>privacy</title>
+      <link>https://teapowered.dev/tags/privacy/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/tags/privacy/</guid>
       <description></description>
     </item>
     

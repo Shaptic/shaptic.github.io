@@ -174,7 +174,7 @@ $$</p>
 <p>These MAC addresses are used for routing Internet traffic &ndash; it&rsquo;s (part of) how Facebook knows to send your ex-girlfriend&rsquo;s new profile picture to <em>you</em>, not your neighbor. Facebook itself doesn&rsquo;t see the MAC address, but your router does and keeps track of it.</p>
 <p><strong>So what?</strong> Well, any time you&rsquo;re connected to a WiFi network, anyone else on that same network can <em>also</em> find out your MAC address. This isn&rsquo;t a big deal on the surface, because that information is necessary for them to be able to communicate with you, but remember, it&rsquo;s a <em>unique ID for your device</em>.</p>
 <p>For example, on my home network, I can find all of my devices:</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nmap -sn 192.168.0.0/24 | grep <span style="color:#cd5555">&#34;MAC Address&#34;</span> | awk <span style="color:#cd5555">&#39;{print $3}&#39;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nmap -sn 192.168.0.0/24 | grep <span style="color:#cd5555">&#34;MAC Address&#34;</span> | awk <span style="color:#cd5555">&#39;{print $3}&#39;</span>
 EC:08:xx:xx:xx:xx   <span style="color:#228b22"># my router</span>
 B8:27:xx:xx:xx:xx   <span style="color:#228b22"># my laptop</span>
 D4:63:xx:xx:xx:xx   <span style="color:#228b22"># my TV</span>
@@ -242,7 +242,7 @@ Transmitting findings to surveillance server... done.
              
              240px'
     
-    src="/posts/mac-address-tracking/iphone-wifi_hu27678625a9a820c74c85d262e3764680_51632_320x0_resize_lanczos_2.png"
+    src="/posts/mac-address-tracking/iphone-wifi_hu27678625a9a820c74c85d262e3764680_51632_320x0_resize_lanczos_3.png"
     
       width="240px"
     
