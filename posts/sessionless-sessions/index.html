@@ -219,7 +219,7 @@ $$</p>
 Whether using this authentication method or not, the user is stored in a database where (for simplicity) a user&rsquo;s ID is represented its row number in a table. In our running example, pretend that this is the user&rsquo;s row: <code>5 | &quot;george&quot; | &quot;hunter2&quot;</code>, so <strong>the user ID is 5</strong>.
 </div>
 <p>Then, with <em>every subsequent request</em>, we send the token and the user ID (instead of the login info) as part of our request using the <code>X-Auth-Token</code> header (which is just part of the HTTP request):</p>
-<pre><code>X-Auth-Token: id=5;token=090b4d082bd7adc1b223086d1d9f8dc4
+<pre tabindex="0"><code>X-Auth-Token: id=5;token=090b4d082bd7adc1b223086d1d9f8dc4
 </code></pre><p>Both of these pieces of information are critical for the server to believe we are who we say we are. The token alone isn&rsquo;t enough; it&rsquo;s a one-way value, so it <em>only</em> proves that we logged in successfully at some point in time. Hence, the user ID is also necessary so that the server also knows <em>who</em> we are. Then, the server can then verify the token by calculating it themselves. They know the credentials associated with the ID, and they know the secret, so they can follow the same formula and make sure the tokens match.</p>
 <p>Why is this secure? Because <strong>users don&rsquo;t know the server&rsquo;s secret,</strong> so they can&rsquo;t fake tokens. The only way they can acquire a valid one is by successfully logging into the server.</p>
 <h1 id="conclusion">Conclusion</h1>

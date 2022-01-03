@@ -2,10 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://teapowered.dev/blurbs/blurb-1630571946/</loc>
-    <lastmod>2021-08-31T02:12:42-07:00</lastmod>
-  </url><url>
     <loc>https://teapowered.dev/</loc>
+    <lastmod>2021-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/tags/crypto/</loc>
+    <lastmod>2021-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/tags/</loc>
+    <lastmod>2021-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/tags/tech/</loc>
+    <lastmod>2021-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/posts/</loc>
+    <lastmod>2021-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/posts/why-nfts-matter/</loc>
+    <lastmod>2021-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/blurbs/blurb-1630571946/</loc>
     <lastmod>2021-08-31T02:12:42-07:00</lastmod>
   </url><url>
     <loc>https://teapowered.dev/blurbs/</loc>
@@ -36,15 +51,6 @@
     <lastmod>2021-06-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://teapowered.dev/tags/politics/</loc>
-    <lastmod>2021-06-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://teapowered.dev/tags/</loc>
-    <lastmod>2021-06-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://teapowered.dev/tags/tech/</loc>
-    <lastmod>2021-06-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://teapowered.dev/posts/</loc>
     <lastmod>2021-06-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://teapowered.dev/posts/self-driving-surveillance/</loc>
