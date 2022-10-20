@@ -27,7 +27,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.min.fcd10c3e0fe44e4ae1a0ce3ab48f06cec42312f2779c3fcfacea01c703b2efba.css" integrity="sha256-/NEMPg/kTkrhoM46tI8GzsQjEvJ3nD/PrOoBxwOy77o=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.6a55e8ac7f062dd22adaea4debc9cc0b1da677c4476a6eedefd3fd152d465bab.css" integrity="sha256-alXorH8GLdIq2upN68nMCx2md8RHam7t79P9FS1GW6s=" crossorigin="anonymous" media="screen">
 
 
 
@@ -169,12 +169,12 @@ contents of your shopping cart, online documents, or other long-term data.
 Cookies are probably the most wide-spread approach for most applications. In
 this implementation, the server issues a unique ID as a cookie when you make a
 request:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#8b008b;font-weight:bold">HTTP</span>/<span style="color:#b452cd">1.1</span> <span style="color:#b452cd">200</span> <span style="color:#008b45;font-weight:bold">OK</span>
-Content-Type: text/html; charset=utf-8
-Content-Length: 84
-Set-Cookie: session=7dbbb1c5-89f4-4b0a-8196-0e91031042a8; Expires=Sat, 20-Jan-2018 12:52:37 GMT; HttpOnly; Path=/
-Date: Wed, 20 Dec 2017 12:52:37 GMT
-</code></pre></div><p>Here, the cookie is <code>session=7dbbb1c5-89f4-...</code>, etc. If you include this data
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-http" data-lang="http"><span style="display:flex;"><span><span style="color:#8b008b;font-weight:bold">HTTP</span>/<span style="color:#b452cd">1.1</span> <span style="color:#b452cd">200</span> <span style="color:#008b45;font-weight:bold">OK</span>
+</span></span><span style="display:flex;"><span>Content-Type: text/html; charset=utf-8
+</span></span><span style="display:flex;"><span>Content-Length: 84
+</span></span><span style="display:flex;"><span>Set-Cookie: session=7dbbb1c5-89f4-4b0a-8196-0e91031042a8; Expires=Sat, 20-Jan-2018 12:52:37 GMT; HttpOnly; Path=/
+</span></span><span style="display:flex;"><span>Date: Wed, 20 Dec 2017 12:52:37 GMT
+</span></span></code></pre></div><p>Here, the cookie is <code>session=7dbbb1c5-89f4-...</code>, etc. If you include this data
 with any subsequent requests to the server, it will know that you are the same
 person as before.</p>
 <h3 id="why-theyre-no-good">Why They&rsquo;re No Good</h3>
@@ -228,23 +228,23 @@ Whether using this authentication method or not, the user is stored in a databas
 <p>If you want to use a robust, standardized solution, you can look into JSON Web
 Tokens (JWTs). For me, though, this simple solution is more than enough to
 provide authentication for my application.</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Obviously this isn&rsquo;t strictly true. Consider <code>Username: georgeh</code> and
 <code>Password: unter2</code>; this combination would likewise result in the same token.
 It&rsquo;s just an analogy to avoid getting mathy.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>For the value to be truly indeterminable, you need to use a cryptographically-secure hashing algorithm like SHA256 (rather than MD5, which is known to be breakable). Here, the resulting HMAC would&rsquo;ve been too long and scary-looking, so I used MD5 for a simpler example.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
+<li id="fn:3">
 <p>The $|$ operator here is concatenation, just slapping the two
 values together.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
     </article>
 </div>

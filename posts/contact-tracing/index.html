@@ -27,7 +27,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.min.fcd10c3e0fe44e4ae1a0ce3ab48f06cec42312f2779c3fcfacea01c703b2efba.css" integrity="sha256-/NEMPg/kTkrhoM46tI8GzsQjEvJ3nD/PrOoBxwOy77o=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.6a55e8ac7f062dd22adaea4debc9cc0b1da677c4476a6eedefd3fd152d465bab.css" integrity="sha256-alXorH8GLdIq2upN68nMCx2md8RHam7t79P9FS1GW6s=" crossorigin="anonymous" media="screen">
 
 
 
@@ -154,7 +154,7 @@
     <article role="article">
         <p>In an effort to combat the COVID-19 crisis, Apple and Google have partnered to implement a way to leverage smartphones for determining whether or not individuals have come in contact with infected patients that they claim preserves user privacy. The techique is called <em>contact tracing</em> and the full list of specifications for the algorithms is in an Apple press release <a href="https://www.apple.com/covid19/contacttracing">here</a>. Here&rsquo;s a high-level summary taken directly from the FAQ:</p>
 <blockquote>
-<p>The solution harness[es] the power of Bluetooth technology to aid in exposure notification. Once enabled, users' devices will regularly send out a beacon via Bluetooth that includes a privacy-preserving identifier&mdash;basically, a string of random numbers that aren&rsquo;t tied to a user&rsquo;s identity and change every 10-20 minutes for additional protection. Other phones will be listening for these beacons and broadcasting theirs as well. When each phone receives another beacon, it will record and securely store that beacon on the device.</p>
+<p>The solution harness[es] the power of Bluetooth technology to aid in exposure notification. Once enabled, users&rsquo; devices will regularly send out a beacon via Bluetooth that includes a privacy-preserving identifier&mdash;basically, a string of random numbers that aren&rsquo;t tied to a user&rsquo;s identity and change every 10-20 minutes for additional protection. Other phones will be listening for these beacons and broadcasting theirs as well. When each phone receives another beacon, it will record and securely store that beacon on the device.</p>
 <p>At least once per day, the system will download a list of beacons that have been verified as belonging to people confirmed as positive for COVID-19 from the relevant public health authority. Each device will check the list of beacons it has recorded against the list downloaded from the server. If there is a match between the beacons stored on the device and the positive diagnosis list, the user may be notified and advised on steps to take next.</p>
 </blockquote>
 <h1 id="why-should-we-care">Why Should We Care?</h1>
@@ -237,7 +237,7 @@ $$
 $$
 The idea is that when a user is infected, they voluntarily reveal their recent temporary exposure keys, which would allow a centralized authority to update a global list that it periodically distributes to all users. Then, the users can cross-reference their own history of observed payloads and see if any matched.</p>
 <p>Unfortunately, this is where things can easily break down. How does a user reveal their keys <em>and</em> stay anonymous? There&rsquo;s no such thing as a truly &ldquo;anonymous tip&rdquo; on the Internet. By willingly uploading your keys to the &ldquo;Diagnosis Server,&rdquo; you are revealing (at <em>least</em>) a good location approximation from your IP address. The location result from <a href="https://tools.keycdn.com/geo">this geolocation service</a> is within 3km of my true location.</p>
-<p>Fortunately, an approximate location like that is not nearly enough to personally identify an individual. Since these apps would (ideally) be operated by a local health authority, they already know their users' county.</p>
+<p>Fortunately, an approximate location like that is not nearly enough to personally identify an individual. Since these apps would (ideally) be operated by a local health authority, they already know their users&rsquo; county.</p>
 <h2 id="bluetooth-broadcasting">Bluetooth Broadcasting</h2>
 <p>The following two points from the Bluetooth specification are the key to keeping the broadcasts hardware-anonymous:</p>
 <ul>
@@ -342,17 +342,17 @@ Bluetooth hardware has progressed to a point that makes this possible. The idea 
 <p>Unfortunately though, the complexity of time sychronization in a distributed system creates an unavoidable attack vector in which attackers can correlate users across key updates <em>because</em> of the key update&hellip; This completely negates any semblance of privacy because now <em>anyone</em> observing the Bluetooth signals (at a sufficient scale, granted) can track users.</p>
 <p>There are further issues with the human element as described above, and sophisticated attacks that apply any Bluetooth Low Energy device, but they are minor compared to the gaping hole time-based correlation creates.</p>
 <p>This is a fantastic effort towards both keeping the public informed and enabling future epidemiological study, but not one I&rsquo;ll be participating in.</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>The syntax <code>a || b</code> is common in cryptography to represent bit-string concatenation.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>There&rsquo;s a bit of a discrepancy here: the quote claims the metadata is updated every 15 minutes, yet the RPI claims to update every 10 minutes. This is just a documentation error, since the Bluetooth spec clearly states that &ldquo;the advertiser address, RPI, and metadata shall be changed synchronously so that they cannot be linked.&rdquo; The true rotation interval is randomly chosen to be within 10 and 20 minutes.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
     </article>
 </div>

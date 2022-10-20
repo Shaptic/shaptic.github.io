@@ -27,7 +27,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.min.fcd10c3e0fe44e4ae1a0ce3ab48f06cec42312f2779c3fcfacea01c703b2efba.css" integrity="sha256-/NEMPg/kTkrhoM46tI8GzsQjEvJ3nD/PrOoBxwOy77o=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.6a55e8ac7f062dd22adaea4debc9cc0b1da677c4476a6eedefd3fd152d465bab.css" integrity="sha256-alXorH8GLdIq2upN68nMCx2md8RHam7t79P9FS1GW6s=" crossorigin="anonymous" media="screen">
 
 
 
@@ -174,11 +174,11 @@ $$</p>
 <p>These MAC addresses are used for routing Internet traffic &ndash; it&rsquo;s (part of) how Facebook knows to send your ex-girlfriend&rsquo;s new profile picture to <em>you</em>, not your neighbor. Facebook itself doesn&rsquo;t see the MAC address, but your router does and keeps track of it.</p>
 <p><strong>So what?</strong> Well, any time you&rsquo;re connected to a WiFi network, anyone else on that same network can <em>also</em> find out your MAC address. This isn&rsquo;t a big deal on the surface, because that information is necessary for them to be able to communicate with you, but remember, it&rsquo;s a <em>unique ID for your device</em>.</p>
 <p>For example, on my home network, I can find all of my devices:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nmap -sn 192.168.0.0/24 | grep <span style="color:#cd5555">&#34;MAC Address&#34;</span> | awk <span style="color:#cd5555">&#39;{print $3}&#39;</span>
-EC:08:xx:xx:xx:xx   <span style="color:#228b22"># my router</span>
-B8:27:xx:xx:xx:xx   <span style="color:#228b22"># my laptop</span>
-D4:63:xx:xx:xx:xx   <span style="color:#228b22"># my TV</span>
-</code></pre></div><div class="notice info">
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ nmap -sn 192.168.0.0/24 | grep <span style="color:#cd5555">&#34;MAC Address&#34;</span> | awk <span style="color:#cd5555">&#39;{print $3}&#39;</span>
+</span></span><span style="display:flex;"><span>EC:08:xx:xx:xx:xx   <span style="color:#228b22"># my router</span>
+</span></span><span style="display:flex;"><span>B8:27:xx:xx:xx:xx   <span style="color:#228b22"># my laptop</span>
+</span></span><span style="display:flex;"><span>D4:63:xx:xx:xx:xx   <span style="color:#228b22"># my TV</span>
+</span></span></code></pre></div><div class="notice info">
   For simplicity, let&rsquo;s call the MAC address the &ldquo;device ID&rdquo; from now on.
 </div>
 <p>Now imagine you&rsquo;re sitting in a coffee shop on their WiFi and find the device IDs of everyone else in the coffee shop. Then, you write them down on a napkin, pack your bags, and head to the coffee shop down the street. Here, you do the same thing, but this time, you hang out for a bit and enjoy your latte. Eventually, you scan for device IDs again and guess what you see&hellip; A new one that <em>matches one on your napkin</em>. That means&hellip; <em>someone from the last coffee shop is here, too</em>. You don&rsquo;t know who they are yet (but you do know what kind of device it is! remember the prefix from before?), but you <em>have</em> tracked their location!</p>
@@ -282,17 +282,17 @@ and false security.</p>
 </blockquote>
 
 <!-- #### Footnotes #### -->
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>This is actually an exploitation technique called a <a href="https://blog.lookout.com/spoofed-wifi-60-minutes">Man-in-the-Middle attack</a> where you create a custom WiFi network and call it something generic (like &ldquo;Starbucks&rdquo;) and then devices will automatically try to connect to it because they recognize the name.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>MAC addresses can be spoofed (faked), and not every manufacturer   generates a unique ID for each their devices, but this applies as a general  rule.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
     </article>
 </div>

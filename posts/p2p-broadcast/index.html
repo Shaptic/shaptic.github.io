@@ -27,7 +27,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.min.fcd10c3e0fe44e4ae1a0ce3ab48f06cec42312f2779c3fcfacea01c703b2efba.css" integrity="sha256-/NEMPg/kTkrhoM46tI8GzsQjEvJ3nD/PrOoBxwOy77o=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.6a55e8ac7f062dd22adaea4debc9cc0b1da677c4476a6eedefd3fd152d465bab.css" integrity="sha256-alXorH8GLdIq2upN68nMCx2md8RHam7t79P9FS1GW6s=" crossorigin="anonymous" media="screen">
 
 
 
@@ -279,17 +279,17 @@ $$</p>
 <h1 id="conclusion">Conclusion</h1>
 <p>Even for the small sample network, we cut the amount of duplicates in half; furthermore, none of the nodes need to store anything in memory. We&rsquo;ve achieved the two goals we were looking for in the beginning! I use this <a href="https://github.com/Shaptic/Cicada/blob/461e62c0ddfec31c932386fcbb43b977790186e9/cicada/swarmlib/swarmnode.py#L133-L137">technique</a> in <em>Cicada</em> for <a href="https://github.com/Shaptic/Cicada/blob/461e62c0ddfec31c932386fcbb43b977790186e9/cicada/packetlib/cicada.py#L50-L134">broadcast packets</a>.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> It can actually be further optimized since each node in a <em>Cicada</em> swarm knows a few details (like immediate neighbors) about a handful of other nodes in the network.</p>
 <p>This kind of optimal broadcasting can be extremely important in a P2P content distribution platform. For example, in a live-streaming network in which a single user broadcasts their data to the rest of the swarm, this minimizes the strain on the content broadcaster as well as on the viewers.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>This links to commits in time rather than the current code so that the link will always be valid. Check out the repo if you want to see improvements over time (such as the future neighbor optimization).&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>Special thanks to <a href="http://mckinziebrandon.me">Brandon</a> for his thoughts on these ideas on a random late night.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
     </article>
 </div>
