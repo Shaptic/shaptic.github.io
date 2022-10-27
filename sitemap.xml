@@ -2,10 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://teapowered.dev/blurbs/blurb-1647026075/</loc>
-    <lastmod>2022-03-11T11:14:35-08:00</lastmod>
-  </url><url>
     <loc>https://teapowered.dev/</loc>
+    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/tags/economics/</loc>
+    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/posts/irrational-economics/</loc>
+    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/tags/misc/</loc>
+    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/tags/</loc>
+    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/posts/</loc>
+    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/blurbs/blurb-1647026075/</loc>
     <lastmod>2022-03-11T11:14:35-08:00</lastmod>
   </url><url>
     <loc>https://teapowered.dev/blurbs/</loc>
@@ -14,13 +29,7 @@
     <loc>https://teapowered.dev/tags/crypto/</loc>
     <lastmod>2021-12-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://teapowered.dev/tags/</loc>
-    <lastmod>2021-12-30T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://teapowered.dev/tags/tech/</loc>
-    <lastmod>2021-12-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://teapowered.dev/posts/</loc>
     <lastmod>2021-12-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://teapowered.dev/posts/why-nfts-matter/</loc>
@@ -83,11 +92,11 @@
     <loc>https://teapowered.dev/blurbs/blurb-1605610261/</loc>
     <lastmod>2020-11-17T02:51:01-08:00</lastmod>
   </url><url>
-    <loc>https://teapowered.dev/tags/misc/</loc>
-    <lastmod>2020-08-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://teapowered.dev/posts/apple-and-epic/</loc>
     <lastmod>2020-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teapowered.dev/posts/infinite-decimals/</loc>
+    <lastmod>2020-08-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://teapowered.dev/posts/pascals-wager/</loc>
     <lastmod>2020-08-03T00:00:00+00:00</lastmod>

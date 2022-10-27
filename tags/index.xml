@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Bits, Bytes, Late Nights</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://teapowered.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://teapowered.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>economics</title>
+      <link>https://teapowered.dev/tags/economics/</link>
+      <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/tags/economics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>misc</title>
+      <link>https://teapowered.dev/tags/misc/</link>
+      <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/tags/misc/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>crypto</title>
       <link>https://teapowered.dev/tags/crypto/</link>
@@ -40,15 +58,6 @@
       <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://teapowered.dev/tags/privacy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>misc</title>
-      <link>https://teapowered.dev/tags/misc/</link>
-      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://teapowered.dev/tags/misc/</guid>
       <description></description>
     </item>
     

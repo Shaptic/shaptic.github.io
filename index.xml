@@ -6,7 +6,16 @@
     <description>Recent content on Bits, Bytes, Late Nights</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Mar 2022 11:14:35 -0800</lastBuildDate><atom:link href="https://teapowered.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://teapowered.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Irrational Economics</title>
+      <link>https://teapowered.dev/posts/irrational-economics/</link>
+      <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/posts/irrational-economics/</guid>
+      <description>Why did I pay $12 for a water bottle at a festival? Why did you buy Tylenol over the generic brand of acetaminophen? Did you know it&amp;rsquo;s really easy to cause liver damage with acetaminophen? In this post, I laugh at the bad economic decisions we make as humans every day.</description>
+    </item>
+    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1647026075/</link>
@@ -187,6 +196,15 @@ After all, isn&amp;rsquo;t it much more optimal (and ML just cares about optimal
       
       <guid>https://teapowered.dev/posts/apple-and-epic/</guid>
       <description>A short blurb on an interesting (if not worrying) possible byproduct if Apple is forced to release their iron grip on the AppStore.</description>
+    </item>
+    
+    <item>
+      <title>Why Does 0.999... = 1?</title>
+      <link>https://teapowered.dev/posts/infinite-decimals/</link>
+      <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/posts/infinite-decimals/</guid>
+      <description>A simple explanation for a fundamental mathematical truth.</description>
     </item>
     
     <item>
