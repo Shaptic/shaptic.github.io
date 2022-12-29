@@ -134,7 +134,7 @@
             </div>
             <div>&nbsp;&#183;&nbsp;</div>
             <div>
-                693 words
+                770 words
             </div>
             <div>&nbsp;&#183;&nbsp;</div>
             <div>
@@ -184,7 +184,7 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#8b008b;font-weight:bold">return</span> unique
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>For an array of size <code>n</code>, this takes <code>O(2n)</code> time<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and uses <code>O(2n)</code> space (yes, the constant doesn&rsquo;t really matter for Big-O, but it does when comparing approaches).</p>
+</span></span></code></pre></div><p>For an array of size <code>n</code>, this takes <code>O(2n)</code> time<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> and uses <code>O(2n)</code> space (yes, the constant doesn&rsquo;t really matter for Big-O, but it does when comparing approaches).</p>
 <p>This approach is painful because (a) we over-estimate the necessary capacity of the new map and (b) we need two loops through our data structures.</p>
 <p>We could solve (b) by pre-allocating <code>unique</code> sooner, then do the array insertion as we do existence checks:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#228b22">// Dedupe removes all non-unique elements from the given array.
@@ -244,7 +244,10 @@
 <hr>
 <ol>
 <li id="fn:1">
-<p>I know that <code>map[string]struct{}</code> is a more idiomatic and <a href="https://stackoverflow.com/questions/34018908/golang-why-dont-we-have-a-set-datastructure#comment89711306_34020023">efficient</a> way to represent a set in Golang, but it&rsquo;s less readable to someone unfamiliar with the language, so I prefer <code>bool</code> here.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>I know that <code>map[string]struct{}</code> is a more idiomatic and <a href="https://stackoverflow.com/questions/34018908/golang-why-dont-we-have-a-set-datastructure#comment89711306_34020023">efficient</a> way to represent a set in Golang, but it&rsquo;s less readable to someone unfamiliar with the language, so I prefer <code>bool</code> here.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>This assumes constant-time map lookups and insertions, both of which are true in the amortized (&ldquo;amortized&rdquo; = did it enough times) case in most languages. There is the subtlety of string comparisons here, though: an equality check is <code>O(m)</code> where <code>m</code> is the length of the shortest string. Technically, then, the complexity is more like <code>O(2nm)</code>. However, this factor is present in <em>every</em> solution, so we can &ldquo;factor it out&rdquo; in a sense, since we&rsquo;re comparing them.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
