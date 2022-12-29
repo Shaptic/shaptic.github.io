@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Byte-sized Algorithms: Removing Duplicates</title>
+      <link>https://teapowered.dev/posts/duplicates-in-place/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://teapowered.dev/posts/duplicates-in-place/</guid>
+      <description>This is just some basic Leetcode-esque stuff I needed to do at work recently. It shouldn&amp;rsquo;t surprise or impress anyone who has thought about this before, but it was mildly interesting to think and write about.</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1647026075/</link>
       <pubDate>Fri, 11 Mar 2022 11:14:35 -0800</pubDate>
