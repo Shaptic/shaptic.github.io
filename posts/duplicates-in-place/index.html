@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<title>
+    Byte-sized Algorithms: Removing Duplicates - Bits, Bytes, Late Nights
+</title>
+
+
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.6a55e8ac7f062dd22adaea4debc9cc0b1da677c4476a6eedefd3fd152d465bab.css" integrity="sha256-alXorH8GLdIq2upN68nMCx2md8RHam7t79P9FS1GW6s=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+
+
+
+<style>
+   
+   
+  @font-face {
+    font-family: 'Didact Gothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/font/didact-gothic-v13-latin-regular.eot');  
+    src: local('Didact Gothic Regular'), local('DidactGothic-Regular'),
+         url('/font/didact-gothic-v13-latin-regular.eot?#iefix') format('embedded-opentype'),  
+         url('/font/didact-gothic-v13-latin-regular.woff2') format('woff2'),  
+         url('/font/didact-gothic-v13-latin-regular.woff') format('woff'),  
+         url('/font/didact-gothic-v13-latin-regular.ttf') format('truetype'),  
+         url('/font/didact-gothic-v13-latin-regular.svg#DidactGothic') format('svg');  
+  }
+</style>
+
+
+
+<style type="text/css">
+  ::selection {
+    background: #fcf8eb;  
+    color: black;
+  }
+  ::-moz-selection {
+    background: #fcf8eb;  
+    color: black;
+  }
+</style>
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Byte-sized Algorithms: Removing Duplicates
+        
+    </title>
+</head>
+
+<body>
+    
+    
+    
+        <div class="section top-menu">
+            
+<p>
+    <a href="https://teapowered.dev/">home</a>
+    
+        
+            &#183;
+            <a href="/posts">thoughts</a>
+        
+            &#183;
+            <a href="/recipes">recipes</a>
+        
+            &#183;
+            <a href="/notes">notes</a>
+        
+            &#183;
+            <a href="/about">me</a>
+        
+    
+</p>
+
+
+        </div>
+    
+    
+
+    <main class="wrap">
+        
+        <header>
+            Byte-sized Algorithms: Removing Duplicates
+        </header>
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+        
+<div class="flex-container">
+    <aside role="complementary">
+        <div class="subtitle"></div>
+        <div id="metadata">
+            <div>
+                Jun 06, 2022
+            </div>
+            <div>&nbsp;&#183;&nbsp;</div>
+            <div>
+                693 words
+            </div>
+            <div>&nbsp;&#183;&nbsp;</div>
+            <div>
+                4 minute read
+            </div>
+            <div class="tag-container">
+                
+                
+                &#183;
+                <span class="tag"><a href="/tags/tech/">#tech</a></span>
+                
+                
+            </div>
+        </div>
+    </aside>
+    <hr />
+    <article role="article">
+        <p>Contrary to popular belief among software engineers, algorithms really do come up in the real world sometimes! This post is just some basic Leetcode-esque stuff I needed to do at work recently. It shouldn&rsquo;t surprise or impress anyone who has thought about this before or taken an algorithms course, but it was mildly interesting to think and write about.</p>
+<h1 id="problem-statement">Problem Statement</h1>
+<p>Suppose you have a large (but in-memory) array of strings and you want to remove all of its duplicates as efficiently as possible, i.e. a function signature like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#228b22">// Dedupe returns an array containing all non-unique elements in the input.
+</span></span></span><span style="display:flex;"><span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">func</span> <span style="color:#008b45">Dedupe</span>(array []<span style="color:#00688b;font-weight:bold">string</span>) []<span style="color:#00688b;font-weight:bold">string</span>
+</span></span></code></pre></div><p>We&rsquo;re going to ignore the obvious solution that probably exists in many languages: returning a set initialized with the array, e.g. in Python:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#8b008b;font-weight:bold">from</span> <span style="color:#008b45;text-decoration:underline">typing</span> <span style="color:#8b008b;font-weight:bold">import</span> List
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b008b;font-weight:bold">def</span> <span style="color:#008b45">dedupe</span>(array: List[<span style="color:#658b00">str</span>]) -&gt; List[<span style="color:#658b00">str</span>]:
+</span></span><span style="display:flex;"><span>  <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#658b00">list</span>(<span style="color:#658b00">set</span>(array))
+</span></span></code></pre></div><p>This isn&rsquo;t ideal since you construct two new objects: the set and then the final list. Plus, Golang (and other systems-y languages) don&rsquo;t have native set types, so let&rsquo;s explore a few variations to this problem.</p>
+<h2 id="naive-solution">Naive Solution</h2>
+<p>The simplest approach would be to use a map (or dictionary or hashmap) to track the unique elements, then turn that back into an array. This is basically the Python approach, except we are emulating its built-in <a href="https://docs.python.org/3/library/stdtypes.html#set"><code>set</code></a> type with a map:<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#228b22">// Dedupe removes all non-unique elements from the given array.
+</span></span></span><span style="display:flex;"><span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">func</span> <span style="color:#008b45">Dedupe</span>(array []<span style="color:#00688b;font-weight:bold">string</span>) []<span style="color:#00688b;font-weight:bold">string</span> {
+</span></span><span style="display:flex;"><span>  set := <span style="color:#658b00">make</span>(<span style="color:#8b008b;font-weight:bold">map</span>[<span style="color:#00688b;font-weight:bold">string</span>]<span style="color:#00688b;font-weight:bold">bool</span>, <span style="color:#658b00">len</span>(array))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8b008b;font-weight:bold">for</span> _, item := <span style="color:#8b008b;font-weight:bold">range</span> array {
+</span></span><span style="display:flex;"><span>    <span style="color:#8b008b;font-weight:bold">if</span> _, ok := set[item]; !ok {
+</span></span><span style="display:flex;"><span>      set[item] = <span style="color:#8b008b;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  i := <span style="color:#b452cd">0</span>
+</span></span><span style="display:flex;"><span>  unique := <span style="color:#658b00">make</span>([]<span style="color:#00688b;font-weight:bold">string</span>, <span style="color:#658b00">len</span>(set))
+</span></span><span style="display:flex;"><span>  <span style="color:#8b008b;font-weight:bold">for</span> key := <span style="color:#8b008b;font-weight:bold">range</span> set {
+</span></span><span style="display:flex;"><span>    unique[i] = key
+</span></span><span style="display:flex;"><span>    i++
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8b008b;font-weight:bold">return</span> unique
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>For an array of size <code>n</code>, this takes <code>O(2n)</code> time<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and uses <code>O(2n)</code> space (yes, the constant doesn&rsquo;t really matter for Big-O, but it does when comparing approaches).</p>
+<p>This approach is painful because (a) we over-estimate the necessary capacity of the new map and (b) we need two loops through our data structures.</p>
+<p>We could solve (b) by pre-allocating <code>unique</code> sooner, then do the array insertion as we do existence checks:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#228b22">// Dedupe removes all non-unique elements from the given array.
+</span></span></span><span style="display:flex;"><span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">func</span> <span style="color:#008b45">Dedupe</span>(array []<span style="color:#00688b;font-weight:bold">string</span>) []<span style="color:#00688b;font-weight:bold">string</span> {
+</span></span><span style="display:flex;"><span>  set := <span style="color:#658b00">make</span>(<span style="color:#8b008b;font-weight:bold">map</span>[<span style="color:#00688b;font-weight:bold">string</span>]<span style="color:#00688b;font-weight:bold">bool</span>, <span style="color:#658b00">len</span>(array))
+</span></span><span style="display:flex;"><span>  unique := <span style="color:#658b00">make</span>([]<span style="color:#00688b;font-weight:bold">string</span>, <span style="color:#b452cd">0</span>, <span style="color:#658b00">len</span>(array))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8b008b;font-weight:bold">for</span> _, item := <span style="color:#8b008b;font-weight:bold">range</span> array {
+</span></span><span style="display:flex;"><span>    <span style="color:#8b008b;font-weight:bold">if</span> _, ok := set[item]; !ok {
+</span></span><span style="display:flex;"><span>      set[item] = <span style="color:#8b008b;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>      unique = <span style="color:#658b00">append</span>(unique, item)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8b008b;font-weight:bold">return</span> unique
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>However, this makes (a) worse: the capacity of <code>unique</code> is <em>much</em> higher than it needs to be.</p>
+<h2 id="unsorted-case">Unsorted Case</h2>
+<p>If the input list is unsorted, we can do a lot better than this by using the input list itself as the final storage location:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#228b22">// Dedupe removes all non-unique elements from the given array *in place*.
+</span></span></span><span style="display:flex;"><span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">func</span> <span style="color:#008b45">Dedupe</span>(array []<span style="color:#00688b;font-weight:bold">string</span>) []<span style="color:#00688b;font-weight:bold">string</span> {
+</span></span><span style="display:flex;"><span>  set := <span style="color:#658b00">make</span>(<span style="color:#8b008b;font-weight:bold">map</span>[<span style="color:#00688b;font-weight:bold">string</span>]<span style="color:#00688b;font-weight:bold">bool</span>, <span style="color:#658b00">len</span>(array))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  count := <span style="color:#b452cd">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8b008b;font-weight:bold">for</span> _, item := <span style="color:#8b008b;font-weight:bold">range</span> array {
+</span></span><span style="display:flex;"><span>    <span style="color:#8b008b;font-weight:bold">if</span> _, ok := set[item]; !ok {
+</span></span><span style="display:flex;"><span>      set[item] = <span style="color:#8b008b;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>      array[count] = item 
+</span></span><span style="display:flex;"><span>      count++
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8b008b;font-weight:bold">return</span> array[:count]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Obviously, if the input list must stay unmodified, this is an irrelevant optimization.</p>
+<p>For an array of size <code>n</code>, this version takes <code>O(n)</code> time and uses <code>O(n)</code> space, our best approach yet.</p>
+<h2 id="sorted-case">Sorted Case</h2>
+<p>If the input list is sorted, we can eliminate the need for a map entirely! Any time a new value is encountered, we adjust the storage index. Note that we shouldn&rsquo;t sort the list in the unsorted case, since sorting takes <code>O(n log n)</code> time which makes matters worse, not better.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#228b22">// Dedupe removes all non-unique elements from the given *sorted* array.
+</span></span></span><span style="display:flex;"><span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">func</span> <span style="color:#008b45">Dedupe</span>(array []<span style="color:#00688b;font-weight:bold">string</span>) []<span style="color:#00688b;font-weight:bold">string</span> {
+</span></span><span style="display:flex;"><span>  prevItem := array[<span style="color:#b452cd">0</span>] <span style="color:#228b22">// assumption: `array` has at least one element
+</span></span></span><span style="display:flex;"><span><span style="color:#228b22"></span>  count := <span style="color:#b452cd">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8b008b;font-weight:bold">for</span> i := <span style="color:#b452cd">1</span>; i &lt; <span style="color:#658b00">len</span>(array); i++ {
+</span></span><span style="display:flex;"><span>    <span style="color:#8b008b;font-weight:bold">if</span> array[i] == prevItem {
+</span></span><span style="display:flex;"><span>      <span style="color:#8b008b;font-weight:bold">continue</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    array[count] = array[i]
+</span></span><span style="display:flex;"><span>    count++
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8b008b;font-weight:bold">return</span> array[:count]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This is the best possible scenario, as we need no extra storage space and do the bare minimum amount of work (albeit still <code>O(n)</code>) to de-duplicate the array.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>I know that <code>map[string]struct{}</code> is a more idiomatic and <a href="https://stackoverflow.com/questions/34018908/golang-why-dont-we-have-a-set-datastructure#comment89711306_34020023">efficient</a> way to represent a set in Golang, but it&rsquo;s less readable to someone unfamiliar with the language, so I prefer <code>bool</code> here.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </article>
+</div>
+
+
+        
+<nav role="navigation" class="flex-container bottom-menu">
+    
+<hr />
+<p>
+    
+    <a href="https://teapowered.dev/">home</a>
+    
+        
+            &#183;
+            <a href="/posts">thoughts</a>
+        
+            &#183;
+            <a href="/recipes">recipes</a>
+        
+            &#183;
+            <a href="/notes">notes</a>
+        
+            &#183;
+            <a href="/about">me</a>
+        
+    
+</p>
+
+
+</nav>
+
+    </main>
+    
+    <footer class="flex-container footer">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax": {
+        }
+      }
+    }
+  });
+</script>
+
+</footer>
+    
+    
+</body>
+
+</html>
