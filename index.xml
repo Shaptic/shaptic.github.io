@@ -286,7 +286,7 @@ My notes on Computational Perception are the ones that started it all. This 330+
       <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://teapowered.dev/posts/sessionless-sessions/</guid>
-      <description>Or, arriving at the rationale behind the existence of JSON Web Tokens.</description>
+      <description>Or, arriving at the rationale behind the existence of JSON Web Tokens in an extremely roundabout fashion.</description>
     </item>
     
     <item>
@@ -314,8 +314,8 @@ My notes on Computational Perception are the ones that started it all. This 330+
       
       <guid>https://teapowered.dev/about/</guid>
       <description>I&amp;rsquo;m George.
-I study computer science and sometimes cook things. I&amp;rsquo;m a bit of a cypherpunk at heart, particularly interested in cryptography, peer-to-peer technologies, and applications of virtual and augmented reality. Fittingly, I work at the Stellar Development Foundation, creating (hopefully) useful abstractions to the underlying protocol for developers to create apps on our blockchain.
-I write about these topics and others in various (albeit rare) posts. I also enjoy full sending down Lombard Street on my longboard and finding new Bay Area views on hikes.</description>
+I study computer science and sometimes cook things. I&amp;rsquo;m a bit of a cypherpunk at heart, particularly interested in cryptography, peer-to-peer technologies, and applications of virtual and augmented reality. Fittingly, I work at the Stellar Development Foundation on the &amp;ldquo;Decentralization&amp;rdquo; team, creating (hopefully) useful abstractions to the underlying protocol (like Horizon) for developers to create apps on our blockchain.
+I write about these topics and others in various (albeit rare) posts.</description>
     </item>
     
     <item>
@@ -326,7 +326,7 @@ I write about these topics and others in various (albeit rare) posts. I also enj
       <guid>https://teapowered.dev/privacy/</guid>
       <description>Woah, how&amp;rsquo;d you get here? This page isn&amp;rsquo;t even linked from anywhere 😜
 This site has no tracking, no ads, and no nonsense. I have no idea who reads it, so if you like (or hate!) a post, shoot me an email and tell me!
-JavaScript is only used to render math with $\LaTeX$ (I might change this at some point to pre-render images, instead). I believe this is the way the Web should always be.</description>
+JavaScript is only used to render math with $\LaTeX$ (I might change this at some point to pre-render images, instead). This is the way the Web should always be!</description>
     </item>
     
   </channel>

@@ -136,7 +136,7 @@
             </div>
             <div>&nbsp;&#183;&nbsp;</div>
             <div>
-                770 words
+                772 words
             </div>
             <div>&nbsp;&#183;&nbsp;</div>
             <div>
@@ -224,7 +224,7 @@
 </span></span></code></pre></div><p>Obviously, if the input list must stay unmodified, this is an irrelevant optimization.</p>
 <p>For an array of size <code>n</code>, this version takes <code>O(n)</code> time and uses <code>O(n)</code> space, our best approach yet.</p>
 <h2 id="sorted-case">Sorted Case</h2>
-<p>If the input list is sorted, we can eliminate the need for a map entirely! Any time a new value is encountered, we adjust the storage index. Note that we shouldn&rsquo;t sort the list in the unsorted case, since sorting takes <code>O(n log n)</code> time which makes matters worse, not better.</p>
+<p>If the input list is sorted, we can eliminate the need for a map entirely! Any time a new value is encountered, we adjust the storage index. Note that we shouldn&rsquo;t try to sort the list in the <a href="#unsorted-case">unsorted case</a>, since sorting takes <code>O(n log n)</code> time which makes matters worse, not better.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#228b22">// Dedupe removes all non-unique elements from the given *sorted* array.
 </span></span></span><span style="display:flex;"><span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">func</span> <span style="color:#008b45">Dedupe</span>(array []<span style="color:#00688b;font-weight:bold">string</span>) []<span style="color:#00688b;font-weight:bold">string</span> {
 </span></span><span style="display:flex;"><span>  prevItem := array[<span style="color:#b452cd">0</span>] <span style="color:#228b22">// assumption: `array` has at least one element
