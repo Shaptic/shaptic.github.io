@@ -173,9 +173,9 @@
 <h2 id="cryptographic-primitives">Cryptographic Primitives</h2>
 <p>Let&rsquo;s start with the basics. The protocol only needs symmetric encryption provided by the following primitives:</p>
 <ul>
-<li>An <code>HKDF</code> (HMAC-based key derivation function) using SHA-256. ✅</li>
-<li><code>AES</code> using 128-bit keys and in CTR mode. ✅</li>
-<li>A cryptographically-secure psuedorandom number generator (<code>CSPRNG</code>). ✅</li>
+<li>An <code>HKDF</code> (HMAC-based key derivation function) using SHA-256. &#x2705;</li>
+<li><code>AES</code> using 128-bit keys and in CTR mode. &#x2705;</li>
+<li>A cryptographically-secure psuedorandom number generator (<code>CSPRNG</code>). &#x2705;</li>
 </ul>
 <p>The HKDF is well-known, standardized, and considered secure; both the <a href="https://www.schneier.com/blog/archives/2009/07/another_new_aes.html">key length</a> and mode of operation for AES
 are considered secure against chosen-plaintext attacks; and the CSPRNG is secure by definition.</p>

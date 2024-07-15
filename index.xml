@@ -4,330 +4,261 @@
     <title>Bits, Bytes, Late Nights</title>
     <link>https://teapowered.dev/</link>
     <description>Recent content on Bits, Bytes, Late Nights</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://teapowered.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://teapowered.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Irrational Economics</title>
       <link>https://teapowered.dev/posts/irrational-economics/</link>
       <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/irrational-economics/</guid>
       <description>Why did I pay $12 for a water bottle at a festival? Why did you buy Tylenol over the generic brand of acetaminophen? Did you know it&amp;rsquo;s &lt;em&gt;really&lt;/em&gt; easy to cause liver damage with acetaminophen? In this post, I laugh at the bad economic decisions we make as humans every day.</description>
     </item>
-    
     <item>
       <title>The Economics of Sustainability</title>
       <link>https://teapowered.dev/posts/the-economics-of-sustainability/</link>
       <pubDate>Fri, 12 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/the-economics-of-sustainability/</guid>
       <description>A brief (by university standards) essay that ties together history, economics, philosophy, ethics, nutrition, and environmentalism to analyze the prosperity resulting from capitalism and industrialization in contrast to our hopes for a sustainable society.</description>
     </item>
-    
     <item>
       <title>Byte-sized Algorithms: Removing Duplicates</title>
       <link>https://teapowered.dev/posts/duplicates-in-place/</link>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/duplicates-in-place/</guid>
       <description>This is just some basic Leetcode-esque stuff I needed to do at work recently. It shouldn&amp;rsquo;t surprise or impress anyone who has thought about this before, but it was mildly interesting to think and write about.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1647026075/</link>
       <pubDate>Fri, 11 Mar 2022 11:14:35 -0800</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1647026075/</guid>
       <description>&amp;ldquo;Whataboutism&amp;rdquo; isn&amp;rsquo;t a logical fallacy if it&amp;rsquo;s in the context of a zero-sum game.</description>
     </item>
-    
     <item>
       <title>Why NFTs Matter</title>
       <link>https://teapowered.dev/posts/why-nfts-matter/</link>
       <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/why-nfts-matter/</guid>
       <description>It&amp;rsquo;s not about ape avatars, basketball highlights, or other digital trinkets. It&amp;rsquo;s about authentic relationships.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1630571946/</link>
       <pubDate>Tue, 31 Aug 2021 02:12:42 -0700</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1630571946/</guid>
       <description>Theres nothing inherently wrong with anecdotal evidence. Yes, the big picture matters, but that shouldnt make real stories less meaningful.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1630571896/</link>
       <pubDate>Wed, 04 Aug 2021 16:44:11 -0700</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1630571896/</guid>
       <description>Conspiracy theory: Corporations dedicate some non-trivial part of their marketing budget to influencing pop culture into including their products (e.g. songs).</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1630571849/</link>
       <pubDate>Tue, 03 Aug 2021 14:28:29 -0700</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1630571849/</guid>
       <description>Conspiracy theory: Popular TV networks time their commercial breaks at the same time (give or take a minute for plausible deniability) to guarantee that viewers see at least some advertisements.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1627151023/</link>
       <pubDate>Wed, 21 Jul 2021 21:22:43 -0700</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1627151023/</guid>
       <description>How do places whose local economy basically exists because of tourism have the gall to charge people extra money to visit there? Occupancy taxes are a joke.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1627151146/</link>
       <pubDate>Tue, 20 Jul 2021 19:08:12 -0700</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1627151146/</guid>
-      <description>If every brand of paper towels claims that 6 of their rolls is the same as 9 &amp;ldquo;regular&amp;rdquo; rolls, doesnt every brand then become a regular roll? Which means 6 rolls = 9 rolls = 13.5 rolls = &amp;hellip; ad infinitum.
-Use this one weird trick to get infinite paper towels for life!</description>
+      <description>If every brand of paper towels claims that 6 of their rolls is the same as 9 &amp;ldquo;regular&amp;rdquo; rolls, doesnt every brand then become a regular roll? Which means 6 rolls = 9 rolls = 13.5 rolls = &amp;hellip; ad infinitum.&#xA;Use this one weird trick to get infinite paper towels for life!</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1626471604/</link>
       <pubDate>Fri, 16 Jul 2021 14:40:04 -0700</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1626471604/</guid>
-      <description>Machine &amp;ldquo;learning&amp;rdquo; is a misnomer: The modern black-box algorithms that show us things they think we want to see start by learning from our behavior but end by manipulating it.
-After all, isn&amp;rsquo;t it much more optimal (and ML just cares about optimality) to slowly convince 10 users that they all want to see 1 thing rather than to show them 10 uniquely-relevant things.</description>
+      <description>Machine &amp;ldquo;learning&amp;rdquo; is a misnomer: The modern black-box algorithms that show us things they think we want to see start by learning from our behavior but end by manipulating it.&#xA;After all, isn&amp;rsquo;t it much more optimal (and ML just cares about optimality) to slowly convince 10 users that they all want to see 1 thing rather than to show them 10 uniquely-relevant things.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1626471682/</link>
       <pubDate>Wed, 07 Jul 2021 18:26:13 -0700</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1626471682/</guid>
       <description>America is one of the only first-world countries out there that allows pharmaceuticals to advertise to the public directly. And then we wonder why we&amp;rsquo;re over-medicated&amp;hellip;</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1623443719/</link>
       <pubDate>Fri, 11 Jun 2021 13:36:30 -0800</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1623443719/</guid>
       <description>Just learned about parallel construction, where the story that law enforcement tells the public is completely fabricated in order to keep the juicy details secret. It&amp;rsquo;s fascinating to think about this in the context of the recent Bitcoin ransomware bust.</description>
     </item>
-    
     <item>
       <title>Newspeak in an AI-Driven World</title>
       <link>https://teapowered.dev/posts/ai-and-newspeak/</link>
       <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/ai-and-newspeak/</guid>
       <description>Or: Stop trying to make everyone dumber, Outlook.</description>
     </item>
-    
     <item>
       <title>Do Self-Driving Cars Dream of Snitching?</title>
       <link>https://teapowered.dev/posts/self-driving-surveillance/</link>
       <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/self-driving-surveillance/</guid>
       <description>A cynical (or realistic) take on how a utopian dream&amp;ndash;autonomous, self-driving vehicles&amp;ndash;can turn into a dystopian nightmare: the global snitching fleet of the future.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1607986302/</link>
       <pubDate>Mon, 14 Dec 2020 14:51:35 -0800</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1607986302/</guid>
       <description>Suppose you wanted to graffiti someone else&amp;rsquo;s fence without getting caught. The color of the graffiti isn&amp;rsquo;t important; it&amp;rsquo;s about sending a message. That means you can choose any color paint you want. Naturally, everyone in the neighborhood has access to the same colors (so no particular choice would draw suspicion) except for one: it&amp;rsquo;s a special, rare color that you are known for producing. You aren&amp;rsquo;t the only one who has any, but you did invent it.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1607986295/</link>
       <pubDate>Tue, 08 Dec 2020 21:40:01 -0800</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1607986295/</guid>
       <description>If you know why a rule exists, you know when it&amp;rsquo;s okay to break it.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1607203804/</link>
       <pubDate>Sat, 05 Dec 2020 13:30:04 -0800</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1607203804/</guid>
       <description>Just realized that the pending ubiquity of self-driving cars will mean every road-accessible inch of our planet will be under a state of constant surveillance thanks to the dozens of high-resolution cameras that will be on every vehicle.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1606114044/</link>
       <pubDate>Sun, 22 Nov 2020 22:47:24 -0800</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1606114044/</guid>
       <description>At what point did America&amp;rsquo;s materialistic superiority over the Soviet Union transition into a religion of consumerism?</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1606086434/</link>
       <pubDate>Sun, 22 Nov 2020 15:07:14 -0800</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1606086434/</guid>
       <description>Has anyone ever considered the fact that since Google is often the provider of free WiFi at most Starbucks, it can secretly man-in-the-middle all of the hotspot&amp;rsquo;s traffic since it&amp;rsquo;s also a trusted SSL certificate provider? Of course, this would be relatively easy to catch (for example, by noticing that Bing&amp;rsquo;s cert is verified by Google rather than Microsoft), but the potential is still unnerving&amp;hellip; All it would take is a few targeted, hard-to-spot interceptions to gain backdoors on many, many systems.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1606005885/</link>
       <pubDate>Sat, 21 Nov 2020 16:44:45 -0800</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1606005885/</guid>
       <description>Isn&amp;rsquo;t it odd how more and more normalized it is to have a chemical buffer between our conscious mind and the real world? From the innocence of sipping on a work-day beer to dependence on caffeine consumption for productivity to the absurdity of same-hour marijuana delivery, it seems our grasp on the world around us slips deeper and deeper into the murky waters of substance-induced thought with each passing day / normalized drug.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://teapowered.dev/blurbs/blurb-1605610261/</link>
       <pubDate>Tue, 17 Nov 2020 02:51:01 -0800</pubDate>
-      
       <guid>https://teapowered.dev/blurbs/blurb-1605610261/</guid>
       <description>There are only two classes worth thinking about: worker and ruler.</description>
     </item>
-    
     <item>
       <title>On Apple&#39;s Ecosystem</title>
       <link>https://teapowered.dev/posts/apple-and-epic/</link>
       <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/apple-and-epic/</guid>
       <description>A short blurb on an interesting (if not worrying) possible byproduct if Apple is forced to release their iron grip on the AppStore.</description>
     </item>
-    
     <item>
       <title>Why Does 0.999... = 1?</title>
       <link>https://teapowered.dev/posts/infinite-decimals/</link>
       <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/infinite-decimals/</guid>
       <description>A simple explanation for a fundamental mathematical truth.</description>
     </item>
-    
     <item>
       <title>On Pascal&#39;s Wager</title>
       <link>https://teapowered.dev/posts/pascals-wager/</link>
       <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/pascals-wager/</guid>
       <description>A guy who took two philosophy courses questions the premises of a 400-year-old argument for the necessity of believing in God.</description>
     </item>
-    
     <item>
       <title>Minecraft and the Simulation Hypothesis</title>
       <link>https://teapowered.dev/posts/simulation/</link>
       <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/simulation/</guid>
       <description>Are we reaching the hardware limitations of our simulated universe?</description>
     </item>
-    
     <item>
       <title>Contact Tracing Privacy</title>
       <link>https://teapowered.dev/posts/contact-tracing/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/contact-tracing/</guid>
       <description>An analysis of Apple&amp;rsquo;s novel contact tracing protocol for COVID-19 though the lens of a paranoid privacy enthusiast.</description>
     </item>
-    
     <item>
       <title>Why (Not) Peer-to-Peer?</title>
       <link>https://teapowered.dev/posts/p2p/</link>
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/p2p/</guid>
       <description>An overview of the Internet&amp;rsquo;s growth in the 2010s and some questions about what&amp;rsquo;s to come&amp;hellip; With the current state of centralized content distribution, why aren&amp;rsquo;t we moving to a peer-to-peer model?</description>
     </item>
-    
     <item>
       <title>Notes</title>
       <link>https://teapowered.dev/notes/</link>
       <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/notes/</guid>
-      <description>Welcome to my comprehensive note directory. These typeset works are the product of untold hours of study and synthesis of various graduate-level topics in computer science. They were created specifically for Georgia Tech&amp;rsquo;s graduate program, but most of them should be self-contained and well-structured enough to serve as a gentle introduction to many different topics:
-My notes on Computational Perception are the ones that started it all. This 330+ page behemoth provides a (relatively) gentle introduction to computer vision and computational photography.</description>
+      <description>Welcome to my comprehensive note directory. These typeset works are the product of untold hours of study and synthesis of various graduate-level topics in computer science. They were created specifically for Georgia Tech&amp;rsquo;s graduate program, but most of them should be self-contained and well-structured enough to serve as a gentle introduction to many different topics:&#xA;My notes on Computational Perception are the ones that started it all. This 330+ page behemoth provides a (relatively) gentle introduction to computer vision and computational photography.</description>
     </item>
-    
     <item>
       <title>My Pescetarian Recipe Collection</title>
       <link>https://teapowered.dev/recipes/</link>
       <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/recipes/</guid>
       <description>A collection of tasty pescetarian recipes that I&amp;rsquo;ve gathered over the years with my personal tweaks and suggestions included.</description>
     </item>
-    
     <item>
       <title>Optimizing Sessionless Sessions</title>
       <link>https://teapowered.dev/posts/sessionless-sessions/</link>
       <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/sessionless-sessions/</guid>
       <description>Or, arriving at the rationale behind the existence of JSON Web Tokens in an extremely roundabout fashion.</description>
     </item>
-    
     <item>
       <title>Efficient P2P Broadcasting</title>
       <link>https://teapowered.dev/posts/p2p-broadcast/</link>
       <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/p2p-broadcast/</guid>
       <description>A memory-less solution that minimizes extra message duplication.</description>
     </item>
-    
     <item>
       <title>Tracking Your Every Move</title>
       <link>https://teapowered.dev/posts/mac-address-tracking/</link>
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/mac-address-tracking/</guid>
       <description>Or, abusing MAC addresses for fun and profit (well, no profit unless you&amp;rsquo;re a massive corporation or the government&amp;hellip;).</description>
     </item>
-    
+    <item>
+      <title></title>
+      <link>https://teapowered.dev/posts/poetry-voice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://teapowered.dev/posts/poetry-voice/</guid>
+      <description>The Voice of Future Regret&#xA;I&amp;rsquo;ll give you a description It&amp;rsquo;s a sort of prescription Call it a premonition or intuition or even superstition But its learned from the past on nights that last and last or&#xA;and wants to help your future&#xA;it whispers so quietly shh lean in close to hear it don&amp;rsquo;t do that do this instead 6 pieces of butter on 3 pieces of bread you&amp;rsquo;ll be filled with regret</description>
+    </item>
     <item>
       <title>Hello there,</title>
       <link>https://teapowered.dev/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/about/</guid>
-      <description>I&amp;rsquo;m George.
-I study computer science and sometimes cook things. I&amp;rsquo;m a bit of a cypherpunk at heart, particularly interested in cryptography, peer-to-peer technologies, and applications of virtual and augmented reality. Fittingly, I work at the Stellar Development Foundation on the &amp;ldquo;Decentralization&amp;rdquo; team, creating (hopefully) useful abstractions to the underlying protocol (like Horizon) for developers to create apps on our blockchain.
-I write about these topics and others in various (albeit rare) posts.</description>
+      <description>I&amp;rsquo;m George.&#xA;I study computer science and sometimes cook things. I&amp;rsquo;m a bit of a cypherpunk at heart, particularly interested in cryptography, peer-to-peer technologies, and applications of virtual and augmented reality. Fittingly, I work at the Stellar Development Foundation on the &amp;ldquo;Decentralization&amp;rdquo; team, creating (hopefully) useful abstractions to the underlying protocol (like Horizon) for developers to create apps on our blockchain.&#xA;I write about these topics and others in various (albeit rare) posts.</description>
     </item>
-    
     <item>
       <title>Privacy &lt;3</title>
       <link>https://teapowered.dev/privacy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/privacy/</guid>
-      <description>Woah, how&amp;rsquo;d you get here? This page isn&amp;rsquo;t even linked from anywhere 😜
-This site has no tracking, no ads, and no nonsense. I have no idea who reads it, so if you like (or hate!) a post, shoot me an email and tell me!
-JavaScript is only used to render math with $\LaTeX$ (I might change this at some point to pre-render images, instead). This is the way the Web should always be!</description>
+      <description>Woah, how&amp;rsquo;d you get here? This page isn&amp;rsquo;t even linked from anywhere &amp;#x1f61c;&#xA;This site has no tracking, no ads, and no nonsense. I have no idea who reads it, so if you like (or hate!) a post, shoot me an email and tell me!&#xA;JavaScript is only used to render math with $\LaTeX$ (I might change this at some point to pre-render images, instead). This is the way the Web should always be!</description>
     </item>
-    
   </channel>
 </rss>

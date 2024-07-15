@@ -1,74 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tech on Bits, Bytes, Late Nights</title>
+    <title>Tech on Bits, Bytes, Late Nights</title>
     <link>https://teapowered.dev/tags/tech/</link>
-    <description>Recent content in tech on Bits, Bytes, Late Nights</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Tech on Bits, Bytes, Late Nights</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://teapowered.dev/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://teapowered.dev/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Byte-sized Algorithms: Removing Duplicates</title>
       <link>https://teapowered.dev/posts/duplicates-in-place/</link>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/duplicates-in-place/</guid>
       <description>This is just some basic Leetcode-esque stuff I needed to do at work recently. It shouldn&amp;rsquo;t surprise or impress anyone who has thought about this before, but it was mildly interesting to think and write about.</description>
     </item>
-    
     <item>
       <title>Why NFTs Matter</title>
       <link>https://teapowered.dev/posts/why-nfts-matter/</link>
       <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/why-nfts-matter/</guid>
       <description>It&amp;rsquo;s not about ape avatars, basketball highlights, or other digital trinkets. It&amp;rsquo;s about authentic relationships.</description>
     </item>
-    
     <item>
       <title>Newspeak in an AI-Driven World</title>
       <link>https://teapowered.dev/posts/ai-and-newspeak/</link>
       <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/ai-and-newspeak/</guid>
       <description>Or: Stop trying to make everyone dumber, Outlook.</description>
     </item>
-    
     <item>
       <title>Do Self-Driving Cars Dream of Snitching?</title>
       <link>https://teapowered.dev/posts/self-driving-surveillance/</link>
       <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/self-driving-surveillance/</guid>
       <description>A cynical (or realistic) take on how a utopian dream&amp;ndash;autonomous, self-driving vehicles&amp;ndash;can turn into a dystopian nightmare: the global snitching fleet of the future.</description>
     </item>
-    
     <item>
       <title>Why (Not) Peer-to-Peer?</title>
       <link>https://teapowered.dev/posts/p2p/</link>
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/p2p/</guid>
       <description>An overview of the Internet&amp;rsquo;s growth in the 2010s and some questions about what&amp;rsquo;s to come&amp;hellip; With the current state of centralized content distribution, why aren&amp;rsquo;t we moving to a peer-to-peer model?</description>
     </item>
-    
     <item>
       <title>Optimizing Sessionless Sessions</title>
       <link>https://teapowered.dev/posts/sessionless-sessions/</link>
       <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/sessionless-sessions/</guid>
       <description>Or, arriving at the rationale behind the existence of JSON Web Tokens in an extremely roundabout fashion.</description>
     </item>
-    
     <item>
       <title>Efficient P2P Broadcasting</title>
       <link>https://teapowered.dev/posts/p2p-broadcast/</link>
       <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/p2p-broadcast/</guid>
       <description>A memory-less solution that minimizes extra message duplication.</description>
     </item>
-    
   </channel>
 </rss>

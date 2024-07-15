@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>politics on Bits, Bytes, Late Nights</title>
+    <title>Politics on Bits, Bytes, Late Nights</title>
     <link>https://teapowered.dev/tags/politics/</link>
-    <description>Recent content in politics on Bits, Bytes, Late Nights</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Politics on Bits, Bytes, Late Nights</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://teapowered.dev/tags/politics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://teapowered.dev/tags/politics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Economics of Sustainability</title>
       <link>https://teapowered.dev/posts/the-economics-of-sustainability/</link>
       <pubDate>Fri, 12 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://teapowered.dev/posts/the-economics-of-sustainability/</guid>
       <description>A brief (by university standards) essay that ties together history, economics, philosophy, ethics, nutrition, and environmentalism to analyze the prosperity resulting from capitalism and industrialization in contrast to our hopes for a sustainable society.</description>
     </item>
-    
   </channel>
 </rss>
