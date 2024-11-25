@@ -27,7 +27,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.min.6ddba9c341475ca171f3a44998786ea9cd4b11007a5a3da35d02b9a2c38f3e73.css" integrity="sha256-bdupw0FHXKFx86RJmHhuqc1LEQB6Wj2jXQK5osOPPnM=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.2919e350bc62ec5f9db812b66ca8f9d1b0c21058e6c0c4239b44b782fa75e78a.css" integrity="sha256-KRnjULxi7F&#43;duBK2bKj50bDCEFjmwMQjm0S3gvp154o=" crossorigin="anonymous" media="screen">
 
 
 
@@ -250,77 +250,77 @@ The idea is that when a user is infected, they voluntarily reveal their recent t
 <h2 id="correlating-key-rotations">Correlating Key Rotations</h2>
 <p>Suppose you, as a user of the app, see the following Bluetooth beacons in a grocery store:</p>
 <table>
-<thead>
-<tr>
-<th style="text-align:center">Tx (Power)</th>
-<th style="text-align:center">BT address</th>
-<th style="text-align:center">RPI</th>
-<th style="text-align:center">Metadata</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">42</td>
-<td style="text-align:center">AA:12:E4</td>
-<td style="text-align:center">0xABCD</td>
-<td style="text-align:center">0x1234</td>
-</tr>
-<tr>
-<td style="text-align:center">78</td>
-<td style="text-align:center">BB:65:51</td>
-<td style="text-align:center">0xEFAB</td>
-<td style="text-align:center">0x1010</td>
-</tr>
-<tr>
-<td style="text-align:center">56</td>
-<td style="text-align:center">CC:13:C3</td>
-<td style="text-align:center">0xA2D4</td>
-<td style="text-align:center">0x2020</td>
-</tr>
-<tr>
-<td style="text-align:center">89</td>
-<td style="text-align:center">DD:86:0C</td>
-<td style="text-align:center">0x04D3</td>
-<td style="text-align:center">0x3030</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">Tx (Power)</th>
+          <th style="text-align: center">BT address</th>
+          <th style="text-align: center">RPI</th>
+          <th style="text-align: center">Metadata</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">42</td>
+          <td style="text-align: center">AA:12:E4</td>
+          <td style="text-align: center">0xABCD</td>
+          <td style="text-align: center">0x1234</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">78</td>
+          <td style="text-align: center">BB:65:51</td>
+          <td style="text-align: center">0xEFAB</td>
+          <td style="text-align: center">0x1010</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">56</td>
+          <td style="text-align: center">CC:13:C3</td>
+          <td style="text-align: center">0xA2D4</td>
+          <td style="text-align: center">0x2020</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">89</td>
+          <td style="text-align: center">DD:86:0C</td>
+          <td style="text-align: center">0x04D3</td>
+          <td style="text-align: center">0x3030</td>
+      </tr>
+  </tbody>
 </table>
 <p>The data here is arbitrary and inaccurate, but that doesn&rsquo;t matter. The key comes from the data you see immediately after one of the users decides to roll its keys:</p>
 <table>
-<thead>
-<tr>
-<th style="text-align:center">Tx (Power)</th>
-<th style="text-align:center">BT address</th>
-<th style="text-align:center">RPI</th>
-<th style="text-align:center">Metadata</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">74</td>
-<td style="text-align:center">BB:65:51</td>
-<td style="text-align:center">0xEFAB</td>
-<td style="text-align:center">0x1010</td>
-</tr>
-<tr>
-<td style="text-align:center">60</td>
-<td style="text-align:center">C2:42:12</td>
-<td style="text-align:center">0xDEAD</td>
-<td style="text-align:center">0x5186</td>
-</tr>
-<tr>
-<td style="text-align:center">88</td>
-<td style="text-align:center">DD:86:0C</td>
-<td style="text-align:center">0x04D3</td>
-<td style="text-align:center">0x3030</td>
-</tr>
-<tr>
-<td style="text-align:center">38</td>
-<td style="text-align:center">EE:51:32</td>
-<td style="text-align:center">0xC4F3</td>
-<td style="text-align:center">0x6194</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">Tx (Power)</th>
+          <th style="text-align: center">BT address</th>
+          <th style="text-align: center">RPI</th>
+          <th style="text-align: center">Metadata</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">74</td>
+          <td style="text-align: center">BB:65:51</td>
+          <td style="text-align: center">0xEFAB</td>
+          <td style="text-align: center">0x1010</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">60</td>
+          <td style="text-align: center">C2:42:12</td>
+          <td style="text-align: center">0xDEAD</td>
+          <td style="text-align: center">0x5186</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">88</td>
+          <td style="text-align: center">DD:86:0C</td>
+          <td style="text-align: center">0x04D3</td>
+          <td style="text-align: center">0x3030</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">38</td>
+          <td style="text-align: center">EE:51:32</td>
+          <td style="text-align: center">0xC4F3</td>
+          <td style="text-align: center">0x6194</td>
+      </tr>
+  </tbody>
 </table>
 <p><sup style="font-style: italic; line-height: 0em">(the adjusted power ratings here are supposed to simulate that people nearby may have moved, but not by much since their last broadcast; suppose the first user is now out of range and the last user is a new broadcaster)</sup></p>
 <p>Take a guess at who the &ldquo;new&rdquo; user on the second row is&hellip; It&rsquo;s obviously just the previous user from the third row! What are the chances that someone (Bluetooth user <code>CC:13:C3</code>) completely disappeared and was replaced by a new person with a similar transmission power (user <code>C2:42:12</code>)? Extremely unlikely.</p>
