@@ -6,8 +6,15 @@
     <description>Recent content in Tech on Bits, Bytes, Late Nights</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://teapowered.dev/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ouroboros: An infinite AI content feed</title>
+      <link>https://teapowered.dev/posts/ouroboros/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://teapowered.dev/posts/ouroboros/</guid>
+      <description>The Gilded Age of content is nearly upon us, when generative AI models will create everything we consume. Everything will be perfectly curated to the viewer and generated on the fly right before your eyes. This post demonstrates how the pieces are nearly there and how easy it is to put an app like this together.</description>
+    </item>
     <item>
       <title>Byte-sized Algorithms: Removing Duplicates</title>
       <link>https://teapowered.dev/posts/duplicates-in-place/</link>

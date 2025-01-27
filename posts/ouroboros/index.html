@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<title>
+    Ouroboros: An infinite AI content feed - Bits, Bytes, Late Nights
+</title>
+
+
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.2919e350bc62ec5f9db812b66ca8f9d1b0c21058e6c0c4239b44b782fa75e78a.css" integrity="sha256-KRnjULxi7F&#43;duBK2bKj50bDCEFjmwMQjm0S3gvp154o=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+
+
+
+<style>
+   
+   
+  @font-face {
+    font-family: 'Didact Gothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/font/didact-gothic-v13-latin-regular.eot');  
+    src: local('Didact Gothic Regular'), local('DidactGothic-Regular'),
+         url('/font/didact-gothic-v13-latin-regular.eot?#iefix') format('embedded-opentype'),  
+         url('/font/didact-gothic-v13-latin-regular.woff2') format('woff2'),  
+         url('/font/didact-gothic-v13-latin-regular.woff') format('woff'),  
+         url('/font/didact-gothic-v13-latin-regular.ttf') format('truetype'),  
+         url('/font/didact-gothic-v13-latin-regular.svg#DidactGothic') format('svg');  
+  }
+</style>
+
+
+
+<style type="text/css">
+  ::selection {
+    background: #fcf8eb;  
+    color: black;
+  }
+  ::-moz-selection {
+    background: #fcf8eb;  
+    color: black;
+  }
+</style>
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Ouroboros: An infinite AI content feed
+        
+    </title>
+</head>
+
+<body>
+    
+    
+    
+        <div class="section top-menu">
+            
+<p>
+    <a href="https://teapowered.dev/">home</a>
+    
+        
+            &#183;
+            <a href="/posts">thoughts</a>
+        
+            &#183;
+            <a href="/recipes">recipes</a>
+        
+            &#183;
+            <a href="/notes">notes</a>
+        
+            &#183;
+            <a href="/about">me</a>
+        
+    
+</p>
+
+
+        </div>
+    
+    
+
+    <main class="wrap">
+        
+        <header>
+            Ouroboros: An infinite AI content feed
+        </header>
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+        
+<div class="flex-container">
+    <aside role="complementary">
+        <div class="subtitle">The Gilded Age of content is nearly upon us, when generative AI models will create everything we consume. Everything will be perfectly curated to the viewer and generated on the fly right before your eyes. This post demonstrates how the pieces are nearly there and how easy it is to put an app like this together.</div>
+        <div id="metadata">
+            <div>
+                Jan 26, 2025
+            </div>
+            <div>&nbsp;&#183;&nbsp;</div>
+            <div>
+                1208 words
+            </div>
+            <div>&nbsp;&#183;&nbsp;</div>
+            <div>
+                a 6 minute read
+            </div>
+            <div class="tag-container">
+                
+                
+                &#183;
+                <span class="tag"><a href="/tags/tech/">#tech</a></span>
+                
+                
+            </div>
+        </div>
+    </aside>
+    <hr />
+    <article role="article">
+        <p>Shortly after OpenAI dropped DALL·E 3—its latest image generation model—in late 2023, I had a technological prognosis for society:</p>
+<blockquote>
+  <p style="margin-bottom: 0.5rem; font-size: larger"><strong>One day, there will be an app that generates you a unique, personalized piece of content on every swipe.</strong></p>
+</blockquote>
+
+<h1 id="soontm">Soon&#x2122;&#xfe0f;</h1>
+<p>In line with existing infinitely-scrolling content feeds like Instagram Reels and TikTok, it will take into account various metrics to gauge your interest level, such as time spent viewing, reading or contributing comments, sharing links with friends, etc. It would incorporate everything it knew about you based on your browsing habits, searches, and engagement to generate a never-before-seen piece of content catered just for you. Like this one:</p>
+
+
+
+
+  <img
+    
+    src="/posts/ouroboros/catdj.png"
+    width='200px'
+    
+    alt=""
+  >
+
+
+<p>Obviously, the technology wasn&rsquo;t there yet at the time, but I could see that it was coming. The developments of that year only served to confirm my theory: multi-modal models like GPT-4o came out that could incorporate text, audio and images all together; and video generation models like Pika and Sora could turn short bits of text into coherent streams of video up to a minute long.</p>
+<p>The cost is still high: generating just a handful of images with DALL·E costs like a dollar, while video generating models get very expensive very quickly. The latency is also prohibitive: nobody is going to wait a full minute just for their content to load. However, these problems will go away as we make more progress in the field. So as time goes on, I&rsquo;m still fully convinced this future is nigh upon us.</p>
+<h1 id="guess-ill-do-it-myself">Guess I&rsquo;ll do it myself</h1>
+<p>Today, after letting these ideas simmer for a <em>long</em> time and watching generative AI get better and better, I had a thought: <strong>why not just try making it?</strong> Unfortunately, there aren&rsquo;t currently any (good) available generative video APIs. Pika, Sora, and Veo all either don&rsquo;t have an API or require contacting their company. Fortunately, the architecture for a platform like this is basically identical for images.</p>
+<p>With that in mind, an hour later I had a proof of concept running:<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<div align="center">
+  <video controls preload="auto" width="320px"  autoplay loop playsinline class="html-video">
+      <source src="/posts/ouroboros/demo-trimmed.mp4" type="video/mp4">
+    <span></span>
+  </video>
+</div>
+<p>The fully-armored knights sitting around a conference table (0:26 in) looking at chart of &ldquo;quest performance metrics&rdquo; honestly cracked me up; this has some potential.</p>
+<h2 id="architecture">Architecture</h2>
+<p>Here&rsquo;s the fun part: the <em>entire</em> front end was written by ChatGPT&rsquo;s 4o model and so was like 80% of the backend, including the &ldquo;recommendation&rdquo; algorithm (well, sorta, as you&rsquo;ll see). The architecture<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> is fairly straightforward: track image prompts and use both &ldquo;likes&rdquo; and viewing time to gauge &ldquo;engagement.&rdquo; Occasionally, spit out a random image to prevent getting stuck on a topic.</p>
+
+
+
+
+  <img
+    
+    src="/posts/ouroboros/architecture-alpha.png"
+    width='500px'
+    
+    alt=""
+  >
+
+
+<p>The &ldquo;seed&rdquo; prompt is pretty straightforward and tries to succinctly capture the average piece of internet content:</p>
+<blockquote>
+<p>Generate a random visual art prompt that could generate high social media engagement from a variety of users. It should be funny (like a situation or meme), relatable or nostalgic, or controversial.</p>
+</blockquote>
+<p>Based on that, it seems like ChatGPT thinks cats are <em>really</em> engaging, which, granted, is fairly reflective of the Internet. After that, it uses a different prompt, followed by a series of topics that the recommendation algorithm spits out.</p>
+<h2 id="recommendation-algorithm">Recommendation Algorithm</h2>
+<p>Since I never sold my soul to any of the big corpos that have perfected the art of <del>spying on you</del> learning what you like, I went into this with no understanding of how recommendation algorithms worked. I had a rough idea of a simple approach and asked GPT-4o to implement it for me. The basic idea was something like this:</p>
+<ol>
+<li>Given the last <code>N</code> &ldquo;liked&rdquo; prompts, turn &rsquo;em into numbers (floating point vectors) using <code>vec2word</code>.</li>
+<li>Do weighted k-means clustering on those vectors to find similarities across prompts, where weights are viewing time.</li>
+<li>Grab the average vector of each cluster.</li>
+<li>Turn that vector back into words and use that as a prompt guide.</li>
+</ol>
+<p>GPT did its best but the prompts it produced were both deterministic <em>and</em> largely nonsensical. As it turns out, (4) is a preeeetty hard thing to do: vector embeddings are mostly a one-way operation unless you want to build and train a machine learning model to find related concepts and/or do a whole buncha work with <a href="https://wordnet.princeton.edu/">WordNet</a>. And ain&rsquo;t nobody got time for that.</p>
+<p>So what&rsquo;s the lazy man&rsquo;s solution? Well, why not just let GPT do the work for us?? I gave it the information about the last handful of prompts with high viewing times and asked it to find shared topics and suggest new prompts.</p>
+<p>This actually worked way better than expected. For example, here&rsquo;s a conversation I ripped out of the API logs. I bolded the terms in the AI&rsquo;s new prompt that match terms from the given &ldquo;liked&rdquo; prompts:</p>
+<blockquote>
+<p>Here are some prompts the user enjoyed:</p>
+<ul>
+<li>Dramatic seagull stealing an ice cream cone right out of the hand of a surprised beachgoer, cartoon style, exaggerated expressions, vibrant colors, humorous chaos, summer beach setting, relatable snack-hijacking moment.</li>
+<li>Cat sitting at a laptop with a headset, in a virtual meeting, surrounded by office supplies, frustrated expression, cluttered desk, playful meme vibe, relatable work-from-home chaos, soft pastel colors, cartoon style.</li>
+<li>Pigeon dressed as a tourist with a camera, snapping photos of famous landmarks, tiny hat and backpack, humorous travel mishaps, city skyline backdrop, lively and colorful street scene, exaggerated features, whimsical exploration theme.</li>
+</ul>
+<hr>
+<p>Dog trying to take a selfie with a group of squirrels, using a selfie stick, chaos ensues as squirrels photobomb with silly poses and <strong>expressions</strong>, <strong>vibrant</strong> forest setting, <strong>cartoon style</strong>, bright colors, <strong>humorous</strong> wildlife interaction, <strong>playfully relatable</strong> technology mishap, <strong>exaggerated features</strong>.</p>
+</blockquote>
+<p>Good enough for me! It&rsquo;s a proof of concept, after all.</p>
+<p>Follow-up improvements included incorporating dislikes so that it had an awareness of bad prompts: I noticed it getting a little hung up on certain themes if it ran long enough (like anthropomorphizing vegetables and animals, for some reason), so the constructive feedback was a valuable addition to keep things fresh. I also occasionally introduced &ldquo;fresh&rdquo; content into the feed (aka just don&rsquo;t use the recommendation algorithm 33% of the time) to get new concepts into the mix.</p>
+<h1 id="results">Results</h1>
+<p>As you can see in the demo <a href="#guess-ill-do-it-myself">above</a>, it does still lean heavily on cats but so does the Internet. In general, the content it generates is usually cute and playful (or, to use one of its favorite descriptors: &ldquo;whimsical&rdquo;) rather than the dank deep-fried brain rot I&rsquo;m looking for on the Internet, but that&rsquo;s just a matter of prompting and (getting decensored models). Humor might be the last human frontier, but it does spit out some pretty funny stuff occasionally, so watch out.</p>
+<p>Once any of the big players drop a video generation model, it&rsquo;ll be super easy to plug-and-play that into this proof-of-concept and see how it goes. Then, latency reduction and a better recommendation algorithm is all this thing needs. Well that and scaling to more than one user, but that&rsquo;s obviously the easy part &#x1f609;</p>
+<p>I stand by my prediction: give it a few years and an app like this will replace TikTok. Well, actually, a more realistic outcome is that TikTok will incorporate this into its feed itself.</p>
+<p>Thanks for reading!</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Please note that the video is <strong>heavily</strong> sped up to keep it interesting: a realistic delay between each image is more like 20 seconds.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Shoutout to <a href="https://excalidraw.com/">excalidraw</a> for making diagrams absurdly easy to make.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </article>
+</div>
+
+
+        
+<nav role="navigation" class="flex-container bottom-menu">
+    
+<hr />
+<p>
+    
+    <a href="https://teapowered.dev/">home</a>
+    
+        
+            &#183;
+            <a href="/posts">thoughts</a>
+        
+            &#183;
+            <a href="/recipes">recipes</a>
+        
+            &#183;
+            <a href="/notes">notes</a>
+        
+            &#183;
+            <a href="/about">me</a>
+        
+    
+</p>
+
+
+</nav>
+
+    </main>
+    
+    <footer class="flex-container footer">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax": {
+        }
+      }
+    }
+  });
+</script>
+
+</footer>
+    
+    
+</body>
+
+</html>
